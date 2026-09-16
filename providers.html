@@ -57,7 +57,7 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 /* VISUAL TREATMENT DISCOVERY */
 .treatment-discovery{margin:22px 0 44px}
 .treatment-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.treatment-card{position:relative;height:280px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+.treatment-card{position:relative;height:210px;overflow:hidden;background:#eee;border:1px solid var(--line)}
 .treatment-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
 .treatment-card:hover img{transform:scale(1.025)}
 .treatment-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,17,16,.62),rgba(18,17,16,.06) 55%,rgba(18,17,16,0))}
@@ -67,10 +67,10 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 .results-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
 .results-head h2{font-size:clamp(34px,4vw,50px);line-height:1}
 .results-meta{font-size:12px;color:var(--muted)}
-.provider-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px;padding-bottom:30px}
+.provider-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 18px;padding-bottom:30px;max-width:1080px;margin:0 auto}
 .provider-card{position:relative;background:#fff;border:1px solid var(--line);overflow:hidden;transition:.2s}
 .provider-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.provider-photo{height:360px;background:#eee;overflow:hidden;position:relative}
+.provider-photo{height:290px;background:#eee;overflow:hidden;position:relative}
 .provider-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .provider-card:nth-child(1) .provider-photo img{object-position:center 42%}
 .provider-card:nth-child(2) .provider-photo img{object-position:center 38%}
@@ -88,8 +88,8 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 .p5{background:linear-gradient(145deg,#eadbd1,#f5ebe4)}
 .p6{background:linear-gradient(145deg,#dfe9e3,#f2e6da)}
 .featured-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);padding:6px 10px;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--berry);border:1px solid rgba(113,59,59,.18)}
-.provider-body{padding:20px}
-.provider-name{font-size:27px;line-height:1.05;margin-bottom:6px}
+.provider-body{padding:17px}
+.provider-name{font-size:23px;line-height:1.08;margin-bottom:6px}
 .provider-role{font-size:12px;color:var(--muted);margin-bottom:9px}
 .credential{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#181716;margin-bottom:13px}
 .dotcheck{width:15px;height:15px;border-radius:50%;background:#181716;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px}
@@ -127,13 +127,13 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 }
 @media(max-width:680px){
   .treatment-strip{grid-template-columns:repeat(2,1fr)}
-  .treatment-card{min-height:180px}
+  .treatment-card{height:170px;min-height:170px}
   .container{width:min(100% - 28px,var(--max))}
   .toprow{height:auto;padding:16px 0;grid-template-columns:1fr}.actions{justify-content:flex-start}
   .brand{font-size:30px}.nav{justify-content:flex-start;overflow:auto;white-space:nowrap;padding-bottom:12px}
   .page-intro{padding-top:44px} h1{font-size:52px}
   .search-grid{grid-template-columns:1fr}.provider-grid{grid-template-columns:1fr}
-  .provider-photo{height:420px}.browse-links{grid-template-columns:1fr}
+  .provider-photo{height:310px}.browse-links{grid-template-columns:1fr}
   .footgrid{grid-template-columns:1fr}.footbottom{display:block}
 }
 
@@ -154,6 +154,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="actions"><a class="btn btn-dark" href="providers.html">Find a Provider</a><a class="btn btn-primary" href="for-providers.html">List Your Practice</a></div>
 </div>
 <nav class="nav">
+<a href="index.html">Home</a>
 <a class="active" href="providers.html">Find a Provider</a>
 <a href="treatments.html">Treatments</a>
 <a href="the-edit.html">The Edit</a>
@@ -178,19 +179,19 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 <div aria-label="Popular treatments" class="treatment-discovery">
 <div class="treatment-strip">
-<a class="treatment-card" href="treatments.html#hair-restoration">
+<a class="treatment-card" href="providers.html?specialty=hair-restoration">
 <img alt="Hair restoration" height="1024" src="assets/images/hair-restoration-4eb63ed9148e.webp" width="1536"/>
 <span class="treatment-label">Hair Restoration</span>
 </a>
-<a class="treatment-card" href="treatments.html#injectables">
+<a class="treatment-card" href="providers.html?specialty=injectables">
 <img alt="Injectables" decoding="async" height="1536" loading="lazy" src="assets/images/injectables-b1214a640f1b.webp" width="1024"/>
 <span class="treatment-label">Injectables</span>
 </a>
-<a class="treatment-card" href="treatments.html#skin-laser">
+<a class="treatment-card" href="providers.html?specialty=skin-laser">
 <img alt="Skin and laser treatments" decoding="async" height="1529" loading="lazy" src="assets/images/skin-and-laser-treatments-ad7df75b9026.webp" width="1029"/>
 <span class="treatment-label">Skin + Laser</span>
 </a>
-<a class="treatment-card" href="treatments.html#aesthetic-recovery">
+<a class="treatment-card" href="providers.html?specialty=aesthetic-recovery">
 <img alt="Lymphatic and post-procedure care" decoding="async" height="1535" loading="lazy" src="assets/images/lymphatic-and-post-procedure-care-04421686981e.webp" width="1025"/>
 <span class="treatment-label">Lymphatic + Post-Procedure</span>
 </a>
@@ -201,7 +202,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="eyebrow">Providers</div>
 <h2>Sample provider profiles</h2>
 </div>
-<div class="results-meta"><span id="resultCount">4</span> providers shown</div>
+<div class="results-meta"><span id="resultCount">6</span> providers shown</div>
 </div>
 <!-- Placeholder provider content for design/prototype use. Replace with recruited providers before publishing. -->
 <div class="provider-grid" id="providerGrid">
@@ -213,7 +214,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="provider-body">
 <h3 class="provider-name">Maya Ellis, MSN, FNP-C</h3>
 <div class="provider-role">Injectables + Facial Balancing · Washington, DC</div>
-<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="credential">Sample profile</div>
 <div class="known">Known for subtle facial balancing and a less-is-more approach.</div>
 <div class="chips"><span class="chip">Botox</span><span class="chip">Fillers</span><span class="chip">Facial Balancing</span></div>
 <span class="view-link">View Profile</span>
@@ -224,7 +225,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="provider-body">
 <h3 class="provider-name">Danielle Brooks, RN</h3>
 <div class="provider-role">Skin + Laser · Chicago, IL</div>
-<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="credential">Sample profile</div>
 <div class="known">A skin-first approach to texture, tone and long-term maintenance.</div>
 <div class="chips"><span class="chip">Laser</span><span class="chip">Microneedling</span><span class="chip">Skin</span></div>
 <span class="view-link">View Profile</span>
@@ -235,7 +236,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="provider-body">
 <h3 class="provider-name">Priya Shah, MD</h3>
 <div class="provider-role">Hair Restoration · Los Angeles, CA</div>
-<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="credential">Sample profile</div>
 <div class="known">Focused on helping women understand the why behind hair loss.</div>
 <div class="chips"><span class="chip">PRP</span><span class="chip">Hair Loss</span><span class="chip">Restoration</span></div>
 <span class="view-link">View Profile</span>
@@ -246,9 +247,31 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div class="provider-body">
 <h3 class="provider-name">Lauren James, PA-C</h3>
 <div class="provider-role">Injectables + Skin · Miami, FL</div>
-<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="credential">Sample profile</div>
 <div class="known">Natural-looking results with an eye for proportion and skin quality.</div>
 <div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Fillers</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+<a class="provider-card" data-location="Austin, TX" data-name="Sofia Ramirez" data-treatment="Body Contouring Aesthetic Recovery Skin Tightening" data-type="Nurse Practitioner" href="providers.html">
+<div class="provider-photo p2"><div class="monogram">SR</div></div>
+<div class="provider-body">
+<h3 class="provider-name">Sofia Ramirez, DNP, FNP-C</h3>
+<div class="provider-role">Body Contouring + Recovery · Austin, TX</div>
+<div class="credential">Sample profile</div>
+<div class="known">A personalized approach to non-surgical contouring and post-treatment care.</div>
+<div class="chips"><span class="chip">Body Contouring</span><span class="chip">Skin Tightening</span><span class="chip">Recovery</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+<a class="provider-card" data-location="Seattle, WA" data-name="Jordan Lee" data-treatment="Skin + Laser Chemical Peels Resurfacing" data-type="Physician Assistant" href="providers.html">
+<div class="provider-photo p3"><div class="monogram">JL</div></div>
+<div class="provider-body">
+<h3 class="provider-name">Jordan Lee, PA-C</h3>
+<div class="provider-role">Skin + Laser · Seattle, WA</div>
+<div class="credential">Sample profile</div>
+<div class="known">Focused on practical treatment plans for tone, texture and skin health.</div>
+<div class="chips"><span class="chip">Laser</span><span class="chip">Peels</span><span class="chip">Resurfacing</span></div>
 <span class="view-link">View Profile</span>
 </div>
 </a>
@@ -265,10 +288,10 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <h2>Browse by Treatment</h2>
 </div>
 <div class="browse-links">
-<a href="treatments.html#injectables">Injectables + Facial Balancing →</a>
-<a href="treatments.html#skin-laser">Skin + Laser →</a>
-<a href="treatments.html#hair-restoration">Hair Restoration →</a>
-<a href="treatments.html#aesthetic-recovery">Body + Lymphatic Care →</a>
+<a href="providers.html?specialty=injectables">Injectables + Facial Balancing →</a>
+<a href="providers.html?specialty=skin-laser">Skin + Laser →</a>
+<a href="providers.html?specialty=hair-restoration">Hair Restoration →</a>
+<a href="providers.html?specialty=aesthetic-recovery">Body + Lymphatic Care →</a>
 </div>
 </div>
 </section>
@@ -340,7 +363,16 @@ function applyFilters(){
 }
 
 const params = new URLSearchParams(window.location.search);
-const initialQuery = params.get('q') || params.get('specialty') || '';
+const specialtyLabels = {
+  'injectables': 'Injectables',
+  'skin-laser': 'Skin Laser',
+  'hair-restoration': 'Hair Restoration',
+  'body-contouring': 'Body Contouring',
+  'aesthetic-recovery': 'Aesthetic Recovery',
+  'lymphatic-post-procedure': 'Lymphatic Post-Procedure'
+};
+const specialty = params.get('specialty') || '';
+const initialQuery = params.get('q') || specialtyLabels[specialty] || specialty;
 if (initialQuery) { text.value = initialQuery; applyFilters(); }
 
 document.getElementById('searchBtn').addEventListener('click', applyFilters);

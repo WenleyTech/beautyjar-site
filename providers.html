@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Find medical aesthetics providers by treatment, specialty and location on BeautyJar." name="description"/>
+<meta content="Find a Provider — BeautyJar" property="og:title"/>
+<meta content="Browse providers across injectables, skin + laser, body contouring and hair restoration." property="og:description"/>
+<title>Find a Provider — BeautyJar</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#181716;--muted:#181716;--line:#ded9d2;--paper:#ffffff;--pink:#eee9e2;
+  --peach:#e9e1d7;--berry:#8a4f5a;--berry2:#713b3b;--sage:#e5e7e1;--butter:#eee8d8;
+  --shadow:0 14px 36px rgba(35,30,25,.07);--max:1280px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+/* HEADER */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(255,253,251,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(222,217,210,.9)}
+.toprow{height:74px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.brand{font-family:'Playfair Display',serif;font-size:35px;font-weight:600;letter-spacing:-.03em}
+.leftnote{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.actions{display:flex;justify-content:flex-end;gap:16px;align-items:center;font-size:13px;font-weight:600}
+.nav{display:flex;justify-content:center;gap:36px;padding:16px 0;border-top:1px solid var(--line);background:#fff;font-size:16px;font-weight:700}
+.nav a:hover,.nav a.active{color:var(--berry)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.btn-primary{background:var(--berry);color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--berry2)}
+
+/* PAGE INTRO */
+.page-intro{padding:42px 0 30px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry);margin-bottom:14px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
+h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bottom:10px}
+.intro-copy{max-width:650px;font-size:17px;color:#181716}
+
+/* SEARCH + FILTERS */
+.search-panel{margin:28px 0 34px;background:white;border:1px solid var(--line);padding:18px}
+.search-grid{display:grid;grid-template-columns:1fr auto;gap:10px}.single-search{max-width:900px}
+.field{border:1px solid var(--line);background:#fff;padding:10px 12px}
+.field label{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:3px}
+.field input,.field select{border:0;outline:0;background:transparent;width:100%;color:var(--ink)}
+.search-action{border:0;background:var(--ink);color:white;padding:0 22px;font-weight:700;cursor:pointer;min-height:52px}
+.search-action:hover{background:#2c2927}
+
+
+/* VISUAL TREATMENT DISCOVERY */
+.treatment-discovery{margin:22px 0 44px}
+.treatment-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.treatment-card{position:relative;height:280px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+.treatment-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+.treatment-card:hover img{transform:scale(1.025)}
+.treatment-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,17,16,.62),rgba(18,17,16,.06) 55%,rgba(18,17,16,0))}
+.treatment-label{position:absolute;left:15px;right:15px;bottom:14px;z-index:2;color:#fff!important;font-size:13px;font-weight:800;line-height:1.15;text-transform:uppercase;letter-spacing:.03em}
+
+/* RESULTS */
+.results-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+.results-head h2{font-size:clamp(34px,4vw,50px);line-height:1}
+.results-meta{font-size:12px;color:var(--muted)}
+.provider-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px;padding-bottom:30px}
+.provider-card{position:relative;background:#fff;border:1px solid var(--line);overflow:hidden;transition:.2s}
+.provider-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.provider-photo{height:360px;background:#eee;overflow:hidden;position:relative}
+.provider-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.provider-card:nth-child(1) .provider-photo img{object-position:center 42%}
+.provider-card:nth-child(2) .provider-photo img{object-position:center 38%}
+.provider-card:nth-child(3) .provider-photo img{object-position:center 50%}
+.provider-card:nth-child(4) .provider-photo img{object-position:center 42%}
+.provider-card:nth-child(5) .provider-photo img{object-position:center 50%}
+.provider-card:nth-child(6) .provider-photo img{object-position:center 48%}
+.provider-photo{background:var(--pink)!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.monogram{height:auto;width:84px;aspect-ratio:1;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--berry);box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.provider-photo::after{content:'Photo coming soon';font-size:12px;font-weight:600;color:#181716}
+.p1{background:linear-gradient(145deg,#f1dce1,#f7ede5)}
+.p2{background:linear-gradient(145deg,#e3ece5,#f4ebe0)}
+.p3{background:linear-gradient(145deg,#f3e9c7,#f2dfe6)}
+.p4{background:linear-gradient(145deg,#e8e1ef,#f7ece6)}
+.p5{background:linear-gradient(145deg,#eadbd1,#f5ebe4)}
+.p6{background:linear-gradient(145deg,#dfe9e3,#f2e6da)}
+.featured-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);padding:6px 10px;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--berry);border:1px solid rgba(113,59,59,.18)}
+.provider-body{padding:20px}
+.provider-name{font-size:27px;line-height:1.05;margin-bottom:6px}
+.provider-role{font-size:12px;color:var(--muted);margin-bottom:9px}
+.credential{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#181716;margin-bottom:13px}
+.dotcheck{width:15px;height:15px;border-radius:50%;background:#181716;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px}
+.known{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;line-height:1.35;color:#181716;margin-bottom:13px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{font-size:10px;font-weight:700;background:#f6f1ef;padding:6px 8px;border-radius:999px;color:#181716}
+.view-link{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--berry);border-bottom:1px solid var(--berry);padding-bottom:2px}
+.empty{display:none;background:#fff;border:1px solid var(--line);padding:40px;margin-bottom:70px;text-align:center}
+.empty h3{font-size:30px;margin-bottom:8px}
+.empty p{color:var(--muted)}
+
+/* LOWER DISCOVERY */
+.browse-strip{margin-top:40px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.browse-grid{display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start}
+.browse-grid h2{font-size:42px;line-height:1.04}
+.browse-links{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+.browse-links a{padding:22px 0;border-bottom:1px solid var(--line);font-size:20px;font-weight:600;display:block}
+.browse-links a:hover{color:var(--berry)}
+
+/* FOOTER */
+.footer{padding:48px 0 26px}
+.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
+.footbrand{font-family:'Playfair Display',serif;font-size:31px;font-weight:600;margin-bottom:9px}
+.footdesc{font-size:12px;color:var(--muted);max-width:320px}
+.foottitle{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:12px}
+.footlinks{display:grid;gap:8px;font-size:12px;color:#181716}
+.footbottom{display:flex;justify-content:space-between;gap:25px;border-top:1px solid var(--line);margin-top:38px;padding-top:18px;font-size:10px;color:var(--muted)}
+
+@media(max-width:980px){
+  .treatment-strip{grid-template-columns:repeat(3,1fr)}
+  .toprow{grid-template-columns:1fr auto}.leftnote{display:none}
+  .search-grid{grid-template-columns:1fr 1fr}.search-action{min-height:50px}
+  .provider-grid{grid-template-columns:repeat(2,1fr)}
+  .browse-grid{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .treatment-strip{grid-template-columns:repeat(2,1fr)}
+  .treatment-card{min-height:180px}
+  .container{width:min(100% - 28px,var(--max))}
+  .toprow{height:auto;padding:16px 0;grid-template-columns:1fr}.actions{justify-content:flex-start}
+  .brand{font-size:30px}.nav{justify-content:flex-start;overflow:auto;white-space:nowrap;padding-bottom:12px}
+  .page-intro{padding-top:44px} h1{font-size:52px}
+  .search-grid{grid-template-columns:1fr}.provider-grid{grid-template-columns:1fr}
+  .provider-photo{height:420px}.browse-links{grid-template-columns:1fr}
+  .footgrid{grid-template-columns:1fr}.footbottom{display:block}
+}
+
+/* READABILITY OVERRIDE */
+body, p, li, label, input, select, button, a, span, div { color:#181716; }
+p, li, label, input, select { font-weight:500; }
+.intro-copy, .results-meta, .provider-role, .footdesc, .footlinks, .footbottom,
+.leftnote, .known, .chip { color:#181716 !important; }
+.results-meta, .provider-role, .footdesc, .footlinks, .footbottom, .leftnote { font-weight:600; }
+input::placeholder { color:#181716; opacity:.72; font-weight:500; }
+</style>
+<link href="https://beautyjar.com/providers.html" rel="canonical"/><link href="assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<header class="topbar">
+<div class="container toprow">
+<div class="leftnote">Aesthetic Provider Directory</div>
+<a class="brand" href="index.html">Beauty<span style="color:var(--berry)">J</span>ar</a>
+<div class="actions"><a class="btn btn-dark" href="providers.html">Find a Provider</a><a class="btn btn-primary" href="for-providers.html">List Your Practice</a></div>
+</div>
+<nav class="nav">
+<a class="active" href="providers.html">Find a Provider</a>
+<a href="treatments.html">Treatments</a>
+<a href="the-edit.html">The Edit</a>
+<a href="about.html">About</a>
+<a href="for-providers.html">For Providers</a>
+</nav>
+</header>
+<main>
+<section class="page-intro">
+<div class="container">
+<div class="eyebrow">BeautyJar</div>
+<h1>Find a Provider</h1>
+<p class="intro-copy">Search providers by treatment, specialty or location.</p>
+<div class="search-panel">
+<div class="search-grid single-search">
+<div class="field">
+<label>Search</label>
+<input id="searchText" placeholder="Search provider, treatment, specialty or city" type="text"/>
+</div>
+<button class="search-action" id="searchBtn" type="button">Search</button>
+</div>
+</div>
+<div aria-label="Popular treatments" class="treatment-discovery">
+<div class="treatment-strip">
+<a class="treatment-card" href="treatments.html#hair-restoration">
+<img alt="Hair restoration" height="1024" src="assets/images/hair-restoration-4eb63ed9148e.webp" width="1536"/>
+<span class="treatment-label">Hair Restoration</span>
+</a>
+<a class="treatment-card" href="treatments.html#injectables">
+<img alt="Injectables" decoding="async" height="1536" loading="lazy" src="assets/images/injectables-b1214a640f1b.webp" width="1024"/>
+<span class="treatment-label">Injectables</span>
+</a>
+<a class="treatment-card" href="treatments.html#skin-laser">
+<img alt="Skin and laser treatments" decoding="async" height="1529" loading="lazy" src="assets/images/skin-and-laser-treatments-ad7df75b9026.webp" width="1029"/>
+<span class="treatment-label">Skin + Laser</span>
+</a>
+<a class="treatment-card" href="treatments.html#aesthetic-recovery">
+<img alt="Lymphatic and post-procedure care" decoding="async" height="1535" loading="lazy" src="assets/images/lymphatic-and-post-procedure-care-04421686981e.webp" width="1025"/>
+<span class="treatment-label">Lymphatic + Post-Procedure</span>
+</a>
+</div>
+</div>
+<div class="results-head">
+<div>
+<div class="eyebrow">Providers</div>
+<h2>Sample provider profiles</h2>
+</div>
+<div class="results-meta"><span id="resultCount">4</span> providers shown</div>
+</div>
+<!-- Placeholder provider content for design/prototype use. Replace with recruited providers before publishing. -->
+<div class="provider-grid" id="providerGrid">
+<a class="provider-card" data-location="Washington, DC" data-name="Maya Ellis" data-treatment="Injectables Facial Balancing Botox Fillers" data-type="Nurse Practitioner" href="for-providers.html#apply">
+<div class="provider-photo">
+<div class="monogram">ME</div>
+<div class="featured-badge">Featured</div>
+</div>
+<div class="provider-body">
+<h3 class="provider-name">Maya Ellis, MSN, FNP-C</h3>
+<div class="provider-role">Injectables + Facial Balancing · Washington, DC</div>
+<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="known">Known for subtle facial balancing and a less-is-more approach.</div>
+<div class="chips"><span class="chip">Botox</span><span class="chip">Fillers</span><span class="chip">Facial Balancing</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+<a class="provider-card" data-location="Chicago, IL" data-name="Danielle Brooks" data-treatment="Skin + Laser Microneedling IPL Laser" data-type="Registered Nurse" href="providers.html">
+<div class="provider-photo p4"><div class="monogram">DB</div></div>
+<div class="provider-body">
+<h3 class="provider-name">Danielle Brooks, RN</h3>
+<div class="provider-role">Skin + Laser · Chicago, IL</div>
+<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="known">A skin-first approach to texture, tone and long-term maintenance.</div>
+<div class="chips"><span class="chip">Laser</span><span class="chip">Microneedling</span><span class="chip">Skin</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+<a class="provider-card" data-location="Los Angeles, CA" data-name="Priya Shah" data-treatment="Hair Restoration PRP Hair Loss" data-type="Physician" href="providers.html">
+<div class="provider-photo p5"><div class="monogram">PS</div></div>
+<div class="provider-body">
+<h3 class="provider-name">Priya Shah, MD</h3>
+<div class="provider-role">Hair Restoration · Los Angeles, CA</div>
+<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="known">Focused on helping women understand the why behind hair loss.</div>
+<div class="chips"><span class="chip">PRP</span><span class="chip">Hair Loss</span><span class="chip">Restoration</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+<a class="provider-card" data-location="Miami, FL" data-name="Lauren James" data-treatment="Injectables Skin Botox Fillers" data-type="Physician Assistant" href="providers.html">
+<div class="provider-photo p6"><div class="monogram">LJ</div></div>
+<div class="provider-body">
+<h3 class="provider-name">Lauren James, PA-C</h3>
+<div class="provider-role">Injectables + Skin · Miami, FL</div>
+<div class="credential"><span class="dotcheck">✓</span> Credential Checked</div>
+<div class="known">Natural-looking results with an eye for proportion and skin quality.</div>
+<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Fillers</span></div>
+<span class="view-link">View Profile</span>
+</div>
+</a>
+</div>
+<div class="empty" id="emptyState">
+<h3>No matches yet.</h3>
+<p>Try another treatment, specialty or location.</p>
+</div>
+</div>
+</section>
+<section class="browse-strip">
+<div class="container browse-grid">
+<div>
+<h2>Browse by Treatment</h2>
+</div>
+<div class="browse-links">
+<a href="treatments.html#injectables">Injectables + Facial Balancing →</a>
+<a href="treatments.html#skin-laser">Skin + Laser →</a>
+<a href="treatments.html#hair-restoration">Hair Restoration →</a>
+<a href="treatments.html#aesthetic-recovery">Body + Lymphatic Care →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footgrid">
+<div>
+<div class="footbrand">BeautyJar</div>
+<div class="footdesc">Aesthetic Provider Directory</div>
+</div>
+<div>
+<div class="foottitle">Discover</div>
+<div class="footlinks">
+<a href="providers.html">Find a Provider</a>
+<a href="treatments.html">Treatments</a>
+<a href="the-edit.html">The Edit</a>
+</div>
+</div>
+<div>
+<div class="foottitle">BeautyJar</div>
+<div class="footlinks">
+<a href="about.html">About</a>
+<a href="for-providers.html">For Providers</a>
+<a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a>
+</div>
+</div>
+<div>
+<div class="foottitle">Legal</div>
+<div class="footlinks">
+<a href="terms.html">Terms</a>
+<a href="privacy.html">Privacy</a>
+<a href="medical-disclaimer.html">Medical Disclaimer</a>
+</div>
+</div>
+</div>
+<div class="footbottom">
+<span>© 2026 BeautyJar · A Wenley Technologies LLC company.</span>
+<span>BeautyJar is a discovery and information platform. It does not provide medical advice or medical services.</span>
+</div>
+</div>
+</footer>
+<script>
+const cards = [...document.querySelectorAll('.provider-card')];
+const text = document.getElementById('searchText');
+const resultCount = document.getElementById('resultCount');
+const emptyState = document.getElementById('emptyState');
+
+function applyFilters(){
+  const q = text.value.trim().toLowerCase();
+  let shown = 0;
+
+  cards.forEach(card => {
+    const haystack = [
+      card.dataset.name,
+      card.dataset.location,
+      card.dataset.treatment,
+      card.dataset.type,
+      card.innerText
+    ].join(' ').toLowerCase();
+
+    const visible = !q || haystack.includes(q);
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+
+  resultCount.textContent = shown;
+  emptyState.style.display = shown ? 'none' : 'block';
+}
+
+const params = new URLSearchParams(window.location.search);
+const initialQuery = params.get('q') || params.get('specialty') || '';
+if (initialQuery) { text.value = initialQuery; applyFilters(); }
+
+document.getElementById('searchBtn').addEventListener('click', applyFilters);
+text.addEventListener('input', applyFilters);
+text.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') applyFilters();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beautyjar.com/sitemap.xml
+

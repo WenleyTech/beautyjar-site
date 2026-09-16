@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>About BeautyJar | Aesthetic Provider Directory</title>
+<meta content="BeautyJar is an aesthetic provider directory for finding providers and exploring treatments and services." name="description"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root{
+  --ink:#0b0b0b;
+  --paper:#ffffff;
+  --white:#ffffff;
+  --line:#dedede;
+  --berry:#8a4f5a;
+  --soft:#f7f7f7;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",Arial,sans-serif;
+  font-weight:500;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:auto;padding:0 42px}
+
+.eyebrow{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--berry);
+  margin-bottom:12px;
+}
+h1,h2,h3{font-family:"Playfair Display",serif;margin:0;font-weight:600}
+
+/* One hero. Everything beneath it steps down in scale. */
+.hero{
+  padding:68px 0 64px;
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:82px;
+  align-items:end;
+  border-bottom:1px solid var(--ink);
+}
+.hero h1{
+  font-size:clamp(48px,5.2vw,66px);
+  line-height:1.01;
+  letter-spacing:-.035em;
+  max-width:520px;
+}
+.hero-copy{
+  font-size:21px;
+  line-height:1.58;
+  font-weight:500;
+  margin:0;
+  max-width:760px;
+}
+
+/* Core editorial sections */
+.section{
+  padding:52px 0;
+  border-bottom:1px solid var(--line);
+}
+.section-grid{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:76px;
+}
+.section h2{
+  font-size:clamp(38px,3.7vw,48px);
+  line-height:1.05;
+  letter-spacing:-.025em;
+}
+.copy p{
+  font-size:18px;
+  line-height:1.68;
+  font-weight:500;
+  margin:0 0 18px;
+  max-width:780px;
+}
+.copy p:last-child{margin-bottom:0}
+.quote{
+  font-family:"Playfair Display",serif;
+  font-size:24px!important;
+  line-height:1.48!important;
+  font-weight:500!important;
+  margin-top:30px!important;
+  padding-top:24px!important;
+  border-top:1px solid var(--ink);
+}
+
+/* Standards */
+.values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.value{
+  border-right:1px solid var(--line);
+  padding:26px 26px 30px;
+  min-height:250px;
+}
+.value:last-child{border-right:0}
+.value .num{
+  font-size:12px;
+  font-weight:800;
+  color:var(--berry);
+  margin-bottom:30px;
+}
+.value h3{
+  font-size:27px;
+  line-height:1.16;
+  margin-bottom:14px;
+}
+.value p{
+  font-size:18px;
+  line-height:1.62;
+  font-weight:500;
+  margin:0;
+}
+
+/* Credential Check: visual trust anchor */
+.check-box{
+  background:var(--soft);
+  padding:38px 40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:42px;
+  border-top:4px solid var(--berry);
+}
+.check-box h3{font-size:28px;line-height:1.18;margin-bottom:16px}
+.check-box p{
+  font-size:18px;
+  line-height:1.65;
+  font-weight:500;
+  margin:0 0 16px;
+}
+.check-box .quote{
+  font-family:"DM Sans",Arial,sans-serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+  font-weight:500!important;
+  margin-top:18px!important;
+  padding-top:18px!important;
+  border-top:1px solid #cfc5bb;
+}
+
+/* Combined trust/resources section: deliberately smaller than narrative sections */
+.trust-resources{
+  padding:50px 0 54px;
+  border-bottom:1px solid var(--line);
+}
+.trust-resources-head{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:76px;
+  align-items:end;
+  margin-bottom:30px;
+}
+.trust-resources h2{
+  font-size:clamp(34px,3vw,42px);
+  line-height:1.06;
+  letter-spacing:-.02em;
+}
+.trust-resources-intro{
+  font-size:18px;
+  line-height:1.65;
+  font-weight:500;
+  margin:0;
+  max-width:780px;
+}
+.resource-block + .resource-block{margin-top:32px}
+.resource-label{
+  font-size:14px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:800;
+  color:var(--berry);
+  margin:0 0 14px;
+}
+.regions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.region{
+  background:#fff;
+  border:1px solid #d8d8d8;
+  padding:20px 21px;
+}
+.region h3{font-size:21px;line-height:1.15;margin-bottom:11px}
+.us-resources{grid-column:1/-1}
+.us-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0 28px;
+}
+.resource-group{
+  padding:12px 0;
+  border-top:1px solid var(--line);
+}
+.resource-group:nth-child(-n+3){border-top:0;padding-top:0}
+.resource-group h4{
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 7px;
+  font-weight:800;
+}
+.resource-note{
+  font-size:12px;
+  line-height:1.5;
+  font-weight:500;
+  display:inline-block;
+  margin-top:5px;
+}
+.region p{
+  font-size:15px;
+  line-height:1.7;
+  font-weight:600;
+  margin:0;
+}
+.region a,
+.source a{
+  text-decoration:none;
+  border-bottom:1px solid var(--ink);
+  text-underline-offset:2px;
+}
+.resource-footnote{
+  font-size:13px;
+  line-height:1.6;
+  font-weight:500;
+  margin:16px 0 0;
+}
+.sources{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.source{
+  background:#fff;
+  border:1px solid #d8d8d8;
+  padding:20px 21px;
+}
+.source h3{font-size:20px;line-height:1.15;margin-bottom:9px}
+.source p{font-size:15px;line-height:1.7;font-weight:600;margin:0}
+
+/* Quiet business legitimacy strip */
+.company-trust{
+  padding:34px 0;
+  border-bottom:1px solid var(--line);
+}
+.company-trust-grid{
+  display:grid;
+  grid-template-columns:1.25fr .85fr .9fr;
+  gap:34px;
+}
+.trust-item{
+  padding-top:14px;
+  border-top:1px solid var(--ink);
+}
+.trust-item .label{
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--berry);
+  font-weight:800;
+  margin-bottom:8px;
+}
+.trust-item p{
+  font-size:14px;
+  line-height:1.6;
+  font-weight:500;
+  margin:0;
+}
+
+/* Mission closes the page; it should not act like another hero */
+.mission{
+  padding:48px 0 52px;
+  text-align:center;
+}
+.mission h2{
+  max-width:780px;
+  margin:auto;
+  font-size:clamp(34px,3.6vw,46px);
+  line-height:1.08;
+  letter-spacing:-.025em;
+}
+.mission p{
+  max-width:700px;
+  margin:16px auto 0;
+  font-family:"Playfair Display",serif;
+  font-size:18px;
+  line-height:1.55;
+}
+footer{
+  padding:32px 0 42px;
+  border-top:1px solid var(--line);
+  font-size:11px;
+  font-weight:650;
+}
+.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .wrap{padding:0 22px}
+  .hero,.section-grid,.trust-resources-head,.company-trust-grid,.check-box{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .hero{padding:50px 0 48px}
+  .hero h1{font-size:48px}
+  .hero-copy{font-size:19px}
+  .section{padding:44px 0}
+  .section h2{font-size:39px}
+  .values,.regions,.sources,.us-grid{grid-template-columns:1fr}
+  .value{border-right:0;border-bottom:1px solid var(--line);min-height:auto}
+  .value:last-child{border-bottom:0}
+  .us-resources{grid-column:auto}
+  .resource-group:nth-child(-n+3){border-top:1px solid var(--line);padding-top:12px}
+  .resource-group:first-child{border-top:0;padding-top:0}
+}
+@media(max-width:820px){
+  .kicker{display:none}
+  .brand-row{grid-template-columns:1fr auto;height:74px}
+  .nav-row{height:auto;padding:14px 0;justify-content:flex-start;overflow:auto}
+}
+
+/* Leadership */
+.leadership{
+  padding:46px 0 48px;
+  border-bottom:1px solid var(--line);
+}
+.leadership-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:24px;
+}
+.leadership h2{
+  font-size:clamp(34px,3vw,42px);
+  line-height:1.06;
+  letter-spacing:-.02em;
+}
+.leadership-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.leader{
+  min-height:154px;
+  padding:25px 26px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  border-right:1px solid var(--line);
+}
+.leader:last-child{border-right:0}
+.leader-photo,.leader-placeholder{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  flex:0 0 88px;
+  overflow:hidden;
+  background:#f2f2f2;
+  border:1px solid #dedede;
+}
+.leader-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 20%;
+}
+.leader-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+  font-weight:600;
+  color:#0b0b0b;
+}
+.leader h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.25;
+  font-weight:800;
+  margin:0 0 5px;
+}
+.leader p{
+  margin:0;
+  font-size:14px;
+  line-height:1.45;
+  font-weight:500;
+}
+@media(max-width:900px){
+  .leadership{padding:42px 0}
+  .leadership-grid{grid-template-columns:1fr}
+  .leader{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    min-height:auto;
+  }
+  .leader:last-child{border-bottom:0}
+}
+
+
+/* Provider conversion */
+.provider-cta{
+  padding:72px 0 76px;
+  background:#0b0b0b;
+  color:#fff;
+  text-align:center;
+}
+.provider-cta-inner{
+  max-width:860px;
+  margin:0 auto;
+  padding:0 28px;
+}
+.provider-cta .eyebrow{
+  color:#d7a7a7;
+  margin-bottom:16px;
+}
+.provider-cta h2{
+  font-size:clamp(40px,4.4vw,58px);
+  line-height:1.05;
+  letter-spacing:-.03em;
+  max-width:760px;
+  margin:0 auto;
+}
+.provider-cta p{
+  max-width:690px;
+  margin:20px auto 0;
+  font-size:18px;
+  line-height:1.65;
+  font-weight:500;
+  color:#f0f0f0;
+}
+.provider-cta-button{
+  display:inline-block;
+  margin-top:28px;
+  padding:15px 24px;
+  background:#fff;
+  color:#0b0b0b;
+  border:1px solid #fff;
+  text-decoration:none;
+  font:800 12px "DM Sans",Arial,sans-serif;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.provider-cta-button:hover{
+  background:#0b0b0b;
+  color:#fff;
+}
+@media(max-width:900px){
+  .provider-cta{padding:58px 0 62px}
+  .provider-cta h2{font-size:42px}
+  .provider-cta p{font-size:17px}
+}
+/* Trust hierarchy refinement */
+#credential-check h2{font-size:clamp(34px,3.4vw,46px);line-height:1.06;}
+
+
+/* FINAL POLISH */
+.hero h1{font-size:48px!important;line-height:1.04!important;letter-spacing:-.025em!important}.hero-copy{font-size:20px!important;line-height:1.55!important}.provider-cta{padding:68px 0 72px!important}.provider-cta .eyebrow{font-size:16px!important;font-weight:800!important;letter-spacing:.09em!important;margin-bottom:15px!important}.provider-cta h2{font-size:clamp(40px,4vw,52px)!important;line-height:1.05!important}@media(max-width:900px){.hero h1{font-size:40px!important}.hero-copy{font-size:18px!important}.provider-cta .eyebrow{font-size:15px!important}.provider-cta h2{font-size:40px!important}}
+
+/* HEADER READABILITY */
+.kicker{
+  color:#0b0b0b !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:.015em !important;
+}
+
+/* REFINED ABOUT PAGE TYPE SCALE */
+.hero h1{font-size:42px!important;line-height:1.06!important;max-width:500px!important}
+.section h2{font-size:36px!important;line-height:1.08!important;letter-spacing:-.02em!important}
+#credential-check h2{font-size:36px!important;line-height:1.08!important}
+.trust-resources h2{font-size:36px!important;line-height:1.08!important}
+.trust-resources-intro{max-width:850px!important}
+.check-box h3{font-size:26px!important;line-height:1.2!important}
+.mission h2{font-size:36px!important;line-height:1.08!important}
+@media(max-width:900px){
+  .hero h1{font-size:36px!important}
+  .section h2,#credential-check h2,.trust-resources h2,.mission h2{font-size:32px!important}
+  .check-box h3{font-size:24px!important}
+}
+
+
+
+/* V24 — shared BeautyJar site chrome */
+.container{width:min(1240px,calc(100% - 52px));margin:0 auto}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e6e2dc}
+.toprow{height:66px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.brand{font-family:'Playfair Display',serif;font-size:35px;font-weight:600;letter-spacing:-.03em;text-decoration:none;color:#171717}
+.leftnote{font-size:14px!important;font-weight:800!important;letter-spacing:.01em!important;line-height:1.2!important;color:#171717!important;opacity:1!important}
+.actions{display:flex;justify-content:flex-end;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:.2s}
+.btn-primary{background:#171717!important;color:#fff!important;border:1px solid #171717!important}.btn-primary:hover{background:#000!important}
+.btn-featured{background:#713b3b!important;color:#fff!important;border:1px solid #713b3b!important}.btn-featured:hover{opacity:.9}
+.nav{display:flex;justify-content:center;gap:38px!important;padding:13px 0!important;border-top:1px solid #e6e2dc;background:#fff;font-size:16px!important;font-weight:800!important}
+.nav a{position:relative;padding:2px 0 7px;text-decoration:none;color:#171717!important;font-size:16px!important;font-weight:800!important;letter-spacing:.005em!important}
+.nav a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:#171717;transform:scaleX(0);transition:transform .2s ease}
+.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+footer#site-footer{padding:32px 0!important;background:#fff;border-top:1px solid #e6e2dc;font-size:12px}
+footer#site-footer .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+footer#site-footer .footer-brand{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:8px}
+footer#site-footer p,footer#site-footer a{font-size:12px;line-height:1.55;color:#171717!important;text-decoration:none}
+footer#site-footer .footer-links{display:flex;flex-direction:column;gap:8px}
+footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-weight:600!important}
+@media(max-width:700px){
+  .container{width:min(100% - 30px,1240px)}
+  .leftnote{display:none!important}
+  .toprow{grid-template-columns:1fr auto;height:62px}
+  .brand{justify-self:start}
+  .actions{gap:6px}
+  .actions .btn{font-size:9px;padding:0 10px;min-height:40px}
+  .nav{overflow-x:auto;justify-content:flex-start;padding-left:20px!important;padding-right:20px!important;white-space:nowrap;gap:22px!important}
+  .nav a{font-size:14px!important}
+  footer#site-footer .footer-grid{grid-template-columns:1fr}
+}
+
+/* About page final type-scale correction */
+.hero h1{font-size:36px!important;line-height:1.08!important;max-width:500px!important}
+@media(max-width:700px){.hero h1{font-size:34px!important}}
+</style>
+<meta content="About BeautyJar | Aesthetic Provider Directory" property="og:title"/>
+<meta content="BeautyJar is an aesthetic provider directory for finding providers and exploring treatments and services." property="og:description"/>
+<link href="https://beautyjar.com/about.html" rel="canonical"/><link href="assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<header class="topbar">
+<div class="container toprow">
+<div class="leftnote">Aesthetic Provider Directory</div>
+<a class="brand" href="index.html">Beauty<span style="color:var(--berry)">J</span>ar</a>
+<div class="actions">
+<a class="btn btn-primary" href="providers.html">Find a Provider</a>
+<a class="btn btn-featured" href="for-providers.html">List Your Practice</a>
+</div>
+</div>
+<nav class="nav">
+<a href="providers.html">Find a Provider</a>
+<a href="treatments.html">Treatments</a>
+<a href="the-edit.html">The Edit</a>
+<a aria-current="page" href="about.html">About</a>
+<a href="for-providers.html">For Providers</a>
+</nav>
+</header>
+<main class="wrap">
+<section class="hero">
+<div>
+<div class="eyebrow">About BeautyJar</div>
+<h1>You want to look good. We’ll help you find who can make that happen.</h1>
+</div>
+<p class="hero-copy">A directory for finding and researching aesthetic providers.</p>
+</section>
+<section class="section">
+<div class="section-grid">
+<div>
+<div class="eyebrow">Our Mission</div>
+<h2>Better information. Easier discovery.</h2>
+</div>
+<div class="copy">
+<p>BeautyJar was created to make the growing world of non-surgical aesthetics easier to navigate. From injectables and laser treatments to body contouring, hair restoration and aesthetic recovery, finding the right provider can be just as important as choosing the treatment itself.</p>
+<p>Our background in compliance shaped the way BeautyJar was built: present professional information clearly, check applicable credentials against recognized sources, and give consumers a thoughtful place to discover providers and research their options.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-grid">
+<div><div class="eyebrow">What You’ll Find</div><h2>A focused aesthetics directory.</h2></div>
+<div class="copy">
+<p>Explore providers and practices across five focused categories: Injectables, Skin + Laser, Body Contouring, Hair Restoration and Aesthetic Recovery. Compare specialties, review professional background, learn about treatments and connect directly with providers in the US and globally.</p>
+</div>
+</div>
+</section>
+<section class="section" id="credential-check">
+<div class="section-grid">
+<div>
+<div class="eyebrow">Credential Checked</div>
+<h2>What “Credential Checked” means.</h2>
+</div>
+<div class="check-box">
+<div>
+<h3>1. Credential verification</h3>
+<p>Before publishing, we check applicable credentials against the right licensing or registration source for that provider.</p>
+</div>
+<div>
+<h3>2. Clear credential status</h3>
+<p>We confirm information at the time it’s reviewed. This does not rank clinical skill, guarantee outcomes, or determine fit for any individual.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="trust-resources">
+<div class="trust-resources-head">
+<div>
+<div class="eyebrow">Credential + Research Sources</div>
+<h2>The governing bodies behind the checks.</h2>
+</div>
+<p class="trust-resources-intro">Credentialing rules vary by profession and location. BeautyJar references recognized licensing, registration and professional bodies appropriate to the provider and jurisdiction. We keep these sources visible so consumers can understand where credential information comes from.</p>
+</div>
+<div class="resource-block">
+<div class="resource-label">Professional credential sources</div>
+<div class="regions">
+<div class="region us-resources"><h3>United States</h3><div class="us-grid">
+<div class="resource-group">
+<h4>Physicians</h4>
+<p>
+<a href="https://www.fsmb.org/contact-a-state-medical-board/" target="_blank">State Medical Boards — FSMB</a><br/>
+<a href="https://www.certificationmatters.org/" target="_blank">ABMS Certification Matters</a><br/>
+<a href="https://find-doctor.ama-assn.org/" target="_blank">AMA DoctorFinder</a>
+</p>
+</div>
+<div class="resource-group">
+<h4>Nurse Practitioners + Registered Nurses</h4>
+<p>
+<a href="https://www.nursys.com/" target="_blank">Nursys — RN/APRN Licensure</a><br/>
+<a href="https://www.aanpcert.org/verify/verfication-for-the-general-public/" target="_blank">AANPCB — NP Certification</a><br/>
+<a href="https://www.ncsbn.org/membership/us-members/contact-bon.page" target="_blank">State Boards of Nursing — NCSBN</a>
+</p>
+</div>
+<div class="resource-group">
+<h4>Physician Assistants / Associates</h4>
+<p>
+<a href="https://portal.nccpa.net/verifypac" target="_blank">NCCPA — Verify PA-C</a><br/>
+<a href="https://www.aapa.org/" target="_blank">AAPA — Professional Resource</a><br/>
+<span class="resource-note">State licensure is checked through the applicable state licensing board.</span>
+</p>
+</div>
+<div class="resource-group">
+<h4>Estheticians + Cosmetology Professionals</h4>
+<p>
+<span class="resource-note">Licensure and scope of practice are regulated at the state level. BeautyJar references the applicable state cosmetology, esthetics or professional licensing authority based on the provider’s location and services.</span>
+</p>
+</div>
+<div class="resource-group">
+<h4>Laser + Energy-Based Treatment Providers</h4>
+<p>
+<a href="https://www.tdlr.texas.gov/las/las.htm" target="_blank">Texas — Laser Hair Removal, TDLR</a><br/>
+<span class="resource-note">Requirements vary by state and treatment. Depending on the jurisdiction, BeautyJar may reference medical, nursing, cosmetology or esthetics boards, radiation-control agencies, or laser-specific licensing authorities.</span>
+</p>
+</div>
+<div class="resource-group">
+<h4>National Provider Identity</h4>
+<p>
+<a href="https://npiregistry.cms.hhs.gov/" target="_blank">NPI Registry — CMS</a><br/>
+<span class="resource-note">An NPI identifies a health care provider. It does not, by itself, establish licensure or credentialing.</span>
+</p>
+</div>
+</div></div>
+<div class="region"><h3>United Kingdom</h3><p>
+<a href="https://www.gmc-uk.org/registration-and-licensing/our-registers" target="_blank">General Medical Council</a><br/>
+<a href="https://www.nmc.org.uk/registration/search-the-register/" target="_blank">Nursing &amp; Midwifery Council</a><br/>
+<a href="https://www.gdc-uk.org/registration/registration-information/check-the-register" target="_blank">General Dental Council</a><br/>
+<a href="https://www.hcpc-uk.org/check-the-register/" target="_blank">Health &amp; Care Professions Council</a>
+</p></div>
+<div class="region"><h3>Canada</h3><p>
+<a href="https://www.cpsbc.ca/public/registrant-directory" target="_blank">College of Physicians &amp; Surgeons of BC</a><br/>
+<a href="https://register.cpso.on.ca/" target="_blank">College of Physicians &amp; Surgeons of Ontario</a><br/>
+<a href="https://www.cno.org/public-register" target="_blank">College of Nurses of Ontario</a><br/>
+<a href="https://physiciansapply.ca/" target="_blank">physiciansapply.ca</a>
+</p></div>
+<div class="region"><h3>Australia</h3><p>
+<a href="https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx" target="_blank">Ahpra Practitioner Register</a><br/>
+<a href="https://www.amc.org.au/" target="_blank">Australian Medical Council</a><br/>
+<a href="https://www.medicalboard.gov.au/" target="_blank">Medical Board of Australia</a><br/>
+<a href="https://www.nursingmidwiferyboard.gov.au/" target="_blank">Nursing &amp; Midwifery Board</a>
+</p></div>
+<div class="region"><h3>Latin America</h3><p>
+<a href="https://cedulaprofesional.sep.gob.mx/" target="_blank">Mexico — Registro Nacional de Profesionistas</a><br/>
+<a href="https://portal.cfm.org.br/" target="_blank">Brazil — Conselho Federal de Medicina</a><br/>
+<a href="https://rethus.minsalud.gov.co/" target="_blank">Colombia — ReTHUS</a><br/>
+<a href="https://www.argentina.gob.ar/salud/registro-nacional-de-prestadores" target="_blank">Argentina — Registro Nacional de Prestadores</a><br/>
+<a href="https://rnpi.superdesalud.gob.cl/" target="_blank">Chile — Registro Nacional de Prestadores</a><br/>
+<a href="https://www.cmp.org.pe/" target="_blank">Peru — Colegio Médico del Perú</a>
+</p></div>
+<div class="region"><h3>Caribbean</h3><p>
+<a href="https://www.moh.gov.jm/medical-council-of-jamaica/" target="_blank">Medical Council of Jamaica</a><br/>
+<a href="https://www.ncj.org.jm/" target="_blank">Nursing Council of Jamaica</a><br/>
+<a href="https://mbtt.org/" target="_blank">Medical Board of Trinidad and Tobago</a><br/>
+<a href="https://www.nursingcounciltt.org/" target="_blank">Nursing Council of Trinidad and Tobago</a><br/>
+<a href="https://bahamasmedicalcouncil.org/" target="_blank">Bahamas Medical Council</a><br/>
+<a href="https://www.barbadosmedicalcouncil.com/" target="_blank">Barbados Medical Council</a><br/>
+<a href="https://medicos.pr.gov/" target="_blank">Puerto Rico Medical Licensing Board</a>
+</p></div>
+<div class="region"><h3>Africa</h3><p>
+<a href="https://mdcghana.org/" target="_blank">Ghana — Medical &amp; Dental Council</a><br/>
+<a href="https://www.nmc.gov.gh/" target="_blank">Ghana — Nursing &amp; Midwifery Council</a><br/>
+<a href="https://kmpdc.go.ke/" target="_blank">Kenya — Medical Practitioners &amp; Dentists Council</a><br/>
+<a href="https://nckenya.com/" target="_blank">Kenya — Nursing Council</a><br/>
+<a href="https://www.mdcn.gov.ng/" target="_blank">Nigeria — Medical &amp; Dental Council</a><br/>
+<a href="https://www.nmcn.gov.ng/" target="_blank">Nigeria — Nursing &amp; Midwifery Council</a><br/>
+<a href="https://www.hpcsa.co.za/" target="_blank">South Africa — Health Professions Council</a><br/>
+<a href="https://www.sanc.co.za/" target="_blank">South Africa — Nursing Council</a>
+</p></div>
+<div class="region"><h3>Asia</h3><p>
+<a href="https://www.mchk.org.hk/" target="_blank">Hong Kong — Medical Council</a><br/>
+<a href="https://www.hkam.org.hk/" target="_blank">Hong Kong Academy of Medicine</a><br/>
+<a href="https://www.mhlw.go.jp/english/" target="_blank">Japan — Ministry of Health, Labour and Welfare</a><br/>
+<a href="https://www.med.or.jp/english/" target="_blank">Japan Medical Association</a><br/>
+<a href="https://www.mohw.go.kr/eng/" target="_blank">South Korea — Ministry of Health and Welfare</a><br/>
+<a href="https://www.kma.org/" target="_blank">Korean Medical Association</a><br/>
+<a href="https://www.smc.gov.sg/" target="_blank">Singapore Medical Council</a><br/>
+<a href="https://www.snb.gov.sg/" target="_blank">Singapore Nursing Board</a>
+</p></div>
+</div>
+<p class="resource-footnote">Regulatory systems vary by country and profession. BeautyJar references recognized licensing and professional bodies appropriate to the provider and jurisdiction.</p>
+</div>
+<div class="resource-block">
+<div class="resource-label">Research + clinical sources</div>
+<div class="sources">
+<div class="source"><h3>Government + Research</h3><p>
+<a href="https://www.fda.gov/" target="_blank">U.S. Food &amp; Drug Administration</a><br/>
+<a href="https://www.nih.gov/" target="_blank">National Institutes of Health</a><br/>
+<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a><br/>
+<a href="https://clinicaltrials.gov/" target="_blank">ClinicalTrials.gov</a>
+</p></div>
+</div>
+</div></section>
+<section class="section">
+<div class="section-grid">
+<div>
+<div class="eyebrow">The Edit + Editorial Standards</div>
+<h2>Research before the appointment.</h2>
+</div>
+<div class="copy">
+<p>BeautyJar uses established medical, regulatory and professional sources when researching treatment content for The Edit. Our articles are designed to help readers understand aesthetic treatments, terminology and questions to consider before connecting with a provider.</p>
+</div>
+</div>
+</section>
+<section class="leadership">
+<div class="leadership-head">
+<div>
+<div class="eyebrow">The People Behind BeautyJar</div>
+<h2>Leadership</h2>
+</div>
+</div>
+<div class="leadership-grid">
+<div class="leader">
+<div class="leader-photo"><img alt="Ruby Osei" height="1440" src="assets/images/ruby-osei-78c2a7bb933f.webp" width="1070"/></div>
+<div>
+<h3>Ruby Osei</h3>
+<p>Director of Compliance</p>
+</div>
+</div>
+<div class="leader">
+<div class="leader-photo"><img alt="Kaitlyn Williams" decoding="async" height="1608" loading="lazy" src="assets/images/kaitlyn-williams-414cb977a802.webp" width="1179"/></div>
+<div>
+<h3>Kaitlyn Williams</h3>
+<p>Provider Relationship Specialist</p>
+</div>
+</div>
+<div class="leader">
+<div aria-label="John Lawson photo placeholder" class="leader-placeholder">JL</div>
+<div>
+<h3>John Lawson</h3>
+<p>CEO</p>
+</div>
+</div>
+</div>
+</section>
+<section class="provider-cta" id="provider-interest">
+<div class="provider-cta-inner">
+<div class="eyebrow">For Providers</div>
+<h2>Join BeautyJar.</h2>
+<p>BeautyJar helps aesthetic professionals and practices make their specialties, professional background and services easier to discover.</p>
+<a class="provider-cta-button" href="for-providers.html">Explore BeautyJar for Providers</a>
+</div>
+</section>
+<section class="mission">
+<div class="eyebrow">Our Mission</div>
+<h2>Focused on better aesthetic discovery.</h2>
+<p>BeautyJar is a Wenley Technologies LLC property, built to connect people with the right aesthetic providers.</p>
+</section>
+</main>
+<footer id="site-footer"><div class="container footer-grid"><div><div class="footer-brand">BeautyJar</div><p>Aesthetic provider discovery.</p><p class="footer-owner">© 2026 Wenley Technologies LLC. All rights reserved.</p></div><div class="footer-links"><a href="providers.html">Find a Provider</a><a href="treatments.html">Treatments</a><a href="the-edit.html">The Edit</a><a href="for-providers.html">For Providers</a></div><div class="footer-links"><a href="about.html">About</a><a href="about.html#credential-check">Provider Standards</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:hello@beautyjar.com">Contact</a><p style="margin-top:8px;font-size:11px;color:#0b0b0b;font-weight:500">Professional information is supplied by providers. Consumers should independently confirm licensure and suitability before receiving medical services.</p></div></div></footer>
+</body>
+</html>

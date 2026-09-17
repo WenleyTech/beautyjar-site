@@ -146,6 +146,20 @@ p, li, label, input, select { font-weight:500; }
 .results-meta, .provider-role, .footdesc, .footlinks, .footbottom, .leftnote { font-weight:600; }
 input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </style>
+<style id="heading-size-correction">
+/* Match the restrained heading scale used on the About page. */
+.page-intro h1,
+.results-head h2,
+.browse-grid h2{
+  font-size:36px!important;
+  line-height:1.08!important;
+  letter-spacing:-.02em!important;
+}
+@media(max-width:700px){
+  .page-intro h1{font-size:34px!important}
+  .results-head h2,.browse-grid h2{font-size:32px!important}
+}
+</style>
 <link href="https://beautyjar.com/providers.html" rel="canonical"/><link href="assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
 <header class="topbar">

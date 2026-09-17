@@ -1,9 +1,177 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Dr. Abby Sample | BeautyJar Profile</title><link rel="icon" href="assets/images/beautyjar-icon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/provider-profile.css"></head><body>
-<header class="top"><div class="wrap toprow"><div class="kicker">Aesthetic Provider Directory</div><a class="logo" href="index.html">Beauty<span class="berry-j">J</span>ar</a><div class="toplinks"><a class="btn" href="providers.html">Find a Provider</a><a class="btn berry" href="for-providers.html">List Your Practice</a></div></div><nav><a href="index.html">Home</a><a href="providers.html">Find a Provider</a><a href="treatments.html">Treatments</a><a href="the-edit.html">The Edit</a><a href="about.html">About</a><a href="for-providers.html">For Providers</a></nav></header>
-<div class="samplebar">Sample BeautyJar Profile</div><main>
-<section class="hero"><div class="portrait"><img src="assets/images/dr-abby-sample-provider-27de4f1a9da1.webp" alt="Dr. Abby Sample"></div><div class="hero-copy"><div class="tier">BeautyJar Profile</div><h1>Dr. Abby Sample, MD, FAAD</h1><div class="role">Dermatology + Aesthetics</div><div class="location">Bethesda, Maryland</div><p class="lede">Skin health, laser treatments and cosmetic dermatology with natural-looking results in mind.</p><div class="actions"><a class="btn berry" href="#practice">Practice Details</a><a class="btn" href="spotlight-abby-sample.html">View Spotlight</a></div></div></section>
-<section class="section"><div class="wrap grid"><div><div class="eyebrow">About Dr. Abby</div><h2>Thoughtful plans for clearer, healthier-looking skin.</h2></div><div class="copy"><p>Dr. Abby Sample is a board-certified dermatologist and founder of Sample Dermatology &amp; Aesthetics in Bethesda. Her practice focuses on skin health, laser treatments and cosmetic dermatology.</p><p>She works with patients seeking thoughtful treatment plans, clearer skin and natural-looking aesthetic results.</p></div></div></section>
-<section class="section"><div class="wrap"><div class="eyebrow">Professional focus</div><div class="services"><article class="service"><h3>Skin Health</h3><p>Personalized plans for tone, texture and long-term maintenance.</p></article><article class="service"><h3>Laser Treatments</h3><p>Device-based options selected around skin history and individual goals.</p></article><article class="service"><h3>Cosmetic Dermatology</h3><p>A measured approach to injectables and aesthetic treatments.</p></article></div></div></section>
-<section class="section"><div class="wrap grid"><div><div class="eyebrow">Background</div><h2>Education + credentials</h2></div><ul class="credentials"><li>MD — Emory University School of Medicine</li><li>Dermatology Residency — Emory University</li><li>Board-Certified Dermatologist (FAAD)</li><li>Active Medical License — Maryland</li><li>American Academy of Dermatology (AAD)</li></ul></div></section>
-<section class="section" id="practice"><div class="wrap"><div class="eyebrow">At her practice</div><div class="details"><div class="detail"><b>Practice</b>Sample Dermatology &amp; Aesthetics</div><div class="detail"><b>Location</b>Bethesda, Maryland</div><div class="detail"><b>Connect</b>sampledermatology.com · @samplederm</div></div><p class="notice" style="margin-top:28px">Sample provider and practice information shown for demonstration.</p></div></section></main>
-<footer><div class="wrap foot"><span>© 2026 BeautyJar · Wenley Technologies LLC</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Abby Sample, MD, FAAD | BeautyJar Profile</title>
+<meta name="description" content="Sample BeautyJar Profile for Dr. Abby Sample.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+:root{--ink:#181716;--paper:#faf8f4;--line:#ded9d2;--berry:#713b3b;--cream:#f0ebe2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:auto;padding:0 42px}
+header{background:#fffdfa;border-bottom:1px solid var(--line)}
+.brand-row{height:92px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}
+.kicker{font-weight:600;font-size:14px;letter-spacing:.02em}
+.logo{font-family:"Playfair Display",serif;font-size:42px;font-weight:600}
+.nav-row{height:68px;display:flex;align-items:center;justify-content:center}
+nav{display:flex;justify-content:center;gap:40px;font-weight:700;font-size:16px}
+.crumbs{font-size:13px;padding:20px 0;color:#2c2926}
+
+.hero{display:grid;grid-template-columns:430px 1fr;gap:44px;align-items:center;padding:12px 0 38px;border-bottom:1px solid var(--line)}
+.hero-img{height:460px;background:white;border:1px solid var(--line);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+h1,h2,h3{font-family:"Playfair Display",serif;margin:0}
+h1{font-size:48px;line-height:1.03;margin:0 0 9px}
+.sub{font-size:20px;margin-bottom:8px}
+.place{font-size:16px;font-weight:500;margin-bottom:24px}
+.tags{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 27px}
+.tag{border:1px solid #cfc7bc;border-radius:50px;padding:9px 15px;font-weight:600}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 22px;border:1px solid var(--ink);font-weight:700;display:inline-block}
+.btn.primary{background:var(--ink);color:white}
+.links{margin-top:20px;font-size:14px;display:flex;gap:22px;flex-wrap:wrap}
+
+.content{display:grid;grid-template-columns:1.55fr .85fr;gap:38px;padding:36px 0}
+section{padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+h2{font-size:30px;margin-bottom:14px}
+p{font-size:16px;line-height:1.68;margin:0 0 14px}
+
+.treatments{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.treatment{height:170px;position:relative;overflow:hidden;background:#ddd}
+.treatment img{width:100%;height:100%;object-fit:cover}
+.treatment:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.treatment b{position:absolute;z-index:2;left:14px;bottom:13px;color:#fff;font-size:18px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gallery img{width:100%;height:165px;object-fit:cover}
+
+.cred ul{list-style:none;padding:0;margin:0}
+.cred li{padding:9px 0;border-bottom:1px solid #e7e1d9;font-size:14px}
+.check{background:#f2ede5;padding:22px;margin-top:20px}
+.check h3{font-size:21px;margin-bottom:9px}
+.practice-card{background:#fff;border:1px solid var(--line);padding:22px}
+.practice-card p{font-size:14px}
+.cta{margin:0 0 50px;background:#eee8df;padding:27px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cta h3{font-size:24px}
+.fine{font-size:12px;line-height:1.5}
+footer{border-top:1px solid var(--line);padding:30px 0 45px;font-size:12px}
+.sample{position:fixed;right:18px;bottom:18px;background:#713b3b;color:#fff;padding:9px 13px;font-size:11px;font-weight:700;letter-spacing:.04em;z-index:10}
+@media(max-width:800px){
+ .wrap{padding:0 20px}
+ .brand-row{grid-template-columns:1fr auto;height:82px} .kicker{display:none}
+ .nav-row{height:auto;padding:14px 0} .nav-row nav{gap:18px;overflow-x:auto;justify-content:flex-start;padding:0 20px;font-size:13px}
+ .hero,.content{grid-template-columns:1fr}
+ .hero-img{height:420px}
+ h1{font-size:40px}
+ .treatments,.gallery{grid-template-columns:1fr}
+ .cta{align-items:flex-start;flex-direction:column}
+}
+.topbtns{display:flex;gap:10px;justify-content:flex-end}
+.topbtn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);border:1px solid var(--ink);text-decoration:none;color:#fff}
+.topbtn.fill{background:var(--berry);border-color:var(--berry);color:#fff}
+</style>
+</head>
+<body>
+<div class="sample">SAMPLE PROFILE</div>
+
+<header>
+  <div class="wrap brand-row">
+    <div class="kicker">Aesthetic Provider Directory</div>
+    <a class="logo" href="index.html">BeautyJar</a>
+    <div class="topbtns"><a class="topbtn" href="providers.html">Find a Provider</a><a class="topbtn fill" href="for-providers.html">List Your Practice</a></div>
+  </div>
+  <div class="nav-row">
+    <nav>
+      <a href="providers.html">Find a Provider</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="the-edit.html">The Edit</a>
+      <a href="about.html">About</a>
+      <a href="for-providers.html">For Providers</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumbs"><a href="providers.html">Find a Provider</a> &nbsp;›&nbsp; Maryland &nbsp;›&nbsp; Bethesda &nbsp;›&nbsp; Dr. Abby Sample</div>
+
+  <div class="hero">
+    <div class="hero-img"><img src="assets/images/beautyjar-embedded-b0587eb318876d4e.png" alt="Dr. Abby Sample"></div>
+    <div>
+      <h1>Dr. Abby Sample, MD, FAAD</h1>
+      <div class="sub">Board-Certified Dermatologist</div>
+      <div class="place">Sample Dermatology &amp; Aesthetics · Bethesda, Maryland</div>
+      <div class="tags"><span class="tag">Skin</span><span class="tag">Lasers</span><span class="tag">Injectables</span></div>
+      <div class="buttons">
+        <a class="btn primary" href="#booking">Book with Dr. Abby</a>
+        <a class="btn" href="#practice">Visit Practice ↗</a>
+      </div>
+      <div class="links"><span>sampledermatology.com</span><span>@samplederm</span></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div>
+      <section>
+        <h2>About Dr. Abby</h2>
+        <p>Dr. Abby Sample is a board-certified dermatologist and founder of Sample Dermatology &amp; Aesthetics in Bethesda. Her practice focuses on skin health, laser treatments and cosmetic dermatology.</p>
+        <p>She works with patients seeking thoughtful treatment plans, clearer skin and natural-looking aesthetic results.</p>
+      </section>
+
+      <section>
+        <h2>Treatments</h2>
+        <div class="treatments">
+          <div class="treatment"><img src="assets/images/beautyjar-embedded-24bc306b2f82830c.webp" alt=""><b>Skin Treatments</b></div>
+          <div class="treatment"><img src="assets/images/beautyjar-embedded-840acfdec125fefb.png" alt=""><b>Laser Treatments</b></div>
+          <div class="treatment"><img src="assets/images/beautyjar-embedded-b1214a640f1bd928.png" alt=""><b>Injectables</b></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="assets/images/beautyjar-embedded-24bc306b2f82830c.webp" alt="">
+          <img src="assets/images/beautyjar-embedded-840acfdec125fefb.png" alt="">
+          <img src="assets/images/beautyjar-embedded-b1214a640f1bd928.png" alt="">
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="cred">
+        <h2>Education + Credentials</h2>
+        <ul>
+          <li>MD — Emory University School of Medicine</li>
+          <li>Dermatology Residency — Emory University</li>
+          <li>Board-Certified Dermatologist (FAAD)</li>
+          <li>Active Medical License — Georgia</li>
+          <li>American Academy of Dermatology (AAD)</li>
+        </ul>
+        <div class="check">
+          <h3>Credential Check ✓</h3>
+          <p>Selected professional credentials reported by the provider are checked against appropriate public licensing or registration sources before publication on BeautyJar.</p>
+          <div class="fine">Credential Check does not constitute an endorsement or an assessment of treatment quality, competence or suitability.</div>
+        </div>
+      </section>
+
+      <section id="practice">
+        <h2>At Her Practice</h2>
+        <div class="practice-card">
+          <p><b>Sample Dermatology &amp; Aesthetics</b><br>Bethesda, Maryland</p>
+          <p>sampledermatology.com<br>@samplederm</p>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="cta" id="booking">
+    <div><h3>Book with Dr. Abby</h3><p style="margin:5px 0 0">Visit her practice to request an appointment.</p></div>
+    <a class="btn primary" href="#">Book appointment</a>
+  </div>
+</main>
+
+<footer><div class="wrap">BeautyJar is a discovery and information platform. It does not provide medical advice or medical services. · Sample provider content is for demonstration only.</div></footer>
+</body>
+</html>

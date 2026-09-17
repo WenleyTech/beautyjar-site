@@ -81,6 +81,7 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 .provider-photo{background:var(--pink)!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
 .monogram{height:auto;width:84px;aspect-ratio:1;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--berry);box-shadow:0 4px 14px rgba(0,0,0,.07)}
 .provider-photo::after{content:'Photo coming soon';font-size:12px;font-weight:600;color:#181716}
+.provider-photo:has(img)::after{content:none}.provider-photo:has(img){background:#fff!important}
 .p1{background:linear-gradient(145deg,#f1dce1,#f7ede5)}
 .p2{background:linear-gradient(145deg,#e3ece5,#f4ebe0)}
 .p3{background:linear-gradient(145deg,#f3e9c7,#f2dfe6)}
@@ -204,77 +205,76 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 <div class="results-meta"><span id="resultCount">6</span> providers shown</div>
 </div>
-<!-- Placeholder provider content for design/prototype use. Replace with recruited providers before publishing. -->
+<!-- Sample provider content for design/prototype use. Replace with recruited providers before publishing. -->
 <div class="provider-grid" id="providerGrid">
-<a class="provider-card" data-location="Washington, DC" data-name="Maya Ellis" data-treatment="Injectables Facial Balancing Botox Fillers" data-type="Nurse Practitioner" href="for-providers.html#apply">
-<div class="provider-photo">
-<div class="monogram">ME</div>
+<a class="provider-card" data-location="Atlanta, GA" data-name="Amara Bennett" data-treatment="Injectables Skin Rejuvenation Wellness" data-type="Nurse Practitioner" href="profile-amara-bennett.html">
+<div class="provider-photo"><img alt="Amara Bennett" src="assets/images/amara-bennett-sample-provider-03027c95b46b.webp">
 <div class="featured-badge">Featured</div>
 </div>
 <div class="provider-body">
-<h3 class="provider-name">Maya Ellis, MSN, FNP-C</h3>
-<div class="provider-role">Injectables + Facial Balancing · Washington, DC</div>
+<h3 class="provider-name">Amara Bennett, DNP, FNP-C</h3>
+<div class="provider-role">Aesthetic Medicine &amp; Wellness · Atlanta, GA</div>
 <div class="credential">Sample profile</div>
-<div class="known">Known for subtle facial balancing and a less-is-more approach.</div>
-<div class="chips"><span class="chip">Botox</span><span class="chip">Fillers</span><span class="chip">Facial Balancing</span></div>
+<div class="known">Individualized aesthetic and skin-focused care with natural-looking results.</div>
+<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Wellness</span></div>
 <span class="view-link">View Profile</span>
 </div>
 </a>
-<a class="provider-card" data-location="Chicago, IL" data-name="Danielle Brooks" data-treatment="Skin + Laser Microneedling IPL Laser" data-type="Registered Nurse" href="providers.html">
-<div class="provider-photo p4"><div class="monogram">DB</div></div>
+<a class="provider-card" data-location="Bethesda, MD" data-name="Abby Sample" data-treatment="Skin Laser Injectables Dermatology" data-type="Physician" href="profile-abby-sample.html">
+<div class="provider-photo"><img alt="Dr. Abby Sample" src="assets/images/dr-abby-sample-provider-27de4f1a9da1.webp"></div>
 <div class="provider-body">
-<h3 class="provider-name">Danielle Brooks, RN</h3>
-<div class="provider-role">Skin + Laser · Chicago, IL</div>
+<h3 class="provider-name">Dr. Abby Sample, MD, FAAD</h3>
+<div class="provider-role">Dermatology + Aesthetics · Bethesda, MD</div>
 <div class="credential">Sample profile</div>
-<div class="known">A skin-first approach to texture, tone and long-term maintenance.</div>
-<div class="chips"><span class="chip">Laser</span><span class="chip">Microneedling</span><span class="chip">Skin</span></div>
+<div class="known">Thoughtful plans for clearer skin and natural-looking aesthetic results.</div>
+<div class="chips"><span class="chip">Skin</span><span class="chip">Laser</span><span class="chip">Injectables</span></div>
 <span class="view-link">View Profile</span>
 </div>
 </a>
-<a class="provider-card" data-location="Los Angeles, CA" data-name="Priya Shah" data-treatment="Hair Restoration PRP Hair Loss" data-type="Physician" href="providers.html">
-<div class="provider-photo p5"><div class="monogram">PS</div></div>
+<a class="provider-card" data-location="Chicago, IL" data-name="David Chen" data-treatment="Hair Restoration PRP Scalp Health" data-type="Physician Assistant" href="spotlight-david-chen.html">
+<div class="provider-photo"><img alt="David Chen" src="assets/images/david-chen-sample-provider-2b770d1fb8ea.webp"></div>
 <div class="provider-body">
-<h3 class="provider-name">Priya Shah, MD</h3>
-<div class="provider-role">Hair Restoration · Los Angeles, CA</div>
-<div class="credential">Sample profile</div>
-<div class="known">Focused on helping women understand the why behind hair loss.</div>
-<div class="chips"><span class="chip">PRP</span><span class="chip">Hair Loss</span><span class="chip">Restoration</span></div>
-<span class="view-link">View Profile</span>
+<h3 class="provider-name">David Chen, PA-C</h3>
+<div class="provider-role">Hair Restoration + Scalp Health · Chicago, IL</div>
+<div class="credential">Sample spotlight</div>
+<div class="known">A diagnostic-first approach to thinning, hair loss and restoration.</div>
+<div class="chips"><span class="chip">PRP</span><span class="chip">Hair Loss</span><span class="chip">Scalp Health</span></div>
+<span class="view-link">View Spotlight</span>
 </div>
 </a>
-<a class="provider-card" data-location="Miami, FL" data-name="Lauren James" data-treatment="Injectables Skin Botox Fillers" data-type="Physician Assistant" href="providers.html">
-<div class="provider-photo p6"><div class="monogram">LJ</div></div>
+<a class="provider-card" data-location="New York, NY" data-name="Kaan Demir" data-treatment="Hair Restoration Hair Transplant Alopecia" data-type="Physician" href="spotlight-kaan-demir.html">
+<div class="provider-photo"><img alt="Dr. Kaan Demir" src="assets/images/dr-kaan-demir-md-1434f4ff55a1.webp"></div>
 <div class="provider-body">
-<h3 class="provider-name">Lauren James, PA-C</h3>
-<div class="provider-role">Injectables + Skin · Miami, FL</div>
-<div class="credential">Sample profile</div>
-<div class="known">Natural-looking results with an eye for proportion and skin quality.</div>
-<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Fillers</span></div>
-<span class="view-link">View Profile</span>
+<h3 class="provider-name">Dr. Kaan Demir, MD</h3>
+<div class="provider-role">Hair Restoration Surgery · New York, NY</div>
+<div class="credential">Sample spotlight</div>
+<div class="known">Hair-loss diagnosis and restoration planning with a focus on women.</div>
+<div class="chips"><span class="chip">Hair Transplant</span><span class="chip">Alopecia</span><span class="chip">Hair Loss</span></div>
+<span class="view-link">View Spotlight</span>
 </div>
 </a>
-<a class="provider-card" data-location="Austin, TX" data-name="Sofia Ramirez" data-treatment="Body Contouring Aesthetic Recovery Skin Tightening" data-type="Nurse Practitioner" href="providers.html">
-<div class="provider-photo p2"><div class="monogram">SR</div></div>
+<article class="provider-card" data-location="Washington, DC" data-name="Yemi Ellis" data-treatment="Injectables Skin Facial Balancing" data-type="Nurse Practitioner">
+<div class="provider-photo"><img alt="Yemi Ellis" src="assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp"></div>
 <div class="provider-body">
-<h3 class="provider-name">Sofia Ramirez, DNP, FNP-C</h3>
-<div class="provider-role">Body Contouring + Recovery · Austin, TX</div>
+<h3 class="provider-name">Yemi Ellis, FNP-C</h3>
+<div class="provider-role">Aesthetic Medicine · Washington, DC</div>
 <div class="credential">Sample profile</div>
-<div class="known">A personalized approach to non-surgical contouring and post-treatment care.</div>
-<div class="chips"><span class="chip">Body Contouring</span><span class="chip">Skin Tightening</span><span class="chip">Recovery</span></div>
-<span class="view-link">View Profile</span>
+<div class="known">Aesthetic care centered on injectables, skin and facial balancing.</div>
+<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div>
+<span class="view-link">Full profile coming soon</span>
 </div>
-</a>
-<a class="provider-card" data-location="Seattle, WA" data-name="Jordan Lee" data-treatment="Skin + Laser Chemical Peels Resurfacing" data-type="Physician Assistant" href="providers.html">
-<div class="provider-photo p3"><div class="monogram">JL</div></div>
+</article>
+<article class="provider-card" data-location="London, UK" data-name="Rachel Morgan" data-treatment="Injectables Facial Balancing Fillers" data-type="Registered Nurse">
+<div class="provider-photo"><img alt="Rachel Morgan" src="assets/images/rachel-morgan-rn-db9b75a17326.webp"></div>
 <div class="provider-body">
-<h3 class="provider-name">Jordan Lee, PA-C</h3>
-<div class="provider-role">Skin + Laser · Seattle, WA</div>
+<h3 class="provider-name">Rachel Morgan, RN</h3>
+<div class="provider-role">Facial Balancing · London, UK</div>
 <div class="credential">Sample profile</div>
-<div class="known">Focused on practical treatment plans for tone, texture and skin health.</div>
-<div class="chips"><span class="chip">Laser</span><span class="chip">Peels</span><span class="chip">Resurfacing</span></div>
-<span class="view-link">View Profile</span>
+<div class="known">A less-is-more approach to facial balancing and natural-looking results.</div>
+<div class="chips"><span class="chip">Facial Balancing</span><span class="chip">Filler</span><span class="chip">Natural Results</span></div>
+<span class="view-link">Full profile coming soon</span>
 </div>
-</a>
+</article>
 </div>
 <div class="empty" id="emptyState">
 <h3>No matches yet.</h3>

@@ -199,6 +199,13 @@ h1,h2,h3{font-family:"Playfair Display",serif;margin:0;font-weight:600}
 }
 .region h3{font-size:21px;line-height:1.15;margin-bottom:11px}
 .us-resources{grid-column:1/-1}
+.regions-toggle{grid-column:1/-1;border:1px solid #d8d8d8;background:#fff}
+.regions-toggle summary{list-style:none;cursor:pointer;padding:16px 21px;font-size:14px;font-weight:800;letter-spacing:.04em;color:var(--berry);display:flex;align-items:center;justify-content:space-between}
+.regions-toggle summary::-webkit-details-marker{display:none}
+.regions-toggle summary::after{content:"Show \2193";font-size:12px;letter-spacing:.02em}
+.regions-toggle[open] summary::after{content:"Hide \2191"}
+.regions-more{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 21px 21px}
+@media(max-width:900px){.regions-more{grid-template-columns:1fr}}
 .us-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -353,7 +360,7 @@ footer{
 }
 .leadership-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   border-top:1px solid var(--ink);
   border-bottom:1px solid var(--ink);
 }
@@ -503,6 +510,7 @@ footer{
 .topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e6e2dc}
 .toprow{height:66px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
 .brand{font-family:'Playfair Display',serif;font-size:35px;font-weight:600;letter-spacing:-.03em;text-decoration:none;color:#171717}
+.brand-j{color:var(--berry)}
 .leftnote{font-size:14px!important;font-weight:800!important;letter-spacing:.01em!important;line-height:1.2!important;color:#171717!important;opacity:1!important}
 .actions{display:flex;justify-content:flex-end;gap:10px;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:0;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:.2s}
@@ -533,8 +541,28 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 /* About page final type-scale correction */
 .hero h1{font-size:36px!important;line-height:1.08!important;max-width:500px!important}
 @media(max-width:700px){.hero h1{font-size:34px!important}}
-/* BeautyJar's consumer experience emphasizes discovery rather than credentialing. */
-#credential-check,.trust-resources{display:none!important}
+
+/* About page readability: strong black secondary copy */
+.hero-copy,
+.copy p,
+.value p,
+.check-box p,
+.trust-resources-intro,
+.resource-group h4,
+.resource-note,
+.region p,
+.region a,
+.source p,
+.source a,
+.resource-footnote,
+.trust-item p,
+.leader p,
+footer#site-footer p,
+footer#site-footer a{
+  color:#0b0b0b!important;
+  font-weight:700!important;
+  opacity:1!important;
+}
 </style>
 <meta content="About BeautyJar | Aesthetic Provider Directory" property="og:title"/>
 <meta content="BeautyJar is an aesthetic provider directory for finding providers and exploring treatments and services." property="og:description"/>
@@ -543,7 +571,7 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <header class="topbar">
 <div class="container toprow">
 <div class="leftnote">Aesthetic Provider Directory</div>
-<a class="brand" href="index.html">Beauty<span style="color:var(--berry)">J</span>ar</a>
+<a class="brand" href="index.html">Beauty<span class="brand-j">J</span>ar</a>
 <div class="actions">
 <a class="btn btn-primary" href="providers.html">Find a Provider</a>
 <a class="btn btn-featured" href="for-providers.html">List Your Practice</a>
@@ -610,10 +638,10 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <div class="eyebrow">Credential + Research Sources</div>
 <h2>The governing bodies behind the checks.</h2>
 </div>
-<p class="trust-resources-intro">Credentialing rules vary by profession and location. BeautyJar references recognized licensing, registration and professional bodies appropriate to the provider and jurisdiction. We keep these sources visible so consumers can understand where credential information comes from.</p>
+<p class="trust-resources-intro">Credentialing rules vary by profession and location. BeautyJar references recognized licensing, registration, certification and professional bodies appropriate to the provider and jurisdiction. We keep these sources visible so consumers can understand where credential information comes from.</p>
 </div>
 <div class="resource-block">
-<div class="resource-label">Professional credential sources</div>
+<div class="resource-label">Professional credential sources</div><p style="font-size:13px;font-weight:600;color:#0b0b0b;margin:-6px 0 18px">Resources last reviewed September 2026.</p>
 <div class="regions">
 <div class="region us-resources"><h3>United States</h3><div class="us-grid">
 <div class="resource-group">
@@ -661,11 +689,14 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 </p>
 </div>
 </div></div>
-<div class="region"><h3>United Kingdom</h3><p>
+<details class="regions-toggle"><summary>Show all regions worldwide</summary><div class="regions-more"><div class="region"><h3>United Kingdom</h3><p>
 <a href="https://www.gmc-uk.org/registration-and-licensing/our-registers" target="_blank">General Medical Council</a><br/>
 <a href="https://www.nmc.org.uk/registration/search-the-register/" target="_blank">Nursing &amp; Midwifery Council</a><br/>
 <a href="https://www.gdc-uk.org/registration/registration-information/check-the-register" target="_blank">General Dental Council</a><br/>
 <a href="https://www.hcpc-uk.org/check-the-register/" target="_blank">Health &amp; Care Professions Council</a>
+</p></div>
+<div class="region"><h3>Europe</h3><p>
+<a href="https://www.medicalcouncil.ie/public-information/check-the-register/" target="_blank">Ireland — Medical Council Register</a>
 </p></div>
 <div class="region"><h3>Canada</h3><p>
 <a href="https://www.cpsbc.ca/public/registrant-directory" target="_blank">College of Physicians &amp; Surgeons of BC</a><br/>
@@ -678,6 +709,9 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <a href="https://www.amc.org.au/" target="_blank">Australian Medical Council</a><br/>
 <a href="https://www.medicalboard.gov.au/" target="_blank">Medical Board of Australia</a><br/>
 <a href="https://www.nursingmidwiferyboard.gov.au/" target="_blank">Nursing &amp; Midwifery Board</a>
+</p></div>
+<div class="region"><h3>New Zealand + Pacific</h3><p>
+<a href="https://www.mcnz.org.nz/registration/register/" target="_blank">Medical Council of New Zealand</a>
 </p></div>
 <div class="region"><h3>Latin America</h3><p>
 <a href="https://cedulaprofesional.sep.gob.mx/" target="_blank">Mexico — Registro Nacional de Profesionistas</a><br/>
@@ -706,7 +740,19 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <a href="https://www.hpcsa.co.za/" target="_blank">South Africa — Health Professions Council</a><br/>
 <a href="https://www.sanc.co.za/" target="_blank">South Africa — Nursing Council</a>
 </p></div>
-<div class="region"><h3>Asia</h3><p>
+<div class="region"><h3>Middle East + Gulf</h3><p>
+<a href="https://scfhs.org.sa/en" target="_blank">Saudi Arabia — Saudi Commission for Health Specialties</a><br/>
+<span class="resource-note">Requirements vary by country across the Gulf. BeautyJar references the applicable national health-professions commission or ministry based on the provider's location.</span>
+</p></div>
+<div class="region"><h3>South Asia</h3><p>
+<a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">India — Indian Medical Register, NMC</a><br/>
+<span class="resource-note">For other South Asian countries, BeautyJar references the applicable national medical, nursing or professional council based on the provider's location.</span>
+</p></div>
+<div class="region"><h3>Southeast Asia</h3><p>
+<a href="https://verification.prc.gov.ph/" target="_blank">Philippines — PRC License Verification</a><br/>
+<a href="https://merits.mmc.gov.my/search" target="_blank">Malaysia — Malaysian Medical Council</a>
+</p></div>
+<div class="region"><h3>East Asia</h3><p>
 <a href="https://www.mchk.org.hk/" target="_blank">Hong Kong — Medical Council</a><br/>
 <a href="https://www.hkam.org.hk/" target="_blank">Hong Kong Academy of Medicine</a><br/>
 <a href="https://www.mhlw.go.jp/english/" target="_blank">Japan — Ministry of Health, Labour and Welfare</a><br/>
@@ -716,6 +762,7 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <a href="https://www.smc.gov.sg/" target="_blank">Singapore Medical Council</a><br/>
 <a href="https://www.snb.gov.sg/" target="_blank">Singapore Nursing Board</a>
 </p></div>
+</div></details>
 </div>
 <p class="resource-footnote">Regulatory systems vary by country and profession. BeautyJar references recognized licensing and professional bodies appropriate to the provider and jurisdiction.</p>
 </div>
@@ -750,24 +797,17 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 </div>
 <div class="leadership-grid">
 <div class="leader">
-<div class="leader-photo"><img alt="Ruby Osei" height="1440" src="assets/images/ruby-osei-78c2a7bb933f.webp" width="1070"/></div>
+<div class="leader-photo"><img alt="Ruby Osei" decoding="async" height="1440" onerror="this.parentElement.outerHTML='&lt;div class=&quot;leader-placeholder&quot;&gt;RO&lt;/div&gt;'" src="assets/images/ruby-osei-78c2a7bb933f.webp?v=20260917" width="1070"/></div>
 <div>
 <h3>Ruby Osei</h3>
-<p>Founder</p>
+<p>Director of Compliance</p>
 </div>
 </div>
 <div class="leader">
-<div class="leader-photo"><img alt="Kaitlyn Williams" decoding="async" height="1608" loading="lazy" src="assets/images/kaitlyn-williams-414cb977a802.webp" width="1179"/></div>
+<div class="leader-photo"><img alt="Kaitlyn Williams" decoding="async" height="1608" onerror="this.parentElement.outerHTML='&lt;div class=&quot;leader-placeholder&quot;&gt;KW&lt;/div&gt;'" src="assets/images/kaitlyn-williams-414cb977a802.webp?v=20260917" width="1179"/></div>
 <div>
 <h3>Kaitlyn Williams</h3>
 <p>Provider Relationship Specialist</p>
-</div>
-</div>
-<div class="leader">
-<div aria-label="John Lawson photo placeholder" class="leader-placeholder">JL</div>
-<div>
-<h3>John Lawson</h3>
-<p>CEO</p>
 </div>
 </div>
 </div>
@@ -776,16 +816,12 @@ footer#site-footer .footer-owner{margin-top:8px;font-size:11px!important;font-we
 <div class="provider-cta-inner">
 <div class="eyebrow">For Providers</div>
 <h2>Join BeautyJar.</h2>
-<p>BeautyJar helps aesthetic professionals and practices make their specialties, professional background and services easier to discover.</p>
+<p>List your specialties and credentials. Let the right patients find you.</p>
 <a class="provider-cta-button" href="for-providers.html">Explore BeautyJar for Providers</a>
 </div>
 </section>
-<section class="mission">
-<div class="eyebrow">Our Mission</div>
-<h2>Focused on better aesthetic discovery.</h2>
-<p>BeautyJar is a Wenley Technologies LLC property, built to connect people with the right aesthetic providers.</p>
-</section>
+
 </main>
-<footer id="site-footer"><div class="container footer-grid"><div><div class="footer-brand">BeautyJar</div><p>Aesthetic provider discovery.</p><p class="footer-owner">© 2026 Wenley Technologies LLC. All rights reserved.</p></div><div class="footer-links"><a href="providers.html">Find a Provider</a><a href="treatments.html">Treatments</a><a href="the-edit.html">The Edit</a><a href="for-providers.html">For Providers</a></div><div class="footer-links"><a href="about.html">About</a><a href="editorial-standards.html">Editorial Standards</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:hello@beautyjar.com">Contact</a><p style="margin-top:8px;font-size:11px;color:#0b0b0b;font-weight:500">Professional information is supplied by providers. Consumers should independently confirm suitability before receiving services.</p></div></div></footer>
+<footer id="site-footer"><div class="container footer-grid"><div><div class="footer-brand">Beauty<span class="brand-j">J</span>ar</div><p>Aesthetic provider discovery.</p><p class="footer-owner">© 2026 Wenley Technologies LLC. All rights reserved.</p></div><div class="footer-links"><a href="providers.html">Find a Provider</a><a href="treatments.html">Treatments</a><a href="the-edit.html">The Edit</a><a href="for-providers.html">For Providers</a></div><div class="footer-links"><a href="about.html">About</a><a href="editorial-standards.html">Editorial Standards</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:hello@beautyjar.com">Contact</a><p style="margin-top:8px;font-size:11px;color:#181716;font-weight:500">Provider information is supplied by practices. Consumers should independently determine whether a provider is right for them.</p></div></div></footer>
 </body>
 </html>

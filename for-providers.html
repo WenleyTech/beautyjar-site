@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    :root{--ink:#181716;--paper:#fff;--line:#ded9d2;--berry:#8a4f5a;--berry-dark:#713b3b;--berry-light:#f3e9e7;--soft:#f8f5f1;--muted:#5c5651;--max:1280px}
+    :root{--ink:#181716;--paper:#fff;--line:#ded9d2;--berry:#8a4f5a;--berry-cta:#a75264;--berry-dark:#713b3b;--berry-light:#f3e9e7;--soft:#f8f5f1;--muted:#5c5651;--max:1280px}
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none} img{display:block;width:100%} button,input,select{font:inherit}
@@ -58,10 +58,10 @@
     .check-list{list-style:none}.check-list li{position:relative;padding:11px 24px 11px 54px;border-bottom:1px solid #eeeae5;font-size:14px;font-weight:600;line-height:1.42}
     .check-list li:before{content:'✓';position:absolute;left:26px;top:10px;color:var(--berry);font-size:17px;font-weight:800}
     .spotlight-only{background:#fcf8f7}.spotlight-only li{font-weight:700}.spotlight-only li:before{color:#9a4554}
-    .plan-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap;padding:24px 26px}
-    .plan-actions .btn{min-width:160px;background:var(--berry);border-color:var(--berry);color:#fff}.plan-actions .btn:hover{background:var(--berry-dark);border-color:var(--berry-dark)}
-    .text-link{font-size:13px;font-weight:800;border-bottom:1px solid currentColor}
-    .refund-note{flex-basis:100%;margin-top:2px;font-size:11px;font-weight:700;line-height:1.55}
+    .plan-actions{display:grid;grid-template-columns:1fr;gap:12px;padding:26px}
+    .plan-actions .btn{width:100%;min-height:64px;background:var(--berry-cta);border:2px solid var(--berry-cta);color:#fff;font-size:17px;font-weight:800;letter-spacing:.015em;box-shadow:0 10px 24px rgba(138,79,90,.22);transition:background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}.plan-actions .btn:hover{background:var(--berry-dark);border-color:var(--berry-dark);box-shadow:0 13px 28px rgba(113,59,59,.26);transform:translateY(-1px)}
+    .text-link{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:48px;border:1px solid var(--ink);font-size:14px;font-weight:800}.text-link:hover{border-color:var(--berry);color:var(--berry)}
+    .refund-note{margin-top:2px;font-size:11px;font-weight:700;line-height:1.55}
     .membership-note{margin-top:16px;font-size:12px;font-weight:600;line-height:1.6}
     .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
     .step{padding:24px 24px 10px 0;margin-right:24px;border-right:1px solid var(--line)}.step:last-child{margin-right:0;border-right:0}

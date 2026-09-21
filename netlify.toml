@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -14,3 +20,63 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/spotlight-abby-sample"
+  to = "/profile-abby-sample"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/spotlight-abby-sample.html"
+  to = "/profile-abby-sample"
+  status = 301
+  force = true
+
+# Preserve useful routes from the previous BeautyJar site.
+[[redirects]]
+  from = "/sample-provider-listing.html"
+  to = "/profile-abby-sample"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/verified-badge.html"
+  to = "/about#credential-check"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-we-verify.html"
+  to = "/about#credential-check"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/provider-spotlight.html"
+  to = "/for-providers#examples"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-featured.html"
+  to = "/for-providers#memberships"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apply.html"
+  to = "/for-providers#memberships"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:page.html"
+  to = "/:page"
+  status = 301
+  force = true

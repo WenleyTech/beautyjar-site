@@ -32,10 +32,10 @@
 <div class="field"><label for="verification-notes">Additional verification information (optional)</label><textarea class="short" id="verification-notes" name="verification_notes"></textarea></div>
 </div></section>
 <section class="form-section"><div class="section-head"><h2>3. Practice information</h2></div><div class="fields">
-<div class="row"><div class="field"><label for="practice-name">Practice name</label><input id="practice-name" name="practice_name" required></div><div class="field"><label for="website">Practice website</label><input id="website" name="practice_website" type="url" placeholder="https://" required></div></div>
+<div class="row"><div class="field"><label for="practice-name">Practice name</label><input id="practice-name" name="practice_name" required></div><div class="field"><label for="website">Practice website</label><input id="website" name="practice_website" type="text" inputmode="url" autocomplete="url" placeholder="beautyjar.com" required><span class="hint">Enter a website, such as beautyjar.com. We will add https:// if needed.</span></div></div>
 <div class="field"><label for="address">Primary practice address</label><input id="address" name="primary_practice_address" required></div>
 <div class="field"><label for="additional-locations">Additional locations (optional)</label><textarea class="short" id="additional-locations" name="additional_locations"></textarea></div>
-<div class="row"><div class="field"><label for="booking">Booking link (optional)</label><input id="booking" name="booking_link" type="url" placeholder="https://"></div><div class="field"><label for="social">Primary professional social link (optional)</label><input id="social" name="professional_social_link" type="url" placeholder="https://"></div></div>
+<div class="row"><div class="field"><label for="booking">Booking link (optional)</label><input id="booking" name="booking_link" type="text" inputmode="url" autocomplete="url" placeholder="practice.com/book"><span class="hint">Leave blank if you do not have one.</span></div><div class="field"><label for="social">Primary professional social link (optional)</label><input id="social" name="professional_social_link" type="text" inputmode="url" autocomplete="url" placeholder="instagram.com/yourpractice"><span class="hint">Leave blank if you do not have one.</span></div></div>
 </div></section>
 <section class="form-section"><div class="section-head"><h2>4. Provider page information</h2><p>Submit factual information in your preferred wording. BeautyJar may edit for consistency and clarity without changing the meaning.</p></div><div class="fields">
 <div class="field"><label for="bio">Professional biography</label><textarea id="bio" name="professional_biography" required></textarea></div>
@@ -76,6 +76,10 @@
 const p=new URLSearchParams(location.search);const type=(p.get('type')||'').toLowerCase();const form=document.getElementById('invitation-form');const error=document.getElementById('link-error');const spot=document.getElementById('spotlight-fields');const spotRequired=[...document.querySelectorAll('[data-spotlight-required]')];
 document.getElementById('invitation-source').value=p.get('source')||'';if(p.get('email'))document.getElementById('invited-email').value=p.get('email');if(p.get('code'))document.getElementById('invitation-code').value=p.get('code');
 const professionalEmail=document.getElementById('professional-email');const notificationEmail=document.getElementById('notification-email');professionalEmail.addEventListener('input',()=>notificationEmail.value=professionalEmail.value);
+const urlFields=['website','booking','social'].map(id=>document.getElementById(id));
+function normalizeUrl(field){const value=field.value.trim();field.setCustomValidity('');if(!value)return true;const normalized=/^https?:\/\//i.test(value)?value:'https://'+value;try{const parsed=new URL(normalized);if(!parsed.hostname||!parsed.hostname.includes('.'))throw new Error();field.value=parsed.href;return true;}catch{field.setCustomValidity('Enter a complete website address, such as beautyjar.com.');return false;}}
+urlFields.forEach(field=>{field.addEventListener('blur',()=>normalizeUrl(field));field.addEventListener('input',()=>field.setCustomValidity(''));});
+form.addEventListener('submit',event=>{const valid=urlFields.every(normalizeUrl);if(!valid){event.preventDefault();form.reportValidity();}});
 if(type==='profile'||type==='spotlight'){
  form.hidden=false;error.hidden=true;document.getElementById('invitation-type').value=type==='spotlight'?'Spotlight':'Profile';
  document.getElementById('invite-eyebrow').textContent=type==='spotlight'?'Spotlight invitation':'Profile invitation';

@@ -10,73 +10,77 @@
 <link href="https://beautyjar.com/spotlight-david-chen" rel="canonical"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-:root{--ink:#181716;--paper:#faf8f4;--line:#ded9d2;--berry:#713b3b;--cream:#f0ebe2}
+:root{--ink:#181716;--paper:#fff;--line:#ded9d2;--berry:#8a4f5a;--cream:#f0ebe2}
 *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
 a{color:inherit;text-decoration:none} .wrap{max-width:1220px;margin:auto;padding:0 42px}
-header{background:#fffdfa;border-bottom:1px solid var(--line)}
+header{background:#fff;border-bottom:1px solid var(--line)}
 .brand-row{height:92px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}
-.kicker{font-weight:600;font-size:14px;letter-spacing:.02em}.logo{font-family:"Playfair Display",serif;font-size:42px;font-weight:600}
+.kicker{font-weight:600;font-size:14px;letter-spacing:.02em}.logo{font-family:"Playfair Display",serif;font-size:36px;font-weight:600}.logo .berry-j{color:var(--berry)}
 .nav-row{height:68px;display:flex;align-items:center;justify-content:center}
-nav{display:flex;justify-content:center;gap:40px;font-weight:600;font-size:15px}
+nav{display:flex;justify-content:center;gap:38px;font-weight:700;font-size:15px}
 .crumbs{font-size:13px;padding:20px 0;color:#2c2926}
-.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center;padding:12px 0 34px;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:start;padding:12px 0 34px;border-bottom:1px solid var(--line)}
 .hero-img{height:470px;background:white;border:1px solid var(--line);overflow:hidden}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:0 0}
 .badge{display:inline-block;background:#eee7dc;padding:8px 11px;font-size:12px;font-weight:700;letter-spacing:.04em}
-h1,h2,h3{font-family:"Playfair Display",serif;margin:0} h1{font-size:52px;line-height:1.02;margin:17px 0 8px}
-.sub{font-size:20px;margin:0 0 7px} .place{font-size:16px;font-weight:500;margin-bottom:25px}
+h1,h2,h3{font-family:"Playfair Display",serif;margin:0} h1{font-size:30px;line-height:1.12;margin:17px 0 8px}
+.sub{font-size:18px;margin:0 0 7px} .place{font-size:16px;font-weight:500;margin-bottom:25px}
 .tags{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:27px} .tag{border:1px solid #cfc7bc;border-radius:50px;padding:10px 16px;font-weight:600}
 .buttons{display:flex;gap:12px} .btn{padding:15px 23px;border:1px solid var(--ink);font-weight:700;display:inline-block}
 .btn.primary{background:var(--ink);color:white} .links{margin-top:22px;font-size:14px;display:flex;gap:22px;flex-wrap:wrap}
 .content{display:grid;grid-template-columns:1.65fr .9fr;gap:34px;padding:34px 0}
-section{padding:0 0 30px;margin-bottom:30px;border-bottom:1px solid var(--line)} h2{font-size:31px;margin-bottom:14px}
-p{font-size:16px;line-height:1.68;margin:0 0 14px} .quote{background:var(--cream);padding:30px;font-family:"Playfair Display",serif;font-size:22px;line-height:1.45;font-style:italic}
+section{padding:0 0 30px;margin-bottom:30px;border-bottom:1px solid var(--line)} h2{font-size:26px;margin-bottom:14px}
+p{font-size:16px;line-height:1.68;margin:0 0 14px} .quote{background:var(--cream);padding:30px;font-family:"Playfair Display",serif;font-size:19px;line-height:1.5;font-style:italic}
 .quote span{display:block;font-family:"DM Sans";font-size:14px;font-style:normal;margin-top:15px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} .card{height:175px;position:relative;overflow:hidden;background:#ddd}
 .card img{width:100%;height:100%;object-fit:cover} .card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.62))}
-.card b{position:absolute;z-index:2;left:15px;bottom:14px;color:white;font-family:"Playfair Display";font-size:20px}
+.card b{position:absolute;z-index:2;left:15px;bottom:14px;color:white;font-family:"Playfair Display";font-size:18px}
 .work{display:grid;grid-template-columns:repeat(4,1fr);gap:10px} .work img{width:100%;height:170px;object-fit:cover}
 .cred ul{list-style:none;padding:0;margin:0} .cred li{padding:8px 0;border-bottom:1px solid #e7e1d9;font-size:14px}
-.check{background:#f2ede5;padding:23px;margin-top:20px} .check h3{font-size:22px;margin-bottom:9px}
+.check{background:#f2ede5;padding:23px;margin-top:20px} .check h3{font-size:18px;margin-bottom:9px}
 .spotlight-only{background:#181716;color:white;padding:28px} .spotlight-only h2{color:white} .spotlight-only p{color:white}
 .pub{padding:14px 0;border-top:1px solid #494743} .pub:first-of-type{border-top:0}
 .practice-img{height:180px;overflow:hidden;margin-bottom:16px} .practice-img img{width:100%;height:100%;object-fit:cover}
 .cta{margin:0 0 50px;background:#eee8df;padding:28px 34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.cta h3{font-size:25px} .fine{font-size:12px;line-height:1.5;margin-top:8px}
+.cta h3{font-size:20px} .fine{font-size:12px;line-height:1.5;margin-top:8px}
 footer{border-top:1px solid var(--line);padding:30px 0 45px;font-size:12px}
-.sample{position:fixed;right:18px;bottom:18px;background:#713b3b;color:#fff;padding:9px 13px;font-size:11px;font-weight:700;letter-spacing:.04em;z-index:10}
+.sample{position:fixed;right:18px;bottom:18px;background:var(--berry);color:#fff;padding:9px 13px;font-size:11px;font-weight:700;letter-spacing:.04em;z-index:10}
 @media(max-width:800px){.wrap{padding:0 20px}.brand-row{grid-template-columns:1fr auto;height:82px}.kicker{display:none}.nav-row{height:auto;padding:14px 0}.nav-row nav{display:flex;gap:18px;overflow-x:auto;justify-content:flex-start;padding:0 20px;font-size:13px}.hero,.content{grid-template-columns:1fr}h1{font-size:40px}.hero-img{height:420px}.cards{grid-template-columns:1fr}.work{grid-template-columns:1fr 1fr}.cta{align-items:flex-start;flex-direction:column}}
 
 /* Targeted profile scale correction */
 .hero{grid-template-columns:380px 1fr;gap:40px}
 .hero-img{width:380px;height:410px}
-h1{font-size:46px}
+h1{font-size:30px}
 @media(max-width:800px){
  .hero{grid-template-columns:1fr;gap:28px}
  .hero-img{width:min(100%,380px);height:390px}
- h1{font-size:36px}
+ h1{font-size:28px}
 }
 
 .hero-img img{object-position:center top}
 .david-treatment-cards{grid-template-columns:repeat(3,1fr)}
 .david-treatment{background:#fff;border:1px solid var(--line);padding:22px;min-height:170px}
-.david-treatment h3{font-size:20px;margin-bottom:10px}
+.david-treatment h3{font-size:18px;margin-bottom:10px}
 .david-treatment p{font-size:14px;line-height:1.55;margin:0}
 .david-practice-visual{height:260px;overflow:hidden;margin-bottom:16px;background:#eee}
 .david-practice-visual img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 @media(max-width:800px){.david-treatment-cards{grid-template-columns:1fr}}
+.topbtns{display:flex;gap:10px;justify-content:flex-end}
+.topbtn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);border:1px solid var(--ink);text-decoration:none;color:#fff}
+.topbtn.fill{background:var(--berry);border-color:var(--berry);color:#fff}
 </style>
 </head>
 <body>
 <div class="sample">SAMPLE SPOTLIGHT PROFILE</div>
 <header>
 <div class="wrap brand-row">
-<div class="kicker">Medical Aesthetics</div>
-<a class="logo" href="/">BeautyJar</a>
-<div></div>
+<div class="kicker">Aesthetic Provider Directory</div>
+<a class="logo" href="/">Beauty<span class="berry-j">J</span>ar</a>
+<div class="topbtns"><a class="topbtn" href="/providers">Find a Provider</a><a class="topbtn fill" href="/for-providers">List Your Practice</a></div>
 </div>
 <div class="nav-row">
 <nav>
+<a href="/">Home</a>
 <a href="/providers">Find a Provider</a>
 <a href="/treatments">Treatments</a>
 <a href="/the-edit">The Edit</a>
@@ -102,6 +106,7 @@ h1{font-size:46px}
 <div class="content">
 <div>
 <section><h2>About David</h2><p>David Chen is an NCCPA-certified Physician Assistant and founder of Chen Hair Restoration in Chicago, Illinois. His practice focuses on hair restoration, PRP therapy and scalp health, working with patients experiencing pattern hair loss, thinning and early-stage alopecia.</p><p>David works from a diagnostic-first approach — identifying the underlying cause of hair loss before recommending treatment, rather than defaulting to a single procedure. He believes hair restoration should be evaluated the same way any other medical treatment is: by whether it actually works for the specific patient in front of him.</p></section>
+<section><h2>Beyond the Practice</h2><p>Outside the practice, David enjoys photography, neighborhood cycling and exploring Chicago’s restaurant scene.</p></section>
 <section><h2>His Approach</h2><p>David combines PRP therapy, low-level laser treatment and surgical hair restoration depending on what a patient’s hair-loss pattern and stage call for. He works with a collaborating dermatologist on surgical cases and is direct about setting realistic timelines — hair-restoration results take months, not weeks, and he would rather a patient know that upfront than be sold on speed.</p></section>
 <section><h2>Treatments</h2><div class="cards david-treatment-cards"><div class="david-treatment"><h3>Hair Restoration Surgery</h3><p>Procedure planning and surgical restoration for appropriate candidates.</p></div><div class="david-treatment"><h3>PRP Therapy</h3><p>Platelet-rich plasma treatment used as part of an individualized hair-loss plan.</p></div><div class="david-treatment"><h3>Scalp Health + LLLT</h3><p>Scalp evaluation and low-level laser therapy based on hair-loss pattern and stage.</p></div></div></section>
 <section><h2>The Practice</h2><div class="david-practice-visual"><img alt="Hair and scalp health editorial presentation" src="assets/images/beautyjar-embedded-894b3aa3d9fc6255.png"/></div><p>Chen Hair Restoration focuses on hair-loss evaluation, PRP therapy, scalp health and surgical hair-restoration planning in Chicago.</p></section>

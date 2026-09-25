@@ -404,6 +404,73 @@ text.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') applyFilters();
 });
 </script>
-<style id="footer-wordmark-match">.bj-footer-brand{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;letter-spacing:-.035em}.bj-footer-brand .brand-j{color:#8a4f5a}</style>
+<style id="bj-help-widget-style">
+#bj-help-widget{font-family:'DM Sans',Arial,sans-serif;color:#181716;position:fixed;right:22px;bottom:22px;z-index:9999}
+#bj-help-widget *{box-sizing:border-box}
+#bj-help-widget [hidden]{display:none!important}
+#bj-help-widget .bj-help-toggle{display:flex;align-items:center;gap:9px;min-height:48px;padding:0 18px;border:0;border-radius:999px;background:#985664;color:#fff;font:700 14px 'DM Sans',Arial,sans-serif;box-shadow:0 5px 20px rgba(24,23,22,.2);cursor:pointer;margin-left:auto}
+#bj-help-widget .bj-help-toggle:hover,#bj-help-widget .bj-help-toggle:focus-visible{background:#713b48}
+#bj-help-widget .bj-help-panel{position:absolute;bottom:60px;right:0;width:min(360px,calc(100vw - 32px));max-height:min(620px,calc(100dvh - 105px));overflow:auto;border:1px solid #ded9d2;background:#fff;box-shadow:0 12px 42px rgba(24,23,22,.2);border-radius:12px}
+#bj-help-widget .bj-help-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:19px 19px 14px;border-bottom:1px solid #ded9d2}
+#bj-help-widget .bj-help-title{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;line-height:1.2;margin:0}
+#bj-help-widget .bj-help-sub{font-size:12px;font-weight:600;line-height:1.45;margin:5px 0 0}
+#bj-help-widget .bj-help-close{background:none;border:0;font-size:25px;line-height:1;cursor:pointer;color:#181716;padding:0 2px}
+#bj-help-widget .bj-help-body{padding:15px 19px 18px}
+#bj-help-widget .bj-help-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;margin:0 0 10px}
+#bj-help-widget .bj-help-question{display:block;width:100%;text-align:left;background:#fff;border:1px solid #ded9d2;border-radius:6px;padding:10px 12px;margin:0 0 7px;color:#181716;font:700 13px/1.4 'DM Sans',Arial,sans-serif;cursor:pointer}
+#bj-help-widget .bj-help-question:hover,#bj-help-widget .bj-help-question:focus-visible{border-color:#985664;background:#fbf7f6}
+#bj-help-widget .bj-help-answer{padding:12px 13px;margin:11px 0 13px;background:#f8f5f3;border-left:3px solid #985664;font-size:13px;line-height:1.55}
+#bj-help-widget .bj-help-answer p{margin:0 0 7px}.bj-help-answer p:last-child{margin-bottom:0}
+#bj-help-widget .bj-help-links{border-top:1px solid #ded9d2;padding-top:12px;font-size:12px;line-height:1.5;font-weight:700}
+#bj-help-widget a{color:#713b48;text-decoration:underline}
+#bj-help-widget :focus-visible{outline:2px solid #181716;outline-offset:2px}
+@media(max-width:500px){#bj-help-widget{right:12px;bottom:12px}#bj-help-widget .bj-help-panel{bottom:58px}}
+</style>
+<div id="bj-help-widget" data-bj-help>
+  <button class="bj-help-toggle" type="button" aria-expanded="false" aria-controls="bj-help-panel">Questions? <span aria-hidden="true">＋</span></button>
+  <section class="bj-help-panel" id="bj-help-panel" aria-label="BeautyJar help" hidden>
+    <div class="bj-help-head"><div><h2 class="bj-help-title">How can we help?</h2><p class="bj-help-sub">Quick answers about BeautyJar.</p></div><button class="bj-help-close" type="button" aria-label="Close help">×</button></div>
+    <div class="bj-help-body"><p class="bj-help-label">Choose a question</p>
+      <button class="bj-help-question" type="button" data-bj-answer="profile">What comes with a Profile?</button>
+      <button class="bj-help-question" type="button" data-bj-answer="spotlight">What is Spotlight?</button>
+      <button class="bj-help-question" type="button" data-bj-answer="payment">What happens after I pay?</button>
+      <button class="bj-help-question" type="button" data-bj-answer="refund">What if my listing is not approved?</button>
+      <button class="bj-help-question" type="button" data-bj-answer="search">How do I contact a provider?</button>
+      <button class="bj-help-question" type="button" data-bj-answer="checked">What does Credential Checked mean?</button>
+      <div class="bj-help-answer" role="status" aria-live="polite" hidden></div>
+      <div class="bj-help-links">More questions? <a href="/faq">Read the full FAQ</a><br>Need help with BeautyJar? <a href="mailto:hello@beautyjar.com?subject=BeautyJar%20question">Email us</a>.</div>
+    </div>
+  </section>
+</div>
+<script id="bj-help-widget-script">
+(() => {
+  const root = document.querySelector('[data-bj-help]');
+  if (!root) return;
+  const toggle = root.querySelector('.bj-help-toggle');
+  const panel = root.querySelector('.bj-help-panel');
+  const answer = root.querySelector('.bj-help-answer');
+  const replies = {
+    profile: '<p>Profile is $79 per month. It includes a dedicated provider page with professional and practice details, services, images and direct booking information.</p><p><a href="/for-providers#memberships">Compare memberships</a></p>',
+    spotlight: '<p>Spotlight is $149 per month. It includes Profile features plus a more detailed editorial presentation and additional visibility. See the current membership details for included placements.</p><p><a href="/for-providers#memberships">See Spotlight details</a></p>',
+    payment: '<p>After payment, we email you a link to submit credentials, practice details, written content and images. We review the information and send a private page preview before publication.</p><p><a href="/faq">Read the full FAQ</a></p>',
+    refund: '<p>If BeautyJar cannot approve a paid listing after review, we cancel the membership and refund the initial payment.</p><p><a href="/faq">Read the full FAQ</a></p>',
+    search: '<p>Provider pages may include a booking link, website or telephone number. Appointments are made directly with the provider or practice.</p><p><a href="/providers">Find a provider</a></p>',
+    checked: '<p>BeautyJar reviews selected professional credentials and practice information using applicable public sources. Credential Checked is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
+  };
+  function close() { panel.hidden = true; toggle.setAttribute('aria-expanded','false'); toggle.focus(); }
+  toggle.addEventListener('click', () => {
+    const opening = panel.hidden;
+    panel.hidden = !opening;
+    toggle.setAttribute('aria-expanded',String(opening));
+    if (opening) root.querySelector('.bj-help-close').focus();
+  });
+  root.querySelector('.bj-help-close').addEventListener('click',close);
+  root.querySelectorAll('[data-bj-answer]').forEach(button => button.addEventListener('click', () => {
+    answer.innerHTML = replies[button.dataset.bjAnswer];
+    answer.hidden = false;
+  }));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !panel.hidden) close(); });
+})();
+</script>
 </body>
 </html>

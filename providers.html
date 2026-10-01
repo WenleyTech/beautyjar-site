@@ -61,7 +61,7 @@ h1{font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.035em;margin-bo
 
 /* VISUAL TREATMENT DISCOVERY */
 .treatment-discovery{margin:22px 0 44px}
-.treatment-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.treatment-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .treatment-card{position:relative;height:210px;overflow:hidden;background:#eee;border:1px solid var(--line)}
 .treatment-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
 .treatment-card:hover img{transform:scale(1.025)}
@@ -165,22 +165,58 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
   .results-head h2,.browse-grid h2{font-size:32px!important}
 }
 </style>
-<link href="https://beautyjar.com/providers" rel="canonical"/><link href="assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/></head>
+<link href="https://beautyjar.com/providers" rel="canonical"/><link href="/assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/><style id="beautyjar-shared-styles">
+
+footer#beautyjar-footer{box-sizing:border-box;margin:0;background:#fff;color:#181716;border-top:1px solid #e6e2dc;padding:32px 0 40px;font:600 12px/1.5 'DM Sans',Arial,sans-serif}
+#beautyjar-footer *{box-sizing:border-box}
+#beautyjar-footer .bj-inner{width:min(1180px,calc(100% - 48px));margin:auto}
+#beautyjar-footer .bj-columns{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:36px}
+#beautyjar-footer .bj-logo{display:inline-block;font:600 30px/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.03em;color:#181716;text-decoration:none}
+#beautyjar-footer .bj-logo span{color:#985664}
+#beautyjar-footer .bj-tagline{font-size:12px;font-weight:700;margin:7px 0 13px}
+#beautyjar-footer .bj-title{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:3px 0 11px}
+#beautyjar-footer .bj-links{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+#beautyjar-footer .bj-social{display:flex;flex-wrap:wrap;gap:7px 15px}
+#beautyjar-footer a{font-size:12px;font-weight:600;line-height:1.5;color:#181716;text-decoration:none}
+#beautyjar-footer a:hover{text-decoration:underline}
+#beautyjar-footer .bj-bottom{border-top:1px solid #e6e2dc;margin-top:27px;padding-top:15px;display:flex;justify-content:space-between;gap:24px;font-size:11px;font-weight:600}
+#beautyjar-footer .bj-bottom span:last-child{text-align:right;max-width:590px}
+@media(max-width:780px){#beautyjar-footer .bj-columns{grid-template-columns:1fr 1fr;gap:25px}#beautyjar-footer .bj-bottom{flex-direction:column;gap:7px}#beautyjar-footer .bj-bottom span:last-child{text-align:left}}
+@media(max-width:480px){#beautyjar-footer .bj-inner{width:calc(100% - 32px)}#beautyjar-footer .bj-columns{grid-template-columns:1fr 1fr;gap:24px 14px}#beautyjar-footer .bj-columns>div:first-child{grid-column:1/-1}}
+
+#beautyjar-header{position:relative;inset:auto;background:#fff;color:#181716;border-bottom:1px solid #e6e2dc;font-family:'DM Sans',Arial,sans-serif}
+#beautyjar-header *{box-sizing:border-box}
+#beautyjar-header .toprow{width:min(1180px,calc(100% - 48px));height:auto;min-height:104px;margin:auto;padding:20px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;border:0}
+#beautyjar-header .leftnote{font:800 14px/1.3 'DM Sans',Arial,sans-serif;color:#181716!important;opacity:1}
+#beautyjar-header .brand{font:600 38px/1.1 'Playfair Display',Georgia,serif;color:#181716;text-decoration:none;letter-spacing:-.03em}
+#beautyjar-header .brand-j{color:#985664}
+#beautyjar-header .actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+#beautyjar-header .btn{display:inline-flex;justify-content:center;align-items:center;min-height:42px;padding:10px 16px;border:1px solid #181716;border-radius:0;box-shadow:none;background:#181716;color:#fff;font:700 12px/1.3 'DM Sans',Arial,sans-serif;text-decoration:none}
+#beautyjar-header .btn-featured{background:#985664;border-color:#985664}
+#beautyjar-header .nav{display:flex;width:100%;margin:0;padding:15px 24px;justify-content:center;gap:30px;border-top:1px solid #e6e2dc;overflow-x:auto}
+#beautyjar-header .nav a{flex-shrink:0;position:relative;padding:2px 0 7px;color:#181716!important;font:800 16px/1.3 'DM Sans',Arial,sans-serif;text-decoration:none}
+#beautyjar-header .nav a::after{content:none}
+#beautyjar-header .nav a[aria-current="page"]{border-bottom:2px solid #985664}
+
+#bj-help-widget.bj-footer-visible .bj-help-toggle{display:none}
+#bj-help-widget.bj-footer-visible:has(.bj-help-panel:not([hidden])) .bj-help-toggle{display:flex}
+@media(max-width:780px){#beautyjar-header .toprow{grid-template-columns:1fr auto;min-height:84px}#beautyjar-header .leftnote{display:none}#beautyjar-header .brand{font-size:30px}#beautyjar-header .nav{justify-content:flex-start;gap:24px}#beautyjar-header .btn{padding:9px 12px}}
+@media(max-width:480px){#beautyjar-header .toprow{width:calc(100% - 32px);grid-template-columns:1fr;gap:14px;text-align:center}#beautyjar-header .actions{justify-content:center}#bj-help-widget .bj-help-toggle{min-height:40px;padding:0 13px;font-size:12px}}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{const footer=document.getElementById('beautyjar-footer'),widget=document.getElementById('bj-help-widget');if(footer&&widget&&'IntersectionObserver' in window){new IntersectionObserver(entries=>{widget.classList.toggle('bj-footer-visible',entries[0].isIntersecting);},{threshold:0}).observe(footer);}});
+
+</script>
+</head>
 <body>
-<header class="topbar">
+<header id="beautyjar-header">
 <div class="container toprow">
 <div class="leftnote">Medical Aesthetics Directory</div>
-<a class="brand" href="/">Beauty<span style="color:var(--berry)">J</span>ar</a>
-<div class="actions"><a class="btn btn-dark" href="/providers">Find a Provider</a><a class="btn btn-primary" href="/for-providers">List Your Practice</a></div>
+<a class="brand" href="/">Beauty<span class="brand-j">J</span>ar</a>
+<div class="actions"><a class="btn btn-primary" href="/providers">Find a Provider</a><a class="btn btn-featured" href="/for-providers">List Your Practice</a></div>
 </div>
-<nav class="nav">
-<a href="/">Home</a>
-<a class="active" href="/providers">Find a Provider</a>
-<a href="/treatments">Treatments</a>
-<a href="/the-edit">The Edit</a>
-<a href="/about">About</a>
-<a href="/for-providers">For Providers</a>
-</nav>
+<nav class="nav"><a href="/">Home</a><a href="/providers" aria-current="page">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a><a href="/about">About</a><a href="/for-providers">For Providers</a></nav>
 </header>
 <main>
 <section class="page-intro">
@@ -200,20 +236,21 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <div aria-label="Popular treatments" class="treatment-discovery">
 <div class="treatment-strip">
 <a class="treatment-card" href="/providers?specialty=hair-restoration">
-<img alt="Hair restoration" height="1024" src="assets/images/hair-restoration-4eb63ed9148e.webp" width="1536"/>
+<img alt="Hair restoration" height="1024" src="/assets/images/hair-restoration-4eb63ed9148e.webp" width="1536"/>
 <span class="treatment-label">Hair Restoration</span>
 </a>
 <a class="treatment-card" href="/providers?specialty=injectables">
-<img alt="Injectables" decoding="async" height="1536" loading="lazy" src="assets/images/injectables-b1214a640f1b.webp" width="1024"/>
+<img alt="Injectables" decoding="async" height="1536" loading="lazy" src="/assets/images/injectables-b1214a640f1b.webp" width="1024"/>
 <span class="treatment-label">Injectables</span>
 </a>
 <a class="treatment-card" href="/providers?specialty=skin-laser">
-<img alt="Skin and laser treatments" decoding="async" height="1529" loading="lazy" src="assets/images/skin-and-laser-treatments-ad7df75b9026.webp" width="1029"/>
+<img alt="Skin and laser treatments" decoding="async" height="1529" loading="lazy" src="/assets/images/skin-and-laser-treatments-ad7df75b9026.webp" width="1029"/>
 <span class="treatment-label">Skin + Laser</span>
 </a>
+<a class="treatment-card" href="/providers?specialty=body-contouring"><img alt="Body contouring treatment" loading="lazy" src="/assets/images/body-contouring-treatment-v2.webp"/><span class="treatment-label">Body Contouring</span></a>
 <a class="treatment-card" href="/providers?specialty=aesthetic-recovery">
-<img alt="Lymphatic and post-procedure care" decoding="async" height="1535" loading="lazy" src="assets/images/lymphatic-and-post-procedure-care-04421686981e.webp" width="1025"/>
-<span class="treatment-label">Lymphatic + Post-Procedure</span>
+<img alt="Lymphatic and post-procedure care" decoding="async" height="1535" loading="lazy" src="/assets/images/lymphatic-and-post-procedure-care-04421686981e.webp" width="1025"/>
+<span class="treatment-label">Aesthetic Recovery</span>
 </a>
 </div>
 </div>
@@ -227,7 +264,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <!-- Sample provider content for design/prototype use. Replace with recruited providers before publishing. -->
 <div class="provider-grid" id="providerGrid">
 <a class="provider-card" data-location="Atlanta, GA" data-name="Amara Bennett" data-treatment="Injectables Skin Rejuvenation Wellness" data-type="Nurse Practitioner" href="/spotlight-amara-bennett">
-<div class="provider-photo"><img alt="Amara Bennett" src="assets/images/amara-bennett-sample-provider-03027c95b46b.webp">
+<div class="provider-photo"><img alt="Amara Bennett" src="/assets/images/amara-bennett-sample-provider-03027c95b46b.webp">
 <div class="featured-badge">Featured</div>
 </div>
 <div class="provider-body">
@@ -240,7 +277,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 </a>
 <a class="provider-card" data-location="Bethesda, MD" data-name="Abby Sample" data-treatment="Skin Laser Injectables Dermatology" data-type="Physician" href="/profile-abby-sample">
-<div class="provider-photo"><img alt="Dr. Abby Sample" src="assets/images/dr-abby-sample-provider-27de4f1a9da1.webp"></div>
+<div class="provider-photo"><img alt="Dr. Abby Sample" src="/assets/images/dr-abby-sample-provider-27de4f1a9da1.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Dr. Abby Sample, MD, FAAD</h3>
 <div class="provider-role">Dermatology + Aesthetics · Bethesda, MD</div>
@@ -251,7 +288,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 </a>
 <a class="provider-card" data-location="Chicago, IL" data-name="David Chen" data-treatment="Hair Restoration PRP Scalp Health" data-type="Physician Assistant" href="/spotlight-david-chen">
-<div class="provider-photo"><img alt="David Chen" src="assets/images/david-chen-sample-provider-2b770d1fb8ea.webp"></div>
+<div class="provider-photo"><img alt="David Chen" src="/assets/images/david-chen-sample-provider-2b770d1fb8ea.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">David Chen, PA-C</h3>
 <div class="provider-role">Hair Restoration + Scalp Health · Chicago, IL</div>
@@ -262,7 +299,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 </a>
 <a class="provider-card" data-location="New York, NY" data-name="Kaan Demir" data-treatment="Hair Restoration Hair Transplant Alopecia" data-type="Physician" href="/spotlight-kaan-demir">
-<div class="provider-photo"><img alt="Dr. Kaan Demir" src="assets/images/dr-kaan-demir-md-1434f4ff55a1.webp"></div>
+<div class="provider-photo"><img alt="Dr. Kaan Demir" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Dr. Kaan Demir, MD</h3>
 <div class="provider-role">Hair Restoration Surgery · New York, NY</div>
@@ -273,7 +310,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 </a>
 <article class="provider-card" data-location="Washington, DC" data-name="Yemi Ellis" data-treatment="Injectables Skin Facial Balancing" data-type="Nurse Practitioner">
-<div class="provider-photo"><img alt="Yemi Ellis" src="assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp"></div>
+<div class="provider-photo"><img alt="Yemi Ellis" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Yemi Ellis, FNP-C</h3>
 <div class="provider-role">Aesthetic Medicine · Washington, DC</div>
@@ -284,7 +321,7 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 </div>
 </article>
 <article class="provider-card" data-location="London, UK" data-name="Rachel Morgan" data-treatment="Injectables Facial Balancing Fillers" data-type="Registered Nurse">
-<div class="provider-photo"><img alt="Rachel Morgan" src="assets/images/rachel-morgan-rn-db9b75a17326.webp"></div>
+<div class="provider-photo"><img alt="Rachel Morgan" src="/assets/images/rachel-morgan-rn-db9b75a17326.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Rachel Morgan, RN</h3>
 <div class="provider-role">Facial Balancing · London, UK</div>
@@ -307,10 +344,10 @@ input::placeholder { color:#181716; opacity:.72; font-weight:500; }
 <h2>Browse by Treatment</h2>
 </div>
 <div class="browse-links">
-<a href="/providers?specialty=injectables">Injectables + Facial Balancing →</a>
+<a href="/providers?specialty=injectables">Injectables →</a>
 <a href="/providers?specialty=skin-laser">Skin + Laser →</a>
 <a href="/providers?specialty=hair-restoration">Hair Restoration →</a>
-<a href="/providers?specialty=aesthetic-recovery">Body + Lymphatic Care →</a>
+<a href="/providers?specialty=aesthetic-recovery">Aesthetic Recovery →</a>
 </div>
 </div>
 </section>
@@ -435,24 +472,7 @@ text.addEventListener('keydown', (e) => {
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !panel.hidden) close(); });
 })();
 </script>
-<style id="beautyjar-standard-footer">
-footer#beautyjar-footer{box-sizing:border-box;margin:0;background:#fff;color:#181716;border-top:1px solid #e6e2dc;padding:32px 0 22px;font:600 12px/1.5 'DM Sans',Arial,sans-serif}
-#beautyjar-footer *{box-sizing:border-box}
-#beautyjar-footer .bj-inner{width:min(1180px,calc(100% - 48px));margin:auto}
-#beautyjar-footer .bj-columns{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:36px}
-#beautyjar-footer .bj-logo{display:inline-block;font:600 30px/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.03em;color:#181716;text-decoration:none}
-#beautyjar-footer .bj-logo span{color:#985664}
-#beautyjar-footer .bj-tagline{font-size:12px;font-weight:700;margin:7px 0 13px}
-#beautyjar-footer .bj-title{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:3px 0 11px}
-#beautyjar-footer .bj-links{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
-#beautyjar-footer .bj-social{display:flex;flex-wrap:wrap;gap:7px 15px}
-#beautyjar-footer a{font-size:12px;font-weight:600;line-height:1.5;color:#181716;text-decoration:none}
-#beautyjar-footer a:hover{text-decoration:underline}
-#beautyjar-footer .bj-bottom{border-top:1px solid #e6e2dc;margin-top:27px;padding-top:15px;display:flex;justify-content:space-between;gap:24px;font-size:11px;font-weight:600}
-#beautyjar-footer .bj-bottom span:last-child{text-align:right;max-width:590px}
-@media(max-width:780px){#beautyjar-footer .bj-columns{grid-template-columns:1fr 1fr;gap:25px}#beautyjar-footer .bj-bottom{flex-direction:column;gap:7px}#beautyjar-footer .bj-bottom span:last-child{text-align:left}}
-@media(max-width:480px){#beautyjar-footer .bj-inner{width:calc(100% - 32px)}#beautyjar-footer .bj-columns{grid-template-columns:1fr 1fr;gap:24px 14px}#beautyjar-footer .bj-columns>div:first-child{grid-column:1/-1}}
-</style>
-<footer id="beautyjar-footer"><div class="bj-inner"><div class="bj-columns"><div><a class="bj-logo" href="/">Beauty<span>J</span>ar</a><p class="bj-tagline">Medical Aesthetics Directory</p><div class="bj-social"><a href="https://x.com/beautyjar">X</a><a href="https://medium.com/@beautyjar">Medium</a><a href="https://facebook.com/Thebeautyjar/">Facebook</a><a href="https://instagram.com/beautyjarhq">Instagram</a></div></div><div><div class="bj-title">Discover</div><div class="bj-links"><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a></div></div><div><div class="bj-title">BeautyJar</div><div class="bj-links"><a href="/about">About</a><a href="/faq">FAQ</a><a href="/for-providers">For Providers</a><a href="mailto:hello@beautyjar.com">Contact Us</a><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></div></div><div><div class="bj-title">Legal</div><div class="bj-links"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/medical-disclaimer">Medical Disclaimer</a><a href="/editorial-standards">Editorial Standards</a><a href="/cookie-policy">Cookie Policy</a></div></div></div><div class="bj-bottom"><span>© 2026 BeautyJar · Wenley Technologies LLC. All rights reserved.</span><span>BeautyJar is a provider discovery and information platform. It does not provide medical advice or medical services.</span></div></div></footer>
+
+<footer id="beautyjar-footer"><div class="bj-inner"><div class="bj-columns"><div><a class="bj-logo" href="/">Beauty<span>J</span>ar</a><p class="bj-tagline">Medical Aesthetics Directory</p><div class="bj-social"><a href="https://x.com/beautyjar">X</a><a href="https://medium.com/@beautyjar">Medium</a><a href="https://facebook.com/Thebeautyjar/">Facebook</a><a href="https://instagram.com/beautyjarhq">Instagram</a></div></div><div><div class="bj-title">Discover</div><div class="bj-links"><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a></div></div><div><div class="bj-title">BeautyJar</div><div class="bj-links"><a href="/about">About</a><a href="/faq">FAQ</a><a href="/for-providers">For Providers</a><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></div></div><div><div class="bj-title">Legal</div><div class="bj-links"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/medical-disclaimer">Medical Disclaimer</a><a href="/editorial-standards">Editorial Standards</a><a href="/cookie-policy">Cookie Policy</a></div></div></div><div class="bj-bottom"><span>© 2026 BeautyJar · Wenley Technologies LLC. All rights reserved.</span><span>BeautyJar is a provider discovery and information platform. It does not provide medical advice or medical services.</span></div></div></footer>
 </body>
 </html>

@@ -778,7 +778,7 @@ footer#site-footer .footer-owner{font-weight:500!important}
 .edit-magazine{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;margin-top:10px}
 .edit-feature-art{aspect-ratio:16/10;overflow:hidden;margin-bottom:20px}
 .edit-feature-art img{width:100%;height:100%;object-fit:cover;display:block}
-.edit-feature-copy h3{font-size:27px;line-height:1.15;margin-bottom:10px}
+.edit-feature-copy h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:27px;line-height:1.15;margin-bottom:10px}
 .edit-feature-copy p{font-size:15px;color:var(--muted);margin-bottom:14px;max-width:480px}
 .edit-list{border-top:1px solid var(--line)}
 .edit-list-item{display:block;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none}
@@ -1103,13 +1103,14 @@ footer#beautyjar-footer{box-sizing:border-box;margin:0;background:#fff;color:#18
 document.addEventListener('DOMContentLoaded',()=>{const footer=document.getElementById('beautyjar-footer'),widget=document.getElementById('bj-help-widget');if(footer&&widget&&'IntersectionObserver' in window){new IntersectionObserver(entries=>{widget.classList.toggle('bj-footer-visible',entries[0].isIntersecting);},{threshold:0}).observe(footer);}});
 
 </script>
+<style id="edit-preview-link">.edit-feature-copy .text-link{color:var(--berry,#8a4f5a);text-decoration:underline;text-underline-offset:4px}.edit-feature:hover .text-link,.edit-feature:focus-visible .text-link{text-decoration-thickness:2px}</style>
 </head>
 <body>
 <header id="beautyjar-header">
 <div class="container toprow">
 <div class="leftnote">Medical Aesthetics Directory</div>
 <a class="brand" href="/">Beauty<span class="brand-j">J</span>ar</a>
-<div class="actions"><a class="btn btn-primary" href="/providers">Find a Provider</a><a class="btn btn-featured" href="/for-providers">List Your Practice</a></div>
+<div class="actions"><a class="btn btn-primary" href="/providers">Find a Provider</a><a class="btn btn-featured" href="/for-providers">Join BeautyJar</a></div>
 </div>
 <nav class="nav"><a href="/" aria-current="page">Home</a><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a><a href="/about">About</a><a href="/for-providers">For Providers</a></nav>
 </header>
@@ -1209,7 +1210,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="edit-feature-copy">
 <h3>40+ and glowing: the laser treatments worth knowing</h3>
 <p>What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
-<span class="text-link">Read the story</span>
+<span class="text-link">Read the story <span aria-hidden="true">→</span></span>
 </div>
 </a>
 <div class="edit-list">
@@ -1311,6 +1312,6 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 })();
 </script>
 
-<footer id="beautyjar-footer"><div class="bj-inner"><div class="bj-columns"><div><a class="bj-logo" href="/">Beauty<span>J</span>ar</a><p class="bj-tagline">Medical Aesthetics Directory</p><div class="bj-social"><a href="https://x.com/beautyjar">X</a><a href="https://medium.com/@beautyjar">Medium</a><a href="https://facebook.com/Thebeautyjar/">Facebook</a><a href="https://instagram.com/beautyjarhq">Instagram</a></div></div><div><div class="bj-title">Discover</div><div class="bj-links"><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a></div></div><div><div class="bj-title">BeautyJar</div><div class="bj-links"><a href="/about">About</a><a href="/faq">FAQ</a><a href="/for-providers">For Providers</a><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></div></div><div><div class="bj-title">Legal</div><div class="bj-links"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/medical-disclaimer">Medical Disclaimer</a><a href="/editorial-standards">Editorial Standards</a><a href="/cookie-policy">Cookie Policy</a></div></div></div><div class="bj-bottom"><span>© 2026 BeautyJar · Wenley Technologies LLC. All rights reserved.</span><span>BeautyJar is a provider discovery and information platform. It does not provide medical advice or medical services.</span></div></div></footer>
+<footer id="beautyjar-footer"><div class="bj-inner"><div class="bj-columns"><div><a class="bj-logo" href="/">Beauty<span>J</span>ar</a><p class="bj-tagline">Medical Aesthetics Directory</p><div class="bj-social"><a href="https://instagram.com/beautyjarhq">Instagram</a><a href="https://x.com/beautyjar">X</a><a href="https://medium.com/@beautyjar">Medium</a><a href="https://facebook.com/Thebeautyjar/">Facebook</a></div></div><div><div class="bj-title">Discover</div><div class="bj-links"><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a></div></div><div><div class="bj-title">Company</div><div class="bj-links"><a href="/about">About</a><a href="/faq">FAQ</a><a href="/for-providers">For Providers</a><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></div></div><div><div class="bj-title">Legal</div><div class="bj-links"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/medical-disclaimer">Medical Disclaimer</a><a href="/editorial-standards">Editorial Standards</a><a href="/cookie-policy">Cookie Policy</a></div></div></div><div class="bj-bottom"><span>© 2026 BeautyJar · Wenley Technologies LLC. All rights reserved.</span><span>BeautyJar is a provider discovery platform and does not provide medical advice or services.</span></div></div></footer>
 </body>
 </html>

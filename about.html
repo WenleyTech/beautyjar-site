@@ -662,6 +662,11 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <meta content="https://beautyjar.com/assets/images/close-beauty-portrait-with-luminous-skin-f84dc0ca4d33.webp" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://beautyjar.com/assets/images/close-beauty-portrait-with-luminous-skin-f84dc0ca4d33.webp" name="twitter:image"/>
+<style>
+#credential-check,#credential-sources{scroll-margin-top:110px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--berry);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -675,7 +680,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <main class="wrap">
 <section class="hero"><div><div class="eyebrow">About BeautyJar</div><h1>Get to know the people behind aesthetic care.</h1></div><p class="hero-copy">Explore credential-checked providers, learn about their approach and get a feel for their practice, all in one place.</p></section>
 <section class="section"><div class="section-grid"><div><div class="eyebrow">Our Story</div><h2>Why I started BeautyJar</h2></div><div class="copy"><p>BeautyJar began with my own search. As my skin changed with shifting hormones, I wanted someone who could help me look refreshed and care for my skin over time. I found beautiful websites and inspiring social media pages, and wanted to learn more about the people behind them—their backgrounds, their approach and what a visit might feel like.</p><p>Choosing whom to trust with your face is personal. I wanted a place where you could get to know a provider before reaching out. That search became BeautyJar.</p></div></div></section>
-<section class="section"><div class="section-grid"><div><div class="eyebrow">Provider Pages</div><h2>A little more about the people and practices.</h2></div><div class="copy"><p><strong>The professionals.</strong> Physicians, nurse practitioners, physician assistants and registered nurses, with each credential explained in plain language.</p><p><strong>The practical details.</strong> Treatments, locations and booking links, plus starting prices, consultation fees, languages, payment options, and new-patient and virtual consultation availability when practices share them.</p><p><strong>A closer look.</strong> Spotlight pages share more of a provider’s story through expanded biographies, patient Q&amp;A, galleries and optional videos.</p><p><strong>Five treatment categories.</strong> Injectables, Skin + Laser, Body Contouring, Hair Restoration and Aesthetic Recovery, with providers in the US and internationally.</p></div></div></section>
+<section class="section"><div class="section-grid"><div><div class="eyebrow">Provider Pages</div><h2>A little more about the people and practices.</h2></div><div class="copy"><p><strong>The professionals.</strong> Licensed medical providers: physicians, nurse practitioners, physician assistants and registered nurses, with each credential explained in plain language.</p><p><strong>The practical details.</strong> Treatments, locations and booking links, plus starting prices, consultation fees, languages, payment options, and new-patient and virtual consultation availability when practices share them.</p><p><strong>A closer look.</strong> Spotlight pages share more of a provider’s story through expanded biographies, Provider Q&amp;A, galleries and optional videos.</p><p><strong>Five treatment categories.</strong> Injectables, Skin + Laser, Body Contouring, Hair Restoration and Aesthetic Recovery, with providers in the US and internationally.</p></div></div></section>
 <section class="section" id="independence"><div class="section-grid"><div><div class="eyebrow">How BeautyJar Works</div><h2>Memberships and Featured placement.</h2></div><div class="copy"><p>Providers pay a flat monthly membership, with no per-inquiry or booking fees. A Featured label identifies a Spotlight membership, the higher paid tier with additional visibility. It describes placement on BeautyJar rather than a clinical rating. The Edit selects its stories independently of membership.</p></div></div></section>
 <section class="section" id="credential-check">
 <div class="section-grid">
@@ -686,7 +691,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="check-box">
 <div>
 <h3>1. Understanding the credential check</h3>
-<p>Before publishing a provider’s page, BeautyJar checks applicable credentials against the appropriate licensing or registration source. Selected professional credentials are rechecked at least once a year. Credential Checked reflects the information confirmed at the time of review.</p>
+<p>Before publishing a provider’s page, BeautyJar checks applicable credentials against the appropriate licensing or registration source. Credentials are rechecked once a year. If a license is suspended, revoked or expires, the listing is made inactive until it has been resolved. Credential Checked reflects the information confirmed at the time of review. <a href="#credential-sources">Explore our credential sources</a>.</p>
 </div>
 <div>
 <h3>2. Finding the right fit for you</h3>
@@ -695,13 +700,13 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </div>
 </section>
-<section class="trust-resources">
+<section class="trust-resources" id="credential-sources">
 <div class="trust-resources-head">
 <div>
 <div class="eyebrow">Credential + Research Sources</div>
 <h2>Where credential information comes from.</h2>
 </div>
-<p class="trust-resources-intro">Credential requirements vary by profession and location. We use the relevant licensing and professional sources to review provider information. You can explore these resources too, whenever you’d like to learn more.</p>
+<p class="trust-resources-intro">Credential requirements vary by profession and location. We use the relevant licensing and professional sources to review provider information. You can explore these resources too, whenever you’d like to learn more. Licensing registers confirm professional registration or licensure; certification sources address specific credentials. Professional associations and research resources provide additional context and do not replace a licensing check.</p>
 </div>
 <div class="resource-block">
 <div class="resource-label">Professional credential sources</div><p style="font-size:13px;font-weight:600;color:#0b0b0b;margin:-6px 0 18px">Resources last reviewed September 2026.</p>
@@ -928,7 +933,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
     payment: '<p>After payment, we email you a link to submit credentials, practice details, written content and images. We review the information and send a private page preview before publication.</p><p><a href="/faq">Read the full FAQ</a></p>',
     refund: '<p>If BeautyJar cannot approve a paid listing after review, we cancel the membership and refund the initial payment.</p><p><a href="/faq">Read the full FAQ</a></p>',
     search: '<p>Provider pages may include a booking link, website or telephone number. Appointments are made directly with the provider or practice.</p><p><a href="/providers">Find a provider</a></p>',
-    checked: '<p>BeautyJar reviews selected professional credentials and practice information using applicable public sources. Credential Checked is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
+    checked: '<p>BeautyJar checks applicable professional credentials against public licensing and registration sources before publication and rechecks them once a year. If a license is suspended, revoked or expires, the listing is made inactive until it has been resolved. Credential Checked is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
   };
   function close() { panel.hidden = true; toggle.setAttribute('aria-expanded','false'); toggle.focus(); }
   toggle.addEventListener('click', () => {

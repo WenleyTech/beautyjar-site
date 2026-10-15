@@ -26,18 +26,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/spotlight-abby-sample"
-  to = "/profile-abby-sample"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/spotlight-abby-sample.html"
-  to = "/profile-abby-sample"
-  status = 301
-  force = true
-
 # Preserve useful routes from the previous BeautyJar site.
 [[redirects]]
   from = "/sample-provider-listing.html"

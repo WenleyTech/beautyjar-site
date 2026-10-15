@@ -56,7 +56,7 @@
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://beautyjar.com/providers.html?q={search_term_string}"
+          "urlTemplate": "https://beautyjar.com/providers?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -1104,6 +1104,14 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 
 </script>
 <style id="edit-preview-link">.edit-feature-copy .text-link{color:var(--berry,#8a4f5a);text-decoration:underline;text-underline-offset:4px}.edit-feature:hover .text-link,.edit-feature:focus-visible .text-link{text-decoration-thickness:2px}</style>
+<style>
+/* Focused clarity and accessibility additions; existing design retained. */
+.bj-credential-note{font-size:13px;line-height:1.6;margin:12px 0 0;color:var(--ink)}
+.bj-credential-note a,.bj-inline-link{text-decoration:underline;text-underline-offset:3px}
+.bj-sample-label{font-size:12px;line-height:1.5;margin:5px 0;color:var(--berry)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--berry);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -1119,8 +1127,8 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="hero-copy">
 <h1>Find an aesthetic provider.</h1>
 <p class="hero-sub">Search by treatment, specialty or location.</p>
-<form action="providers.html" class="searchbox">
-<div class="searchfield"><small>Search</small><input name="q" placeholder="Provider, treatment, specialty or city"/></div>
+<form action="/providers" class="searchbox" role="search">
+<div class="searchfield"><small>Search</small><input aria-label="Search providers by name, treatment, specialty or city" name="q" placeholder="Provider, treatment, specialty or city"/></div>
 <button class="searchbtn" type="submit">Search</button>
 </form>
 <div class="popular-label">Popular:</div>
@@ -1142,7 +1150,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>Provider profiles</span><span>Treatments + trends</span><span>Direct practice connections</span></div></div>
 <section class="section category-wrap" id="treatments">
 <div class="container">
-<div class="section-head"><div><h2>Browse by specialty.</h2></div><p>Explore providers across injectables, skin, laser, hair, body and cosmetic procedures.</p></div>
+<div class="section-head"><div><h2>Browse by treatment category.</h2></div><p>Explore providers across injectables, skin and laser treatments, body contouring, hair restoration and aesthetic recovery.</p></div>
 <div class="categories">
 <a class="cat" href="/providers?specialty=injectables"><img alt="Injectables" decoding="async" height="1536" loading="lazy" src="/assets/images/injectables-c9aad1e5d020.webp" width="1024"/><div><h3>Injectables</h3><p>Botox, filler, Sculptra, facial balancing</p></div></a>
 <a class="cat" href="/providers?specialty=skin-laser"><img alt="Skin and laser treatments" decoding="async" height="1529" loading="lazy" src="/assets/images/skin-and-laser-treatments-3b5c592c9cd8.webp" width="1029"/><div><h3>Skin + Laser</h3><p>Lasers, microneedling, peels, advanced skincare</p></div></a>
@@ -1157,9 +1165,9 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </section>
 <section class="section" id="providers">
 <div class="container">
-<div class="section-head"><div><h2>Featured Providers</h2></div><p>Browse selected provider profiles and connect directly with their practices.</p></div>
+<div class="section-head"><div><h2>Featured Providers</h2></div><p>Explore Spotlight provider pages and connect directly with practices. Featured placement reflects Spotlight membership, not a clinical rating.</p></div>
 <div class="providers">
-<a class="provider-card" href="/spotlight-abby-sample"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Abby Sample</div><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></a>
+<a class="provider-card" href="/spotlight-abby-sample"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Abby Sample</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></a>
 <a class="provider-card" href="/spotlight-kaan-demir"><div class="provider-img"><img alt="Dr. Kaan Demir, MD" decoding="async" height="760" loading="lazy" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Kaan Demir, MD</div><div class="provider-role">Hair Restoration Surgeon in New York, New York</div><div class="chips"><span class="chip">Hair Transplant</span><span class="chip">Female Hair Loss</span><span class="chip">Alopecia</span></div></div></a>
 <article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
 <article class="provider-card"><div class="provider-img"><img alt="Rachel Morgan, RN" decoding="async" height="758" loading="lazy" src="/assets/images/rachel-morgan-rn-db9b75a17326.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Rachel Morgan, RN</div><div class="provider-role">Facial Balancing in London, UK</div><div class="chips"><span class="chip">Natural Results</span><span class="chip">Filler</span></div></div></article>
@@ -1205,7 +1213,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </div>
 <div class="edit-magazine">
-<a class="edit-feature" href="/the-edit#laser-treatments-after-40">
+<a class="edit-feature" href="/coming-soon">
 <div class="edit-feature-art"><img alt="Blonde woman in her 40s featured in The BeautyJar Edit" decoding="async" height="941" loading="lazy" src="/assets/images/beautyjar-edit-blonde-40-plus.webp" width="1672"/></div>
 <div class="edit-feature-copy">
 <h3>40+ and glowing: the laser treatments worth knowing</h3>
@@ -1214,15 +1222,15 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </a>
 <div class="edit-list">
-<a class="edit-list-item" href="/the-edit#botox-undetectable">
+<a class="edit-list-item" href="/coming-soon">
 <h4>Botox, but make it undetectable.</h4>
 <p>Why “less obvious” has become its own aesthetic.</p>
 </a>
-<a class="edit-list-item" href="/the-edit#expensive-skin">
+<a class="edit-list-item" href="/coming-soon">
 <h4>What makes skin look expensive?</h4>
 <p>Texture, tone, restraint — and why the plan matters more than the trend.</p>
 </a>
-<a class="edit-list-item" href="/the-edit#laser-list-melanin-rich-skin">
+<a class="edit-list-item" href="/coming-soon">
 <h4>The Laser List: what actually works for melanin-rich skin?</h4>
 <p>A smarter starting point for researching devices, providers and skin tone considerations.</p>
 </a>
@@ -1294,7 +1302,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
     payment: '<p>After payment, we email you a link to submit credentials, practice details, written content and images. We review the information and send a private page preview before publication.</p><p><a href="/faq">Read the full FAQ</a></p>',
     refund: '<p>If BeautyJar cannot approve a paid listing after review, we cancel the membership and refund the initial payment.</p><p><a href="/faq">Read the full FAQ</a></p>',
     search: '<p>Provider pages may include a booking link, website or telephone number. Appointments are made directly with the provider or practice.</p><p><a href="/providers">Find a provider</a></p>',
-    checked: '<p>BeautyJar reviews selected professional credentials and practice information using applicable public sources. Credential Checked is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
+    checked: '<p>BeautyJar checks applicable professional credentials against public licensing and registration sources before publication and rechecks them once a year. If a license is suspended, revoked or expires, the listing is made inactive until it has been resolved. Credential Checked is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
   };
   function close() { panel.hidden = true; toggle.setAttribute('aria-expanded','false'); toggle.focus(); }
   toggle.addEventListener('click', () => {

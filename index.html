@@ -1112,6 +1112,23 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--berry);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="founding-homepage">
+.founding-band{background:#f3e9e7;border-bottom:1px solid var(--line)}
+.founding-band-grid{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px 0}
+.hero-location{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--berry);margin-bottom:14px}
+.fb-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--berry);margin-bottom:6px}
+.fb-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,2.6vw,32px);font-weight:600;line-height:1.15;color:var(--ink);margin:0 0 6px}
+.fb-copy{font-size:15px;line-height:1.55;color:var(--ink);margin:0;max-width:640px}
+.fb-btn{flex:none;min-height:54px;padding:0 26px}
+.founding-card{display:flex;align-items:center;background:#f3e9e7!important;text-decoration:none}
+.founding-card-inner{padding:34px 30px}
+.founding-card-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:600;line-height:1.1;margin:4px 0 12px;color:var(--ink)}
+.founding-card p{font-size:15px;line-height:1.55;color:var(--ink);margin:0 0 16px}
+.founding-card .text-link{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--berry)}
+.edit-soon{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+@media(min-width:1001px){.providers{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.founding-band-grid{flex-direction:column;align-items:flex-start;gap:16px}.fb-btn{width:100%}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -1125,8 +1142,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <main><section class="hero">
 <div class="container hero-grid">
 <div class="hero-copy">
-<h1>Find an aesthetic provider.</h1>
-<p class="hero-sub">Search by treatment, specialty or location.</p>
+<div class="hero-location">Medical aesthetics in DC, Maryland &amp; Northern Virginia</div>
+<h1>Get to know your provider before you book.</h1>
+<p class="hero-sub">Meet the people behind the treatments. Explore their experience, approach and what makes their practice their own.</p>
 <form action="/providers" class="searchbox" role="search">
 <div class="searchfield"><small>Search</small><input aria-label="Search providers by name, treatment, specialty or city" name="q" placeholder="Provider, treatment, specialty or city"/></div>
 <button class="searchbtn" type="submit">Search</button>
@@ -1147,7 +1165,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <div class="v-tag">BeautyJar</div>
 </div>
 </div>
-</section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>Provider profiles</span><span>Treatments + trends</span><span>Direct practice connections</span></div></div>
+</section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>Meet the person behind the treatment</span><span>Know what to expect</span><span>Connect directly with the practice</span></div></div>
+<section class="founding-band" aria-label="Founding Provider offer"><div class="container founding-band-grid"><div><div class="fb-eyebrow">Founding Providers</div><p class="fb-title">Join BeautyJar’s first 50 DMV providers with a complimentary membership that never expires.</p><p class="fb-copy">For licensed physicians, nurse practitioners, physician assistants and registered nurses practicing in DC, Maryland and Northern Virginia.</p></div><a class="btn btn-featured fb-btn" href="/founding-provider">Apply as a Founding Provider</a></div></section>
 <section class="section category-wrap" id="treatments">
 <div class="container">
 <div class="section-head"><div><h2>Browse by treatment category.</h2></div><p>Explore providers across injectables, skin and laser treatments, body contouring, hair restoration and aesthetic recovery.</p></div>
@@ -1165,12 +1184,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 </section>
 <section class="section" id="providers">
 <div class="container">
-<div class="section-head"><div><h2>Featured Providers</h2></div><p>Explore Spotlight provider pages and connect directly with practices. Featured placement reflects Spotlight membership, not a clinical rating.</p></div>
+<div class="section-head"><div><h2>See what a BeautyJar profile looks like.</h2></div><p>These are sample profiles with fictional providers. Our first Founding Providers are joining now.</p></div>
 <div class="providers">
 <a class="provider-card" href="/spotlight-abby-sample"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Abby Sample</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></a>
-<a class="provider-card" href="/spotlight-kaan-demir"><div class="provider-img"><img alt="Dr. Kaan Demir, MD" decoding="async" height="760" loading="lazy" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Kaan Demir, MD</div><div class="provider-role">Hair Restoration Surgeon in New York, New York</div><div class="chips"><span class="chip">Hair Transplant</span><span class="chip">Female Hair Loss</span><span class="chip">Alopecia</span></div></div></a>
-<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
-<article class="provider-card"><div class="provider-img"><img alt="Rachel Morgan, RN" decoding="async" height="758" loading="lazy" src="/assets/images/rachel-morgan-rn-db9b75a17326.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Rachel Morgan, RN</div><div class="provider-role">Facial Balancing in London, UK</div><div class="chips"><span class="chip">Natural Results</span><span class="chip">Filler</span></div></div></article>
+
+<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
+<a class="provider-card founding-card" href="/founding-provider"><div class="founding-card-inner"><div class="fb-eyebrow">Founding Providers</div><div class="founding-card-title">Your profile could be here.</div><p>Be one of BeautyJar’s first 50 DMV providers, with a complimentary membership that never expires.</p><span class="text-link">Apply now <span aria-hidden="true">→</span></span></div></a>
+
 </div>
 </div>
 </section>
@@ -1178,25 +1198,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <div class="container">
 <div class="why-head">
 <div>
-<h2>Discover what’s happening in aesthetics.</h2>
+<h2>Their story, all in one place.</h2>
 </div>
 <div class="why-intro">
-<p>Browse providers, explore treatments and find ideas for your next appointment.</p>
+<p>The full picture of a provider, from their approach to the treatments they love most.</p>
 <a class="trust-link" href="/providers">Find a Provider</a>
 </div>
 </div>
 <div class="why-grid">
 <article class="why-card">
-<h3>Meet aesthetic providers.</h3>
-<p>Explore profiles, specialties, services and practice information.</p>
+<h3>Meet the person behind the treatment.</h3>
+<p>Their experience, their approach and what makes their practice their own.</p>
 </article>
 <article class="why-card">
-<h3>Explore treatments and trends.</h3>
-<p>Get familiar with popular treatments, services and what’s new in aesthetics.</p>
+<h3>Know what to expect.</h3>
+<p>Treatments, starting prices, consultation details and what a first visit looks like.</p>
 </article>
 <article class="why-card">
-<h3>Connect directly.</h3>
-<p>Find a provider, learn about their practice and contact them directly.</p>
+<h3>Connect directly with the practice.</h3>
+<p>Reach out through the practice’s own website or booking link.</p>
 </article>
 </div>
 </div>
@@ -1213,27 +1233,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 </div>
 </div>
 <div class="edit-magazine">
-<a class="edit-feature" href="/coming-soon">
+<div class="edit-feature">
 <div class="edit-feature-art"><img alt="Blonde woman in her 40s featured in The BeautyJar Edit" decoding="async" height="941" loading="lazy" src="/assets/images/beautyjar-edit-blonde-40-plus.webp" width="1672"/></div>
 <div class="edit-feature-copy">
 <h3>40+ and glowing: the laser treatments worth knowing</h3>
 <p>What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
-<span class="text-link">Read the story <span aria-hidden="true">→</span></span>
+<span class="edit-soon">Coming soon</span>
 </div>
-</a>
+</div>
 <div class="edit-list">
-<a class="edit-list-item" href="/coming-soon">
+<div class="edit-list-item">
 <h4>Botox, but make it undetectable.</h4>
 <p>Why “less obvious” has become its own aesthetic.</p>
-</a>
-<a class="edit-list-item" href="/coming-soon">
+<span class="edit-soon">Coming soon</span>
+</div>
+<div class="edit-list-item">
 <h4>What makes skin look expensive?</h4>
 <p>Texture, tone, restraint — and why the plan matters more than the trend.</p>
-</a>
-<a class="edit-list-item" href="/coming-soon">
+<span class="edit-soon">Coming soon</span>
+</div>
+<div class="edit-list-item">
 <h4>The Laser List: what actually works for melanin-rich skin?</h4>
 <p>A smarter starting point for researching devices, providers and skin tone considerations.</p>
-</a>
+<span class="edit-soon">Coming soon</span>
+</div>
 </div>
 </div>
 </div>
@@ -1241,9 +1264,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 </section>
 <section class="cta provider-cta dark">
 <div class="container">
-<h2>Are you a provider?</h2>
+<h2>Are you a DMV provider?</h2>
+<p>Join BeautyJar’s first 50 DMV providers with a complimentary membership that never expires.</p>
 <div class="closing-actions">
-<a class="btn btn-featured" href="/for-providers">Join BeautyJar</a>
+<a class="btn btn-featured" href="/founding-provider">Apply as a Founding Provider</a>
+<a class="btn btn-outline" href="/for-providers">See all memberships</a>
 </div>
 </div>
 </section>

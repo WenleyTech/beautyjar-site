@@ -1136,6 +1136,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .fb-title{margin-bottom:18px!important;letter-spacing:-.025em!important;line-height:1.08!important;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1}
 .founding-card-title,h1,h2{font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1}
 .sample-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--berry);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.sample-note{font-size:14px!important;font-weight:600;color:#5c5651}
+
+/* calm founding band */
+section.founding-band{background:#fff!important;border-top:1px solid #ece4e1;border-bottom:1px solid #ece4e1;padding:0!important;margin:0!important}
+.founding-band .founding-band-grid{padding:40px 0!important;gap:40px!important}
+.founding-band .fb-eyebrow{font-size:11px!important;letter-spacing:.16em!important;margin:0 0 10px!important}
+.founding-band .fb-title{font-family:'DM Sans',Arial,sans-serif!important;font-size:clamp(19px,1.6vw,22px)!important;font-weight:500!important;letter-spacing:-.005em!important;line-height:1.4!important;max-width:640px!important;margin:0 0 10px!important}
+.founding-band .fb-copy{font-size:15px!important;line-height:1.6!important;color:#181716!important;font-weight:700!important;max-width:600px!important;margin:0!important}
+.founding-band .fb-btn{min-height:46px!important;padding:0 22px!important;font-size:12px!important;letter-spacing:.08em!important}
+
+/* sample grid cleanup */
+@media(min-width:1001px){.providers{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+body .providers .provider-card .chips .chip{background:#f6f2ef!important;border:1px solid #e9e2dd!important;color:#181716!important}
+.providers .provider-card{position:relative}.spotlight-tag{position:absolute;top:14px;left:14px;z-index:2;background:#fff;padding:3px 9px;border:1px solid #8a4f5a;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a4f5a}
 </style>
 </head>
 <body>
@@ -1192,14 +1206,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 </section>
 <section class="section" id="providers">
 <div class="container">
-<div class="section-head"><div><h2>See what a BeautyJar profile looks like.</h2></div><div class="sample-intro"><p>These are sample profiles with fictional providers.</p><a class="text-link sample-link" href="/spotlight-abby-sample">View a sample profile <span aria-hidden="true">→</span></a></div></div>
+<div class="section-head"><div><h2>See what a BeautyJar profile looks like.</h2></div><div class="sample-intro"><p class="sample-note">Sample profiles shown for illustration.</p><a class="text-link sample-link" href="/spotlight-abby-sample">View a sample profile <span aria-hidden="true">→</span></a></div></div>
 <div class="providers">
-<article class="provider-card"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Abby Sample</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></article>
+<article class="provider-card"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="spotlight-tag">Spotlight</div><div class="provider-name">Dr. Abby Sample</div><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></article>
 
-<article class="provider-card"><div class="provider-img"><img alt="David Chen, PA-C" decoding="async" height="841" loading="lazy" src="/assets/images/beautyjar-embedded-2b770d1fb8ea567a.png" width="700"/></div><div class="provider-body"><div class="provider-name">David Chen, PA-C</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Hair Restoration in Arlington, Virginia</div><div class="chips"><span class="chip">Hair Restoration</span><span class="chip">PRP Therapy</span><span class="chip">Scalp Health</span></div></div></article>
-<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
-<article class="provider-card"><div class="provider-img"><img alt="Rachel Morgan, RN" decoding="async" height="758" loading="lazy" src="/assets/images/rachel-morgan-rn-db9b75a17326.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Rachel Morgan, RN</div><p class="bj-sample-label">Sample profile · fictional provider</p><div class="provider-role">Facial Balancing in Annapolis, Maryland</div><div class="chips"><span class="chip">Natural Results</span><span class="chip">Filler</span></div></div></article>
-
+<article class="provider-card"><div class="provider-img"><img alt="Dr. Kaan Demir, MD" decoding="async" height="760" loading="lazy" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Kaan Demir, MD</div><div class="provider-role">Hair Restoration in Tysons, Virginia</div><div class="chips"><span class="chip">Hair Transplant</span><span class="chip">PRP Therapy</span><span class="chip">Scalp Health</span></div></div></article>
+<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
 </div>
 </div>
 </section>
@@ -1207,7 +1219,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <div class="container">
 <div class="why-head">
 <div>
-<h2>Their story, all in one place.</h2>
+<h2>Every provider, in their own words.</h2>
 </div>
 <div class="why-intro">
 <p>The full picture of a provider, from their approach to the treatments they love most.</p>

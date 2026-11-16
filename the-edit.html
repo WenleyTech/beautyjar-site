@@ -142,17 +142,14 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="eyebrow">Beauty + Wellness</div>
 <h1>The BeautyJar Edit</h1>
 </div>
-<article class="hero">
-<div class="hero-img"><img alt="Portrait of a woman in her 40s with glowing skin" height="941" src="/assets/images/beautyjar-edit-blonde-40-plus.webp" style="object-position:88% 0%;" width="1672"/></div>
-<div class="hero-copy">
-<div class="category">Skin + Laser</div>
-<h2 id="laser-treatments-after-40">40+ and glowing: the laser treatments worth knowing</h2>
-<p class="deck">What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
-<span class="avail">Available December 1</span>
-</div>
-</article>
-<div class="grid-title">The Edit</div>
+
 <section class="story-grid"><article class="story">
+<div class="story-img"><img alt="Portrait of a woman in her 40s with glowing skin" decoding="async" height="941" src="/assets/images/beautyjar-edit-blonde-40-plus.webp" style="object-position:88% 0%;" width="1672"/></div>
+<div class="category">Skin + Laser</div>
+<h3 id="laser-treatments-after-40">40+ and glowing: the laser treatments worth knowing</h3>
+<p>What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
+<span class="avail">Available December 1</span>
+</article><article class="story">
 <div class="story-img"><img alt="Woman receiving a subtle injectable treatment" decoding="async" height="1374" loading="lazy" src="/assets/images/woman-receiving-a-subtle-injectable-treatment-7e17949e8c20.webp" width="1145"/></div>
 <div class="category">Injectables</div>
 <h3 id="botox-undetectable">Botox, but make it undetectable.</h3>
@@ -300,7 +297,7 @@ html body article.story p:not(#bj-x){font-size:14px!important;line-height:1.55!i
 <style id="bj-avail">.avail{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8a4f5a}article.hero .avail{margin-top:22px}</style>
 <style id="bj-type">
 /* One type scale for the site */
-html body main h1:not(#bj-x){font-size:44px!important;line-height:1.1!important;letter-spacing:-.02em!important}
+html body main h1:not(#bj-x){font-size:36px!important;line-height:1.15!important;letter-spacing:-.02em!important}
 html body main h2:not(#bj-x){font-size:26px!important;line-height:1.2!important;letter-spacing:-.01em!important}
 html body main h3:not(#bj-x){font-size:20px!important;line-height:1.25!important}
 /* page-specific exceptions */
@@ -315,5 +312,7 @@ html body main .plan-head h3:not(#bj-x){font-size:24px!important}
 html body main .founding h2:not(#bj-x){font-size:22px!important;line-height:1.35!important}
 @media(max-width:650px){html body main h1:not(#bj-x),html body main .hero-copy h1:not(#bj-x){font-size:34px!important}html body main h2:not(#bj-x),html body main article.hero h2:not(#bj-x){font-size:23px!important}}
 </style>
+<style id="bj-equal">html body .story-grid:not(#bj-x){grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:32px!important;row-gap:44px!important;align-items:stretch!important;margin-top:36px!important}html body article.story:not(#bj-x){align-self:stretch}html body .story-img:not(#bj-x){aspect-ratio:4/3!important;height:auto!important}html body article.story h3:not(#bj-x){font-size:21px!important}@media(max-width:900px){html body .story-grid:not(#bj-x){grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:560px){html body .story-grid:not(#bj-x){grid-template-columns:1fr!important}}</style>
+<style id="bj-h1-mobile">@media(max-width:650px){html body main h1:not(#bj-x){font-size:30px!important;line-height:1.15!important}}</style>
 </body>
 </html>

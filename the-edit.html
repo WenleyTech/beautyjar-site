@@ -148,30 +148,34 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="category">Skin + Laser</div>
 <h2 id="laser-treatments-after-40">40+ and glowing: the laser treatments worth knowing</h2>
 <p class="deck">What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
-<a class="read" href="/coming-soon">Read the story</a>
+<span class="avail">Available December 1</span>
 </div>
 </article>
 <div class="grid-title">The Edit</div>
 <section class="story-grid"><article class="story">
 <div class="story-img"><img alt="Woman receiving a subtle injectable treatment" decoding="async" height="1374" loading="lazy" src="/assets/images/woman-receiving-a-subtle-injectable-treatment-7e17949e8c20.webp" width="1145"/></div>
 <div class="category">Injectables</div>
-<h3 id="botox-undetectable"><a href="/coming-soon">Botox, but make it undetectable.</a></h3>
+<h3 id="botox-undetectable">Botox, but make it undetectable.</h3>
 <p>Why “less obvious” has become its own aesthetic.</p>
-</article><article class="story">
-<div class="story-img"><img alt="Close-up of a woman parting her hair to show thinning at the part line" decoding="async" height="1333" loading="lazy" src="/assets/images/close-up-of-a-woman-parting-her-hair-to-show--ce912c670316.webp" width="900"/></div>
-<div class="category">Hair Restoration</div>
-<h3><a href="/coming-soon">Hair thinning isn’t one thing. Neither is the treatment.</a></h3>
-<p>Why the cause matters before PRP, minoxidil, supplements or restoration treatments enter the conversation.</p>
+<span class="avail">Available December 8</span>
 </article><article class="story">
 <div class="story-img"><img alt="Close beauty portrait with luminous skin" decoding="async" height="1017" loading="lazy" src="/assets/images/close-beauty-portrait-with-luminous-skin-f84dc0ca4d33.webp" width="1800"/></div>
 <div class="category">Skin</div>
-<h3 id="expensive-skin"><a href="/coming-soon">What makes skin look expensive?</a></h3>
+<h3 id="expensive-skin">What makes skin look expensive?</h3>
 <p>Texture, tone, restraint — and why the plan matters more than the trend.</p>
+<span class="avail">Available December 15</span>
 </article><article class="story story-laser">
 <div class="story-img"><img alt="Sunlit portrait of a woman with glowing melanin-rich skin" decoding="async" height="769" loading="lazy" src="/assets/images/sunlit-portrait-of-a-woman-in-her-40s-with-gl-2eb7d47e9f53.webp" style="object-position:70% 10%;" width="1800"/></div>
 <div class="category">Skin + Laser</div>
-<h3 id="laser-list-melanin-rich-skin"><a href="/coming-soon">The Laser List: what actually works for melanin-rich skin?</a></h3>
+<h3 id="laser-list-melanin-rich-skin">The Laser List: what actually works for melanin-rich skin?</h3>
 <p>A smarter look at devices, provider experience and skin tone considerations.</p>
+<span class="avail">Available December 22</span>
+</article><article class="story">
+<div class="story-img"><img alt="Close-up of a woman parting her hair to show thinning at the part line" decoding="async" height="1333" loading="lazy" src="/assets/images/close-up-of-a-woman-parting-her-hair-to-show--ce912c670316.webp" width="900"/></div>
+<div class="category">Hair Restoration</div>
+<h3>Hair thinning isn’t one thing. Neither is the treatment.</h3>
+<p>Why the cause matters before PRP, minoxidil, supplements or restoration treatments enter the conversation.</p>
+<span class="avail">In the works</span>
 </article></section>
 </main>
 
@@ -280,6 +284,36 @@ main > *{max-width:none!important;margin-left:0!important;margin-right:0!importa
 html body .story-img img:not(#bj-x){width:100%!important;display:block}
 html body .story-img:not(#bj-x),html body .hero-img:not(#bj-x){background:#fff!important}
 html body .eyebrow:not(#bj-x),html body .category:not(#bj-x),html body .grid-title:not(#bj-x){color:#8a4f5a!important}
+</style>
+<style id="bj-scale">
+html body article.hero h2:not(#bj-x){font-size:34px!important;line-height:1.12!important;letter-spacing:-.015em!important}
+html body .hero-img:not(#bj-x){height:400px!important}
+html body .hero-img img:not(#bj-x){height:100%!important;object-fit:cover}
+html body .story-grid:not(#bj-x){grid-template-columns:repeat(4,minmax(0,1fr))!important;column-gap:28px!important}
+html body .story-img:not(#bj-x){height:auto!important;aspect-ratio:4/5}
+html body .story-img img:not(#bj-x){height:100%!important;object-fit:cover}
+html body article.story h3:not(#bj-x){font-size:21px!important;line-height:1.22!important;letter-spacing:-.01em!important}
+html body article.story p:not(#bj-x){font-size:14px!important;line-height:1.55!important}
+@media(max-width:900px){html body .story-grid:not(#bj-x){grid-template-columns:repeat(2,minmax(0,1fr))!important}html body .hero-img:not(#bj-x){height:300px!important}}
+@media(max-width:560px){html body .story-grid:not(#bj-x){grid-template-columns:1fr!important}html body article.hero h2:not(#bj-x){font-size:28px!important}}
+</style>
+<style id="bj-avail">.avail{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8a4f5a}article.hero .avail{margin-top:22px}</style>
+<style id="bj-type">
+/* One type scale for the site */
+html body main h1:not(#bj-x){font-size:44px!important;line-height:1.1!important;letter-spacing:-.02em!important}
+html body main h2:not(#bj-x){font-size:26px!important;line-height:1.2!important;letter-spacing:-.01em!important}
+html body main h3:not(#bj-x){font-size:20px!important;line-height:1.25!important}
+/* page-specific exceptions */
+html body main .hero-copy h1:not(#bj-x){font-size:50px!important}
+html body main article.hero h2:not(#bj-x){font-size:34px!important;line-height:1.12!important}
+html body main .lane-name h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card.primary h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card h3:not(#bj-x){font-size:22px!important}
+html body main .edit-feature-copy h3:not(#bj-x){font-size:24px!important}
+html body main a.cat h3:not(#bj-x){font-size:22px!important}
+html body main .plan-head h3:not(#bj-x){font-size:24px!important}
+html body main .founding h2:not(#bj-x){font-size:22px!important;line-height:1.35!important}
+@media(max-width:650px){html body main h1:not(#bj-x),html body main .hero-copy h1:not(#bj-x){font-size:34px!important}html body main h2:not(#bj-x),html body main article.hero h2:not(#bj-x){font-size:23px!important}}
 </style>
 </body>
 </html>

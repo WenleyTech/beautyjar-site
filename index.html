@@ -1187,7 +1187,7 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 <div class="v-tag">BeautyJar</div>
 </div>
 </div>
-</section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>Meet the person behind the treatment</span><span>Know what to expect</span><span>Connect directly with the practice</span></div></div>
+</section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>License confirmed</span><span>Know what to expect</span><span>Book directly with the practice</span></div></div>
 <section class="founding-band" aria-label="Founding Provider offer"><div class="container founding-band-grid"><div><div class="fb-eyebrow">Founding Providers</div><p class="fb-title">Our first 50 providers in DC, Maryland and Northern Virginia receive a complimentary membership that never expires.</p><p class="fb-copy">For licensed physicians, nurse practitioners, physician assistants and registered nurses.</p></div><a class="btn btn-featured fb-btn" href="/founding-provider">Apply as a Founding Provider</a></div></section>
 <section class="section category-wrap" id="treatments">
 <div class="container">
@@ -1219,25 +1219,25 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 <div class="container">
 <div class="why-head">
 <div>
-<h2>Every provider, in their own words.</h2>
+<h2>Know who’s treating you.</h2>
 </div>
 <div class="why-intro">
-<p>The full picture of a provider, from their approach to the treatments they love most.</p>
+<p>In medical aesthetics, the name on the practice isn’t always the person holding the syringe. Every BeautyJar page answers three questions before you book.</p>
 <a class="trust-link" href="/providers">Find a Provider</a>
 </div>
 </div>
 <div class="why-grid">
 <article class="why-card">
-<h3>Meet the person behind the treatment.</h3>
-<p>Their experience, their approach and what makes their practice their own.</p>
+<h3>Who will actually treat me?</h3>
+<p>Many practices are known by one doctor’s name, while treatments are performed by nurse practitioners, physician assistants or registered nurses. BeautyJar introduces the person, not just the practice.</p>
 </article>
 <article class="why-card">
-<h3>Know what to expect.</h3>
-<p>Treatments, starting prices, consultation details and what a first visit looks like.</p>
+<h3>Who oversees their work?</h3>
+<p>Depending on the state and their license, many injectors work under a medical director. Where that applies, it’s listed on their page.</p>
 </article>
 <article class="why-card">
-<h3>Connect directly with the practice.</h3>
-<p>Reach out through the practice’s own website or booking link.</p>
+<h3>Is their license active?</h3>
+<p>We confirm it with the board that issued it before the page goes live, and recheck it every year.</p>
 </article>
 </div>
 </div>
@@ -1259,24 +1259,24 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 <div class="edit-feature-copy">
 <h3>40+ and glowing: the laser treatments worth knowing</h3>
 <p>What changes after 40, which laser categories come up most often, and the questions worth asking a provider.</p>
-<span class="edit-soon">Coming soon</span>
+<span class="edit-soon">Available December 1</span>
 </div>
 </div>
 <div class="edit-list">
 <div class="edit-list-item">
 <h4>Botox, but make it undetectable.</h4>
 <p>Why “less obvious” has become its own aesthetic.</p>
-<span class="edit-soon">Coming soon</span>
+<span class="edit-soon">Available December 8</span>
 </div>
 <div class="edit-list-item">
 <h4>What makes skin look expensive?</h4>
 <p>Texture, tone, restraint — and why the plan matters more than the trend.</p>
-<span class="edit-soon">Coming soon</span>
+<span class="edit-soon">Available December 15</span>
 </div>
 <div class="edit-list-item">
 <h4>The Laser List: what actually works for melanin-rich skin?</h4>
 <p>A smarter starting point for researching devices, providers and skin tone considerations.</p>
-<span class="edit-soon">Coming soon</span>
+<span class="edit-soon">Available December 22</span>
 </div>
 </div>
 </div>
@@ -1285,8 +1285,7 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 </section>
 <section class="cta provider-cta dark">
 <div class="container">
-<h2>Join BeautyJar.</h2>
-<p>Our first 50 providers in DC, Maryland and Northern Virginia receive a complimentary membership that never expires.</p>
+<h2>Are you a provider? Join BeautyJar.</h2>
 <div class="closing-actions">
 <a class="btn btn-featured" href="/founding-provider">Apply as a Founding Provider</a>
 <a class="btn btn-outline" href="/for-providers">See all memberships</a>
@@ -1407,6 +1406,23 @@ html body #providers .provider-img:not(#bj-x){height:auto!important;aspect-ratio
 html body #providers .provider-img img:not(#bj-x){width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 50%!important;transform:none!important}
 #treatments h2,#providers h2,section.why-beautyjar h2,#edit h2{position:relative;padding-top:26px}
 #treatments h2::before,#providers h2::before,section.why-beautyjar h2::before,#edit h2::before{content:"";position:absolute;left:0;top:0;width:60px;height:3px;background:#8a4f5a}
+</style>
+<style id="bj-type">
+/* One type scale for the site */
+html body main h1:not(#bj-x){font-size:44px!important;line-height:1.1!important;letter-spacing:-.02em!important}
+html body main h2:not(#bj-x){font-size:26px!important;line-height:1.2!important;letter-spacing:-.01em!important}
+html body main h3:not(#bj-x){font-size:20px!important;line-height:1.25!important}
+/* page-specific exceptions */
+html body main .hero-copy h1:not(#bj-x){font-size:50px!important}
+html body main article.hero h2:not(#bj-x){font-size:34px!important;line-height:1.12!important}
+html body main .lane-name h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card.primary h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card h3:not(#bj-x){font-size:22px!important}
+html body main .edit-feature-copy h3:not(#bj-x){font-size:24px!important}
+html body main a.cat h3:not(#bj-x){font-size:22px!important}
+html body main .plan-head h3:not(#bj-x){font-size:24px!important}
+html body main .founding h2:not(#bj-x){font-size:22px!important;line-height:1.35!important}
+@media(max-width:650px){html body main h1:not(#bj-x),html body main .hero-copy h1:not(#bj-x){font-size:34px!important}html body main h2:not(#bj-x),html body main article.hero h2:not(#bj-x){font-size:23px!important}}
 </style>
 </body>
 </html>

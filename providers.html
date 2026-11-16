@@ -263,27 +263,27 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 <!-- Sample provider content for design/prototype use. Replace with recruited providers before publishing. -->
 <div class="provider-grid" id="providerGrid">
-<a class="provider-card" data-location="Atlanta, GA" data-name="Amara Bennett" data-treatment="Injectables Skin Rejuvenation Wellness" data-type="Nurse Practitioner" href="/spotlight-amara-bennett">
+<a class="provider-card" data-location="Atlanta, GA" data-name="Amara Bennett" data-treatment="Injectables Skin Rejuvenation Wellness Aesthetic Recovery" data-type="Nurse Practitioner" href="/spotlight-amara-bennett">
 <div class="provider-photo"><img alt="Amara Bennett" src="/assets/images/card-amara-bennett.webp">
 <div class="featured-badge">Featured</div>
 </div>
 <div class="provider-body">
 <h3 class="provider-name">Amara Bennett, DNP, FNP-C</h3>
 <div class="provider-role">Aesthetic Medicine &amp; Wellness · Atlanta, GA</div>
-<div class="credential">Sample profile</div>
+<div class="credential">Sample spotlight</div>
 <div class="known">Individualized aesthetic and skin-focused care with natural-looking results.</div>
-<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Wellness</span></div>
-<span class="view-link">View Profile</span>
+<div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Aesthetic Recovery</span></div>
+<span class="view-link">View Spotlight</span>
 </div>
 </a>
-<a class="provider-card" data-location="Bethesda, MD" data-name="Abby Sample" data-treatment="Skin Laser Injectables Dermatology" data-type="Physician" href="/profile-abby-sample">
+<a class="provider-card" data-location="Bethesda, MD" data-name="Abby Sample" data-treatment="Skin Laser Injectables Dermatology Body Contouring" data-type="Physician" href="/profile-abby-sample">
 <div class="provider-photo"><img alt="Dr. Abby Sample" src="/assets/images/card-abby-sample.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Dr. Abby Sample, MD, FAAD</h3>
 <div class="provider-role">Dermatology + Aesthetics · Bethesda, MD</div>
 <div class="credential">Sample profile</div>
 <div class="known">Thoughtful plans for clearer skin and natural-looking aesthetic results.</div>
-<div class="chips"><span class="chip">Skin</span><span class="chip">Laser</span><span class="chip">Injectables</span></div>
+<div class="chips"><span class="chip">Skin + Laser</span><span class="chip">Injectables</span><span class="chip">Body Contouring</span></div>
 <span class="view-link">View Profile</span>
 </div>
 </a>
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <span class="view-link">View Spotlight</span>
 </div>
 </a>
-<article class="provider-card" data-location="Washington, DC" data-name="Yemi Ellis" data-treatment="Injectables Skin Facial Balancing" data-type="Nurse Practitioner">
+<a class="provider-card" href="/profile-amara-bennett" data-location="Washington, DC" data-name="Yemi Ellis" data-treatment="Injectables Skin Facial Balancing" data-type="Nurse Practitioner">
 <div class="provider-photo"><img alt="Yemi Ellis" src="/assets/images/card-yemi-ellis.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Yemi Ellis, FNP-C</h3>
@@ -317,10 +317,10 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="credential">Sample profile</div>
 <div class="known">Aesthetic care centered on injectables, skin and facial balancing.</div>
 <div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div>
-<span class="view-link">Full profile coming soon</span>
+<span class="view-link">View sample Profile</span>
 </div>
-</article>
-<article class="provider-card" data-location="London, UK" data-name="Rachel Morgan" data-treatment="Injectables Facial Balancing Fillers" data-type="Registered Nurse">
+</a>
+<a class="provider-card" href="/profile-abby-sample" data-location="London, UK" data-name="Rachel Morgan" data-treatment="Injectables Facial Balancing Fillers" data-type="Registered Nurse">
 <div class="provider-photo"><img alt="Rachel Morgan" src="/assets/images/card-rachel-morgan.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Rachel Morgan, RN</h3>
@@ -328,13 +328,13 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="credential">Sample profile</div>
 <div class="known">A less-is-more approach to facial balancing and natural-looking results.</div>
 <div class="chips"><span class="chip">Facial Balancing</span><span class="chip">Filler</span><span class="chip">Natural Results</span></div>
-<span class="view-link">Full profile coming soon</span>
+<span class="view-link">View sample Profile</span>
 </div>
-</article>
+</a>
 </div>
 <div class="empty" id="emptyState">
-<h3>No matches yet.</h3>
-<p>Try another treatment, specialty or location.</p>
+<h3>No providers here yet.</h3>
+<p>New providers are joining BeautyJar, so check back soon.</p>
 </div>
 </div>
 </section>
@@ -347,6 +347,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <a href="/providers?specialty=injectables">Injectables →</a>
 <a href="/providers?specialty=skin-laser">Skin + Laser →</a>
 <a href="/providers?specialty=hair-restoration">Hair Restoration →</a>
+<a href="/providers?specialty=body-contouring">Body Contouring →</a>
 <a href="/providers?specialty=aesthetic-recovery">Aesthetic Recovery →</a>
 </div>
 </div>
@@ -507,12 +508,31 @@ html body article.provider-card:not(#bj-x){border-bottom-color:#dedede!important
 .browse-strip h2::before{content:"";position:absolute;left:0;top:0;width:60px;height:3px;background:#8a4f5a}
 </style>
 <style id="bj-align">
+html body .provider-grid:not(#bj-x){padding-bottom:0!important}
+html body .browse-strip:not(#bj-x){margin-top:0!important}
 html body .provider-grid .provider-photo:not(#bj-x){background:#fff!important;overflow:hidden!important;height:auto!important;aspect-ratio:1/1}
 html body .provider-grid .provider-photo img:not(#bj-x){width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 50%!important;transform:none!important}
 main .container,.browse-strip .container{width:min(1180px,calc(100% - 48px))!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important}
 .provider-grid{max-width:none!important;margin-left:0!important;margin-right:0!important;width:100%!important}
 @media(min-width:900px){.provider-grid{grid-template-columns:repeat(3,1fr)!important}}
 html body .browse-links a:not(#bj-x){border-bottom-color:#dedede!important}
+</style>
+<style id="bj-type">
+/* One type scale for the site */
+html body main h1:not(#bj-x){font-size:44px!important;line-height:1.1!important;letter-spacing:-.02em!important}
+html body main h2:not(#bj-x){font-size:26px!important;line-height:1.2!important;letter-spacing:-.01em!important}
+html body main h3:not(#bj-x){font-size:20px!important;line-height:1.25!important}
+/* page-specific exceptions */
+html body main .hero-copy h1:not(#bj-x){font-size:50px!important}
+html body main article.hero h2:not(#bj-x){font-size:34px!important;line-height:1.12!important}
+html body main .lane-name h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card.primary h3:not(#bj-x){font-size:26px!important}
+html body main a.guide-card h3:not(#bj-x){font-size:22px!important}
+html body main .edit-feature-copy h3:not(#bj-x){font-size:24px!important}
+html body main a.cat h3:not(#bj-x){font-size:22px!important}
+html body main .plan-head h3:not(#bj-x){font-size:24px!important}
+html body main .founding h2:not(#bj-x){font-size:22px!important;line-height:1.35!important}
+@media(max-width:650px){html body main h1:not(#bj-x),html body main .hero-copy h1:not(#bj-x){font-size:34px!important}html body main h2:not(#bj-x),html body main article.hero h2:not(#bj-x){font-size:23px!important}}
 </style>
 </body>
 </html>

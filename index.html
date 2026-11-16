@@ -275,7 +275,7 @@ body{background:#fff;color:var(--ink)}
   overflow:hidden !important;
   padding:0 !important;
   border:1px solid var(--line) !important;
-  background:#ddd !important;
+  background:#fff !important;
 }
 .cat img{
   position:absolute;
@@ -1208,10 +1208,10 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 <div class="container">
 <div class="section-head"><div><h2>See what a BeautyJar profile looks like.</h2></div><div class="sample-intro"><p class="sample-note">Sample profiles shown for illustration.</p><a class="text-link sample-link" href="/spotlight-abby-sample">View a sample profile <span aria-hidden="true">→</span></a></div></div>
 <div class="providers">
-<article class="provider-card"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="496" loading="lazy" src="/assets/images/featured-provider-b68de2f029ba.webp" width="700"/></div><div class="provider-body"><div class="spotlight-tag">Spotlight</div><div class="provider-name">Dr. Abby Sample</div><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></article>
+<article class="provider-card"><div class="provider-img"><img alt="Dr. Abby Sample" decoding="async" height="720" loading="lazy" src="/assets/images/card-abby-sample.webp" width="720"/></div><div class="provider-body"><div class="spotlight-tag">Spotlight</div><div class="provider-name">Dr. Abby Sample</div><div class="provider-role">Dermatology in Bethesda, Maryland</div><div class="chips"><span class="chip">Skin</span><span class="chip">Lasers</span><span class="chip">Injectables</span></div></div></article>
 
-<article class="provider-card"><div class="provider-img"><img alt="Dr. Kaan Demir, MD" decoding="async" height="760" loading="lazy" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Dr. Kaan Demir, MD</div><div class="provider-role">Hair Restoration in Tysons, Virginia</div><div class="chips"><span class="chip">Hair Transplant</span><span class="chip">PRP Therapy</span><span class="chip">Scalp Health</span></div></div></article>
-<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="758" loading="lazy" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp" width="700"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
+<article class="provider-card"><div class="provider-img"><img alt="Dr. Kaan Demir, MD" decoding="async" height="720" loading="lazy" src="/assets/images/card-kaan-demir.webp" width="720"/></div><div class="provider-body"><div class="provider-name">Dr. Kaan Demir, MD</div><div class="provider-role">Hair Restoration in New York, New York</div><div class="chips"><span class="chip">Hair Transplant</span><span class="chip">PRP Therapy</span><span class="chip">Scalp Health</span></div></div></article>
+<article class="provider-card"><div class="provider-img"><img alt="Yemi Ellis, FNP-C" decoding="async" height="720" loading="lazy" src="/assets/images/card-yemi-ellis.webp" width="720"/></div><div class="provider-body"><div class="provider-name">Yemi Ellis, FNP-C</div><div class="provider-role">Aesthetic Medicine in Washington, DC</div><div class="chips"><span class="chip">Injectables</span><span class="chip">Skin</span><span class="chip">Facial Balancing</span></div></div></article>
 </div>
 </div>
 </section>
@@ -1387,5 +1387,26 @@ footer,#beautyjar-footer{border-top-color:#d9d9d9!important}
 #beautyjar-header .nav a[aria-current="page"]{border-bottom-color:#8a4f5a!important}
 </style>
 <style id="bj-sections">section.founding-band,.founding-band,.category-wrap,.why-beautyjar{border-top:0!important;border-bottom:0!important}</style>
+<style id="bj-soft-lines">
+html body form.searchbox:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body div.trust-marker-strip:not(#bj-x){border-bottom-color:#dedede!important;border-top-color:#dedede!important;}
+html body div.container > span:not(#bj-x){border-left-color:#dedede!important;border-top-color:#dedede!important;}
+html body a.cat:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body a.cat.explore-treatments:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body article.provider-card:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body span.chip:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body div.why-grid:not(#bj-x){border-top-color:#dedede!important;}
+html body article.why-card:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;}
+html body div.edit-list:not(#bj-x){border-top-color:#dedede!important;}
+html body section.cta.provider-cta:not(#bj-x){border-top-color:#dedede!important;}
+html body div.searchfield:not(#bj-x){border-bottom-color:#dedede!important;}
+html body a.pchip:not(#bj-x){border-color:#dedede!important}
+</style>
+<style id="bj-accent">
+html body #providers .provider-img:not(#bj-x){height:auto!important;aspect-ratio:1/1;overflow:hidden;background:#fff!important}
+html body #providers .provider-img img:not(#bj-x){width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 50%!important;transform:none!important}
+#treatments h2,#providers h2,section.why-beautyjar h2,#edit h2{position:relative;padding-top:26px}
+#treatments h2::before,#providers h2::before,section.why-beautyjar h2::before,#edit h2::before{content:"";position:absolute;left:0;top:0;width:60px;height:3px;background:#8a4f5a}
+</style>
 </body>
 </html>

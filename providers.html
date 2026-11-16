@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <!-- Sample provider content for design/prototype use. Replace with recruited providers before publishing. -->
 <div class="provider-grid" id="providerGrid">
 <a class="provider-card" data-location="Atlanta, GA" data-name="Amara Bennett" data-treatment="Injectables Skin Rejuvenation Wellness" data-type="Nurse Practitioner" href="/spotlight-amara-bennett">
-<div class="provider-photo"><img alt="Amara Bennett" src="/assets/images/amara-bennett-sample-provider-03027c95b46b.webp">
+<div class="provider-photo"><img alt="Amara Bennett" src="/assets/images/card-amara-bennett.webp">
 <div class="featured-badge">Featured</div>
 </div>
 <div class="provider-body">
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </a>
 <a class="provider-card" data-location="Bethesda, MD" data-name="Abby Sample" data-treatment="Skin Laser Injectables Dermatology" data-type="Physician" href="/profile-abby-sample">
-<div class="provider-photo"><img alt="Dr. Abby Sample" src="/assets/images/dr-abby-sample-provider-27de4f1a9da1.webp"></div>
+<div class="provider-photo"><img alt="Dr. Abby Sample" src="/assets/images/card-abby-sample.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Dr. Abby Sample, MD, FAAD</h3>
 <div class="provider-role">Dermatology + Aesthetics · Bethesda, MD</div>
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </a>
 <a class="provider-card" data-location="Chicago, IL" data-name="David Chen" data-treatment="Hair Restoration PRP Scalp Health" data-type="Physician Assistant" href="/spotlight-david-chen">
-<div class="provider-photo"><img alt="David Chen" src="/assets/images/david-chen-sample-provider-2b770d1fb8ea.webp"></div>
+<div class="provider-photo"><img alt="David Chen" src="/assets/images/card-david-chen.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">David Chen, PA-C</h3>
 <div class="provider-role">Hair Restoration + Scalp Health · Chicago, IL</div>
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </a>
 <a class="provider-card" data-location="New York, NY" data-name="Kaan Demir" data-treatment="Hair Restoration Hair Transplant Alopecia" data-type="Physician" href="/spotlight-kaan-demir">
-<div class="provider-photo"><img alt="Dr. Kaan Demir" src="/assets/images/dr-kaan-demir-md-1434f4ff55a1.webp"></div>
+<div class="provider-photo"><img alt="Dr. Kaan Demir" src="/assets/images/card-kaan-demir.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Dr. Kaan Demir, MD</h3>
 <div class="provider-role">Hair Restoration Surgery · New York, NY</div>
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </a>
 <article class="provider-card" data-location="Washington, DC" data-name="Yemi Ellis" data-treatment="Injectables Skin Facial Balancing" data-type="Nurse Practitioner">
-<div class="provider-photo"><img alt="Yemi Ellis" src="/assets/images/yemi-ellis-fnp-c-a29e7e0a8980.webp"></div>
+<div class="provider-photo"><img alt="Yemi Ellis" src="/assets/images/card-yemi-ellis.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Yemi Ellis, FNP-C</h3>
 <div class="provider-role">Aesthetic Medicine · Washington, DC</div>
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 </div>
 </article>
 <article class="provider-card" data-location="London, UK" data-name="Rachel Morgan" data-treatment="Injectables Facial Balancing Fillers" data-type="Registered Nurse">
-<div class="provider-photo"><img alt="Rachel Morgan" src="/assets/images/rachel-morgan-rn-db9b75a17326.webp"></div>
+<div class="provider-photo"><img alt="Rachel Morgan" src="/assets/images/card-rachel-morgan.webp"></div>
 <div class="provider-body">
 <h3 class="provider-name">Rachel Morgan, RN</h3>
 <div class="provider-role">Facial Balancing · London, UK</div>
@@ -494,5 +494,25 @@ footer,#beautyjar-footer{border-top-color:#d9d9d9!important}
 #beautyjar-header .nav a[aria-current="page"]{border-bottom-color:#8a4f5a!important}
 </style>
 <style id="bj-sections">.browse-strip{border-top:0!important;border-bottom:0!important}</style>
+<style id="bj-soft-lines">
+html body div.search-panel:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body div.field:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body a.treatment-card:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body a.provider-card:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body article.provider-card:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+</style>
+<style id="bj-accent">
+.results-head .eyebrow::before{content:"";display:block;width:60px;height:3px;background:#8a4f5a;margin-bottom:18px}
+.browse-strip h2{position:relative;padding-top:26px}
+.browse-strip h2::before{content:"";position:absolute;left:0;top:0;width:60px;height:3px;background:#8a4f5a}
+</style>
+<style id="bj-align">
+html body .provider-grid .provider-photo:not(#bj-x){background:#fff!important;overflow:hidden!important;height:auto!important;aspect-ratio:1/1}
+html body .provider-grid .provider-photo img:not(#bj-x){width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 50%!important;transform:none!important}
+main .container,.browse-strip .container{width:min(1180px,calc(100% - 48px))!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important}
+.provider-grid{max-width:none!important;margin-left:0!important;margin-right:0!important;width:100%!important}
+@media(min-width:900px){.provider-grid{grid-template-columns:repeat(3,1fr)!important}}
+html body .browse-links a:not(#bj-x){border-bottom-color:#dedede!important}
+</style>
 </body>
 </html>

@@ -84,7 +84,7 @@ if(type==='profile'||type==='spotlight'){
  document.getElementById('invite-title').textContent=type==='spotlight'?'Complete your BeautyJar Spotlight information.':'Complete your BeautyJar Profile information.';
  document.getElementById('invite-description').textContent=type==='spotlight'?'Submit the professional, practice and expanded presentation materials needed to verify your information and prepare your Spotlight page.':'Submit the professional, practice and profile materials needed to verify your information and prepare your Profile page.';
  document.getElementById('invitation-banner-heading').textContent='Your invited '+(type==='spotlight'?'Spotlight':'Profile')+' is complimentary for life.';
- document.getElementById('invitation-banner-copy').textContent='No payment, subscription or credit card is required. Your listing remains complimentary while BeautyJar operates the directory and you remain eligible and comply with the Invited Provider Terms. Publication follows invitation and credential review.';
+ document.getElementById('invitation-banner-copy').textContent='No payment, subscription or credit card is required. Your listing remains complimentary while BeautyJar operates the directory and you remain eligible and comply with the Invited Provider Terms. Publication follows invitation and license review.';
  form.action='/provider-invitation-complete?type='+type;
  const isSpotlight=type==='spotlight';
  spot.hidden=!isSpotlight;
@@ -112,4 +112,10 @@ const maxImageBytes=2*1024*1024;
 
 }else{form.hidden=true;error.hidden=false;document.getElementById('invitation-banner').hidden=true;}
 </script>
+<style id="bj-soft-lines">
+html body header.header:not(#bj-x){border-bottom-color:#d9d9d9!important;}
+html body #link-error:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body section.form-section:not(#bj-x){border-bottom-color:#dedede!important;border-left-color:#dedede!important;border-right-color:#dedede!important;border-top-color:#dedede!important;}
+html body div.section-head:not(#bj-x){border-bottom-color:#dedede!important;}
+</style>
 </body></html>

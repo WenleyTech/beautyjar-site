@@ -127,6 +127,17 @@ footer#beautyjar-footer{box-sizing:border-box;margin:0;background:#fff;color:#00
 document.addEventListener('DOMContentLoaded',()=>{const footer=document.getElementById('beautyjar-footer'),widget=document.getElementById('bj-help-widget');if(footer&&widget&&'IntersectionObserver' in window){new IntersectionObserver(entries=>{widget.classList.toggle('bj-footer-visible',entries[0].isIntersecting);},{threshold:0}).observe(footer);}});
 
 </script>
+<style id="bj-reports-on-edit">
+.report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:6px!important;padding-bottom:40px!important;border-bottom:1px solid #dedede}
+.report-card{display:block;color:#000;text-decoration:none}
+.report-card .rc-img{aspect-ratio:16/9;overflow:hidden;margin-bottom:16px;box-shadow:0 12px 34px rgba(62,31,40,.14)}
+.report-card .rc-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.report-card:hover .rc-img img{transform:scale(1.02)}
+.report-card h3{margin-bottom:8px}
+.report-card p{font-size:14px;line-height:1.55;margin:0;font-weight:500}
+.report-card .avail{margin-top:12px}
+@media(max-width:700px){.report-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -142,7 +153,24 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 <div class="eyebrow">Beauty + Wellness</div>
 <h1>The BeautyJar Edit</h1>
 </div>
-
+<div class="grid-title">BeautyJar Reports</div>
+<section class="report-grid">
+<a class="report-card" href="/reports/the-expert-advantage">
+<div class="rc-img"><img alt="Cover of the BeautyJar report The Expert Advantage" decoding="async" height="900" src="/assets/images/report-the-expert-advantage-cover.webp" width="1600"/></div>
+<div class="category">Report · 2027 Outlook</div>
+<h3>The Expert Advantage</h3>
+<p>How qualified providers stand out in medical aesthetics, and what today’s patients look for before they book.</p>
+<span class="avail">Read the report →</span>
+</a>
+<a class="report-card" href="/reports/the-new-aesthetics-patient">
+<div class="rc-img"><img alt="Cover of the BeautyJar report The New Aesthetics Patient" decoding="async" height="900" src="/assets/images/report-the-new-aesthetics-patient-cover.webp" width="1600"/></div>
+<div class="category">Report · 2027 Outlook</div>
+<h3>The New Aesthetics Patient</h3>
+<p>Older, more informed, and ready to invest in the right provider.</p>
+<span class="avail">Read the report →</span>
+</a>
+</section>
+<div class="grid-title">Articles</div>
 <section class="story-grid"><article class="story">
 <div class="story-img"><img alt="Portrait of a woman in her 40s with glowing skin" decoding="async" height="941" src="/assets/images/beautyjar-edit-blonde-40-plus.webp" style="object-position:88% 0%;" width="1672"/></div>
 <div class="category">Skin + Laser</div>

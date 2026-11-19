@@ -771,6 +771,15 @@ html body main section .bj-checks p:not(#bj-x){font-size:16px!important;margin:0
 html body main .copy p:not(#bj-x),html body main .section p:not(#bj-x),html body main .hero-copy:not(#bj-x),html body main .check-box p:not(#bj-x),html body main .value p:not(#bj-x),html body main .bj-steps p:not(#bj-x),html body main .bj-checks li:not(#bj-x),html body main .bj-stat p:not(#bj-x),html body main .bj-facts td:not(#bj-x){font-weight:400!important}
 html body main .copy:not(#bj-x),html body main .copy p:not(#bj-x),html body main .bj-check-single:not(#bj-x){max-width:640px}
 html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
+.bj-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.bj-btn-outline{border:1px solid #000!important;background:transparent!important;color:#000!important}
+.bj-btn-outline:hover{background:#000!important;color:#fff!important}
+.bj-inline-link{color:#8a4f5a;font-weight:700;text-decoration:none;white-space:nowrap}
+.bj-inline-link:hover{text-decoration:underline}
+.bj-samples{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 26px;margin:20px 0 0!important}
+.bj-samples a{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a4f5a;text-decoration:none}
+.bj-samples a:hover{text-decoration:underline}
+.bj-samples span{font-size:13px;color:#555}
 </style>
 <script type="application/ld+json">
 {
@@ -851,53 +860,17 @@ html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
 <nav class="nav"><a href="/">Home</a><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a><a aria-current="page" href="/about">About</a><a href="/for-providers">For Providers</a></nav>
 </header>
 <main class="wrap">
-<section class="hero"><div><div class="eyebrow">About BeautyJar</div><h1>Get to know the people behind aesthetic care.</h1></div><p class="hero-copy">BeautyJar is a medical aesthetics directory of licensed providers.</p></section>
+<section class="hero"><div><div class="eyebrow">About BeautyJar</div><h1>Get to know the people behind aesthetic care.</h1></div><div><p class="hero-copy">BeautyJar is a medical aesthetics directory of licensed providers.</p><div class="bj-hero-actions"><a class="btn btn-primary" href="/providers">Find a Provider</a><a class="btn bj-btn-outline" href="/for-providers">For Providers</a></div></div></section>
+
+<section class="section" id="story"><div class="section-grid"><div><div class="eyebrow">Our Story</div><h2>Why BeautyJar exists</h2></div><div class="copy"><p>Choosing who to trust with your face is personal. BeautyJar was created so you can find a provider whose experience, approach and credentials fit what you’re looking for.</p></div></div></section>
 
 <section class="section" id="different"><div class="section-grid"><div><div class="eyebrow">Our approach</div><h2>What you’ll find on each provider profile</h2></div></div>
 <div class="values bj-values">
 <div class="value"><div class="num">01</div><h3>Who they are</h3><p>Their training, background, and what drew them to aesthetics.</p></div>
 <div class="value"><div class="num">02</div><h3>How they practice</h3><p>The treatments they offer, where they see patients, and how they approach care.</p></div>
 <div class="value"><div class="num">03</div><h3>License check</h3><p>Checked with the issuing board.</p></div>
-</div></section>
-
-<section class="section" id="story"><div class="section-grid"><div><div class="eyebrow">Our Story</div><h2>How BeautyJar began</h2></div><div class="copy"><p>BeautyJar began with my own search. As my skin changed with shifting hormones, I wanted to find a provider who could help me care for it over time. Choosing whom to trust with your face is personal, and that experience inspired me to create a place where you can discover providers and get to know them before reaching out.</p><p>My work in governance, risk, and compliance shaped how I built BeautyJar, starting with how we check licenses.</p><p class="bj-sign"><strong>— Ruby</strong></p></div></div></section>
-
-<section class="section" id="how-to-choose"><div class="section-grid"><div><div class="eyebrow">A patient’s guide</div><h2>How to choose an aesthetic provider</h2><p class="bj-side-note">Seven things to look at before you book.</p></div>
-<div><ol class="bj-steps">
-<li><span class="bj-step-n">01</span><h3>Check their license</h3><p>On BeautyJar, this is done for you.</p></li>
-<li><span class="bj-step-n">02</span><h3>Ask who will treat you</h3><p>If someone else will perform the treatment, ask for their full name and professional credential.</p></li>
-<li><span class="bj-step-n">03</span><h3>Ask about their experience</h3><p>Where did they train for this treatment, and how often do they perform it?</p></li>
-<li><span class="bj-step-n">04</span><h3>See whether their approach fits your goals</h3><p>Ask to see examples of their work and discuss what they’d recommend for you.</p></li>
-<li><span class="bj-step-n">05</span><h3>Use the consultation</h3><p>Ask about risks, downtime, follow-up, and whom to contact if you have a concern afterward.</p></li>
-<li><span class="bj-step-n">06</span><h3>Get the full price</h3><p>Ask whether pricing is per unit, syringe, or session, and what the total includes.</p></li>
-<li><span class="bj-step-n">07</span><h3>Take your time</h3><p>Give yourself room to think it over and ask any follow-up questions before booking.</p></li>
-</ol>
-<p class="bj-guide-note">A license confirms a provider’s professional status at the time it’s checked. It doesn’t measure skill or guarantee results. A consultation is your chance to talk about your goals, ask about their experience and decide whether the practice feels right for you.</p></div></div></section>
-
-<section class="section bj-numbers" id="by-the-numbers" aria-labelledby="bj-numbers-title"><div class="section-head"><div><div class="eyebrow">By the numbers</div><h2 id="bj-numbers-title">Patients choose people.</h2></div></div>
-<div class="bj-row-label">How patients choose</div>
-<div class="bj-stat-grid">
-<div class="bj-stat"><span class="bj-stat-num">70%</span><p>of U.S. consumers surveyed are considering a cosmetic procedure.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">94%</span><p>say rate-and-review websites affect their choice of provider.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">74%</span><p>follow the social media of a provider they see or are considering.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">73%</span><p>of medical spa patients are repeat patients, up from 65% in 2022. The right first choice lasts.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/medical-spas-are-safe-repeat-patients-and-industry-size/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
 </div>
-<div class="bj-row-label">Aesthetics today</div>
-<div class="bj-stat-grid">
-<div class="bj-stat"><span class="bj-stat-num">$20.5B</span><p>spent by U.S. patients on non-surgical aesthetics in 2024, up 5% from 2023.</p><a class="bj-stat-src" href="https://qsight.guidepoint.com/trends-report/" target="_blank" rel="noopener">Guidepoint Qsight &amp; Skytale&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">10,488</span><p>medical spas in the U.S. in 2023, up from 8,899 a year earlier. More choice makes the right fit matter more.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/2024-medical-spa-state-of-the-industry-executive-report-recap/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">80%</span><p>of minimally invasive procedures in 2025 were neuromodulators and hyaluronic acid fillers.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/stats2025" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
-<div class="bj-stat"><span class="bj-stat-num">+24%</span><p>growth in cosmetic procedures among patients 66 and older in 2025, the fastest of any age group.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/news/articles/plastic-surgery-at-every-age-how-goals-change-throughout-life" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
-</div>
-<div class="bj-reports">
-<span class="bj-reports-label">BeautyJar Insights · 2027 Outlook</span>
-<a class="bj-report" href="/reports/the-expert-advantage"><b>The Expert Advantage</b><span>How qualified providers stand out, and what patients look for before they book.</span><em>Read the report →</em></a>
-<a class="bj-report" href="/reports/the-new-aesthetics-patient"><b>The New Aesthetics Patient</b><span>Older, more informed and ready to invest in the right provider.</span><em>Read the report →</em></a>
-</div>
-<div class="bj-data-note"><span class="bj-data-label">How we use data</span><p>BeautyJar cites primary sources: professional societies, industry associations and market research firms. Figures appear exactly as each source published them, and sources may use different definitions and time periods. Select any source to read the original. Last reviewed November 2026. <a href="/editorial-standards">Read our Editorial Standards</a>.</p></div>
-</section>
-
-<section class="section" id="independence"><div class="section-grid"><div><div class="eyebrow">Memberships</div><h2>How BeautyJar works.</h2></div><div class="copy"><p>BeautyJar is free to browse. Patients book directly with the practice. Providers can join through a paid monthly membership. Every provider goes through the same license check. Spotlight includes labeled featured placement. Stories in The Edit are selected independently.</p></div></div></section>
+<div class="bj-samples"><a href="/profile-amara-bennett">View a sample Profile&nbsp;→</a><a href="/spotlight-abby-sample">View a sample Spotlight&nbsp;→</a></div></section>
 
 <section class="section" id="credential-check">
 <div class="section-grid">
@@ -920,6 +893,49 @@ html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
 </ul></details></div>
 </section>
 
+<section class="section" id="independence"><div class="section-grid"><div><div class="eyebrow">Using BeautyJar</div><h2>How BeautyJar works.</h2></div><div class="copy"><p><strong>For patients.</strong> BeautyJar is free to browse. Patients book directly with the practice.</p><p><strong>For providers.</strong> Providers can join through a monthly membership. Spotlight includes labeled featured placement. <a class="bj-inline-link" href="/for-providers">See memberships and pricing&nbsp;→</a></p><p>Every provider goes through the same license check. Stories in The Edit are selected independently.</p></div></div></section>
+
+<section class="section bj-numbers" id="by-the-numbers" aria-labelledby="bj-numbers-title"><div class="section-head"><div><div class="eyebrow">Industry research</div><h2 id="bj-numbers-title">Patients choose people.</h2></div></div>
+<div class="bj-row-label">How patients choose</div>
+<div class="bj-stat-grid">
+<div class="bj-stat"><span class="bj-stat-num">70%</span><p>of U.S. consumers surveyed are considering a cosmetic procedure.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">94%</span><p>say rate-and-review websites affect their choice of provider.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">74%</span><p>follow the social media of a provider they see or are considering.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">73%</span><p>of medical spa patients are repeat patients, up from 65% in 2022. The right first choice lasts.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/medical-spas-are-safe-repeat-patients-and-industry-size/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
+</div>
+<div class="bj-row-label">Aesthetics today</div>
+<div class="bj-stat-grid">
+<div class="bj-stat"><span class="bj-stat-num">$20.5B</span><p>spent by U.S. patients on non-surgical aesthetics in 2024, up 5% from 2023.</p><a class="bj-stat-src" href="https://qsight.guidepoint.com/trends-report/" target="_blank" rel="noopener">Guidepoint Qsight &amp; Skytale&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">10,488</span><p>medical spas in the U.S. in 2023, up from 8,899 a year earlier. More choice makes the right fit matter more.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/2024-medical-spa-state-of-the-industry-executive-report-recap/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">80%</span><p>of minimally invasive procedures in 2025 were neuromodulators and hyaluronic acid fillers.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/stats2025" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">+24%</span><p>growth in cosmetic procedures among patients 66 and older in 2025, the fastest of any age group.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/news/articles/plastic-surgery-at-every-age-how-goals-change-throughout-life" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
+</div>
+<div class="bj-reports">
+<span class="bj-reports-label">BeautyJar Insights · 2027 Outlook</span>
+<a class="bj-report" href="/reports/the-expert-advantage"><b>The Expert Advantage</b><span>How qualified providers stand out, and what patients look for before they book.</span><em>Read the report →</em></a>
+<a class="bj-report" href="/reports/the-new-aesthetics-patient"><b>The New Aesthetics Patient</b><span>Older, more informed and ready to invest in the right provider.</span><em>Read the report →</em></a>
+</div>
+<div class="bj-data-note"><span class="bj-data-label">How we use data</span><p>BeautyJar cites primary sources: professional societies, industry associations and market research firms. Figures appear exactly as each source published them, and sources may use different definitions and time periods. Select any source to read the original. Last reviewed November 2026. <a href="/editorial-standards">Read our Editorial Standards</a>.</p></div>
+</section>
+
+<section class="section" id="how-to-choose"><div class="section-grid"><div><div class="eyebrow">A patient’s guide</div><h2>How to choose an aesthetic provider</h2><p class="bj-side-note">Seven things to look at before you book.</p></div>
+<div><ol class="bj-steps">
+<li><span class="bj-step-n">01</span><h3>Check their license</h3><p>On BeautyJar, this is done for you.</p></li>
+<li><span class="bj-step-n">02</span><h3>Ask who will treat you</h3><p>If someone else will perform the treatment, ask for their full name and professional credential.</p></li>
+<li><span class="bj-step-n">03</span><h3>Ask about their experience</h3><p>Where did they train for this treatment, and how often do they perform it?</p></li>
+<li><span class="bj-step-n">04</span><h3>See whether their approach fits your goals</h3><p>Ask to see examples of their work and discuss what they’d recommend for you.</p></li>
+<li><span class="bj-step-n">05</span><h3>Use the consultation</h3><p>Ask about risks, downtime, follow-up, and whom to contact if you have a concern afterward.</p></li>
+<li><span class="bj-step-n">06</span><h3>Get the full price</h3><p>Ask whether pricing is per unit, syringe, or session, and what the total includes.</p></li>
+<li><span class="bj-step-n">07</span><h3>Take your time</h3><p>Give yourself room to think it over and ask any follow-up questions before booking.</p></li>
+</ol>
+<p class="bj-guide-note">A license confirms a provider’s professional status at the time it’s checked. It doesn’t measure skill or guarantee results. A consultation is your chance to talk about your goals, ask about their experience and decide whether the practice feels right for you.</p></div></div></section>
+
+<section class="section" id="faq"><div class="section-grid"><div><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="bj-side-note">More in the <a href="/faq">full FAQ</a>.</p></div>
+<div class="bj-faq">
+<details class="bj-faq-item"><summary>How do I know if a provider is right for me?</summary><p>Start with their page: their training, their approach and the treatments they focus on. Every license is confirmed, though a license doesn’t measure skill or guarantee results. A consultation is your chance to ask questions and see whether the practice feels right for you.</p></details>
+<details class="bj-faq-item"><summary>Where is BeautyJar available?</summary><p>BeautyJar is open to licensed providers across the United States, starting in Washington, DC, Maryland and Northern Virginia. International providers are coming soon.</p></details>
+</div></div></section>
+
 <section class="section" id="regulation"><div class="section-grid"><div><div class="eyebrow">Regulation</div><h2>The rules are changing.</h2></div><div class="copy"><p>States are tightening who can perform aesthetic treatments and how they’re supervised. <a class="bj-law" href="https://americanmedspa.org/news/texas-iv-therapy-bill-hb-3749-signed-into-law-by-governor-abbott" target="_blank" rel="noopener">Texas (Jenifer’s Law)</a>, <a class="bj-law" href="https://www.clearhq.org/news/rhode-island-establishes-medical-spas-safety-act-7-30-25" target="_blank" rel="noopener">Rhode Island</a>, <a class="bj-law" href="https://www.americanmedspa.org/news/indiana-sb-282-has-passed-what-med-spas-need-to-know-and-why-collective-advocacy-matters/" target="_blank" rel="noopener">Indiana</a> and <a class="bj-law" href="https://djholtlaw.com/what-counts-as-the-practice-of-medicine-in-california-med-spas/" target="_blank" rel="noopener">California</a> have all passed new laws since 2025. BeautyJar tracks these changes and confirms every provider’s license.</p></div></div></section>
 
 <section class="section" id="key-facts"><div class="section-grid"><div><div class="eyebrow">Key facts</div><h2>BeautyJar at a glance</h2><p class="bj-side-note">Last updated November 2026.</p></div>
@@ -932,22 +948,16 @@ html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
 <tr><th scope="row">Availability</th><td>Licensed providers across the U.S., with a founding community in Washington, DC, Maryland and Northern Virginia</td></tr>
 <tr><th scope="row">Who is listed</th><td>Physicians, nurse practitioners, physician assistants and registered nurses who offer medical aesthetic treatments</td></tr>
 <tr><th scope="row">How providers join</th><td>By application</td></tr>
-<tr><th scope="row">License review</th><td>Confirmed with the issuing board. Rechecked every year. Page made inactive if a license lapses.</td></tr>
+<tr><th scope="row">License review</th><td>Confirmed with the issuing board. Rechecked every year. Profile paused if a license lapses.</td></tr>
 <tr><th scope="row">For patients</th><td>Free. Book directly with the provider or practice.</td></tr>
 <tr><th scope="row">Provider memberships</th><td>Profile and Spotlight. See <a href="/for-providers">For Providers</a> for pricing.</td></tr>
 <tr><th scope="row">Fees</th><td>No lead or booking fees</td></tr>
-<tr><th scope="row">Paid placement</th><td>Spotlight placement is labeled and is not a rating or endorsement</td></tr>
+<tr><th scope="row">Featured placement</th><td>Spotlight placement is labeled and is not a rating or endorsement</td></tr>
 <tr><th scope="row">Editorial</th><td>Stories in The Edit are selected independently and are not part of membership</td></tr>
 <tr><th scope="row">Medical advice</th><td>BeautyJar does not provide medical advice or services.</td></tr>
 <tr><th scope="row">Research</th><td><a href="/reports/the-expert-advantage">The Expert Advantage</a> · <a href="/reports/the-new-aesthetics-patient">The New Aesthetics Patient</a></td></tr>
 <tr><th scope="row">Contact</th><td><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></td></tr>
 </tbody></table></div></section>
-
-<section class="section" id="faq"><div class="section-grid"><div><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="bj-side-note">More in the <a href="/faq">full FAQ</a>.</p></div>
-<div class="bj-faq">
-<details class="bj-faq-item"><summary>How do I know if a provider is right for me?</summary><p>Start with their page: their training, their approach and the treatments they focus on. Every license is confirmed, though a license doesn’t measure skill or guarantee results. A consultation is your chance to ask questions and see whether the practice feels right for you.</p></details>
-<details class="bj-faq-item"><summary>Where is BeautyJar available?</summary><p>BeautyJar is open to licensed providers across the United States, starting in Washington, DC, Maryland and Northern Virginia. International providers are coming soon.</p></details>
-</div></div></section>
 
 <section class="trust-resources" id="credential-sources">
 <div class="trust-resources-head">
@@ -1168,7 +1178,7 @@ html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
     profile: '<p>Profile is $79 per month. It includes a dedicated provider page with professional and practice details, services, images and direct booking information.</p><p><a href="/for-providers#memberships">Compare memberships</a></p>',
     spotlight: '<p>Spotlight is $149 per month. It includes Profile features plus a more detailed editorial presentation and additional visibility. See the current membership details for included placements.</p><p><a href="/for-providers#memberships">See Spotlight details</a></p>',
     payment: '<p>After payment, we email you a link to submit license information, practice details, written content and images. We review the information and send a private page preview before publication.</p><p><a href="/faq">Read the full FAQ</a></p>',
-    refund: '<p>If BeautyJar cannot approve a paid listing after review, we cancel the membership and refund the initial payment.</p><p><a href="/faq">Read the full FAQ</a></p>',
+    refund: '<p>If we can’t approve a listing after review, we cancel the membership and refund your first payment.</p><p><a href="/faq">Read the full FAQ</a></p>',
     search: '<p>Provider pages may include a booking link, website or telephone number. Appointments are made directly with the provider or practice.</p><p><a href="/providers">Find a provider</a></p>',
     checked: '<p>BeautyJar confirms each provider’s license with the board that issued it before publication and rechecks it once a year. If a license is suspended, revoked or expires, the listing is made inactive until it has been resolved. A license review is not a guarantee of care or results.</p><p><a href="/faq">Read the full explanation</a></p>'
   };

@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>About BeautyJar | Medical Aesthetics Directory</title>
-<meta content="Finding aesthetic care is personal. Get to know licensed medical aesthetics providers, explore their approach and find a practice that feels right for you." name="description"/>
+<meta content="BeautyJar is a medical aesthetics directory of licensed providers in the Washington, DC area. Meet providers before you book; every license is confirmed with the issuing board." name="description"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
 
@@ -617,7 +617,7 @@ footer#site-footer a{
 }
 </style>
 <meta content="About BeautyJar | Medical Aesthetics Directory" property="og:title"/>
-<meta content="BeautyJar is a Medical Aesthetics Directory for finding providers and exploring treatments and services." property="og:description"/>
+<meta content="BeautyJar is a medical aesthetics directory of licensed providers in the Washington, DC area. Meet providers before you book; every license is confirmed with the issuing board." property="og:description"/>
 <link href="https://beautyjar.com/about" rel="canonical"/><link href="/assets/images/beautyjar-icon.svg" rel="icon" type="image/svg+xml"/><style id="beautyjar-shared-styles">
 
 footer#beautyjar-footer{box-sizing:border-box;margin:0;background:#fff;color:#000;border-top:1px solid #000;padding:32px 0 40px;font:600 12px/1.5 'DM Sans',Arial,sans-serif}
@@ -669,6 +669,177 @@ document.addEventListener('DOMContentLoaded',()=>{const footer=document.getEleme
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--berry);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="bj-about-v2">
+
+.bj-numbers{background:#fff}
+.bj-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #dedede}
+.bj-stat{padding:28px 26px 26px 0}
+.bj-stat + .bj-stat{border-left:1px solid #dedede;padding-left:26px}
+.bj-stat-num{display:block;font-family:'Playfair Display',Georgia,serif;font-size:52px;line-height:1;font-weight:600;color:#8a4f5a;letter-spacing:-.02em;margin-bottom:14px;font-variant-numeric:lining-nums}
+.bj-stat p{font-size:15px;line-height:1.5;font-weight:600;color:#000;margin:0 0 12px}
+.bj-stat-src{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5c5651}
+.bj-reports{display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:stretch;margin-top:34px;padding-top:26px;border-top:1px solid #dedede}
+.bj-reports-label{align-self:center;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8a4f5a;max-width:150px;line-height:1.5}
+.bj-report{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid #dedede;text-decoration:none;color:#000;transition:border-color .2s}
+.bj-report:hover{border-color:#8a4f5a}
+.bj-report b{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600}
+.bj-report span{font-size:14px;line-height:1.5;font-weight:500}
+.bj-report em{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a4f5a;margin-top:6px}
+.bj-stat-note{font-size:12px;font-weight:600;color:#5c5651;margin-top:16px}
+@media(max-width:900px){.bj-stat-grid{grid-template-columns:1fr 1fr}.bj-stat:nth-child(3){border-left:0;padding-left:0}.bj-stat:nth-child(n+3){border-top:1px solid #dedede}.bj-reports{grid-template-columns:1fr}.bj-reports-label{max-width:none}}
+@media(max-width:560px){.bj-stat-grid{grid-template-columns:1fr}.bj-stat,.bj-stat + .bj-stat{border-left:0;padding-left:0;border-top:1px solid #dedede}.bj-stat:first-child{border-top:0}.bj-stat-num{font-size:44px}}
+
+#by-the-numbers .section-head{margin-bottom:8px}
+.bj-row-label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#000;margin:26px 0 10px}
+#by-the-numbers .bj-stat p{font-size:15px!important;line-height:1.5!important}
+#by-the-numbers .bj-stat-note{font-size:12px!important}
+.bj-values{margin-top:22px;border-top:1px solid #dedede!important;border-bottom:1px solid #dedede!important}
+.bj-values .value{min-height:0;padding:24px 26px 26px 0;border-right:0}
+.bj-values .value + .value{border-left:1px solid #dedede;padding-left:26px}
+.bj-values .value .num{margin-bottom:14px;letter-spacing:.1em;text-transform:uppercase}
+.bj-values .value p{font-size:16px!important}
+.bj-sign{margin-top:22px!important;padding-top:16px;border-top:1px solid #dedede;display:flex;flex-direction:column;gap:2px}
+.bj-sign span{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8a4f5a}
+.bj-side-note{font-size:15px!important;line-height:1.55!important;margin:14px 0 0;max-width:300px}
+.bj-side-note a{text-decoration:underline}
+.bj-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #dedede}
+.bj-steps li{padding:20px 24px 20px 0;border-bottom:1px solid #dedede}
+.bj-steps li:nth-child(even){padding-left:24px;border-left:1px solid #dedede}
+.bj-steps li:last-child{grid-column:1/-1}
+.bj-steps li:last-child:nth-child(odd){padding-left:0;border-left:0}
+.bj-step-n{display:block;font-size:12px;font-weight:800;color:#8a4f5a;letter-spacing:.08em;margin-bottom:8px}
+html body main .bj-steps h3:not(#bj-x){font-size:19px!important;margin-bottom:6px}
+.bj-steps p{font-size:15px!important;line-height:1.55!important;margin:0}
+.bj-steps a{text-decoration:underline}
+.bj-facts{width:100%;border-collapse:collapse;border-top:1px solid #dedede;font-size:15px}
+.bj-facts th,.bj-facts td{text-align:left;vertical-align:top;padding:13px 0;border-bottom:1px solid #dedede;line-height:1.5}
+.bj-facts th{width:190px;padding-right:24px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a4f5a;padding-top:15px}
+.bj-facts td{font-weight:600}
+.bj-facts a{text-decoration:underline;text-underline-offset:2px}
+.bj-faq{border-top:1px solid #dedede}
+.bj-faq-item{border-bottom:1px solid #dedede}
+.bj-faq-item summary{list-style:none;cursor:pointer;padding:17px 34px 17px 0;position:relative;font:600 19px/1.35 'Playfair Display',Georgia,serif}
+.bj-faq-item summary::-webkit-details-marker{display:none}
+.bj-faq-item summary::after{content:"+";position:absolute;right:4px;top:14px;font:500 24px 'DM Sans',Arial,sans-serif;color:#8a4f5a}
+.bj-faq-item[open] summary::after{content:"\2212"}
+.bj-faq-item p{margin:0 0 18px!important;font-size:16px!important;max-width:720px}
+.bj-behind{max-width:780px}
+.bj-founder{border:1px solid #dedede!important;border-top:3px solid #8a4f5a!important;min-height:0!important}
+html body main .bj-founder h3:not(#bj-x){font-family:'Playfair Display',Georgia,serif!important;font-size:24px!important;font-weight:600!important}
+.bj-founder p{font-size:14px!important;line-height:1.5!important}
+.bj-founder .leader-placeholder{border-color:#8a4f5a;color:#8a4f5a}
+@media(max-width:900px){
+ .bj-values .value,.bj-values .value + .value{border-left:0;padding-left:0;border-top:1px solid #dedede}
+ .bj-values .value:first-child{border-top:0}
+ .bj-steps{grid-template-columns:1fr}
+ .bj-steps li,.bj-steps li:nth-child(even){padding-left:0;border-left:0}
+ .bj-behind{grid-template-columns:1fr;gap:26px}
+ .bj-side-note{max-width:none}
+}
+@media(max-width:560px){.bj-facts th{display:block;width:auto;padding:14px 0 2px;border-bottom:0}.bj-facts td{display:block;padding:0 0 14px}}
+#by-the-numbers .bj-stat-num{font-size:36px!important;margin-bottom:10px!important}
+@media(max-width:560px){#by-the-numbers .bj-stat-num{font-size:32px!important}}
+a.bj-stat-src{display:inline!important;text-decoration:underline;text-decoration-color:#c9c9c9;text-underline-offset:3px;transition:color .2s}
+a.bj-stat-src:hover{color:#8a4f5a;text-decoration-color:#8a4f5a}
+.bj-data-note{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:baseline;margin-top:22px;padding:16px 20px;border:1px solid #dedede;border-left:3px solid #8a4f5a}
+.bj-data-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8a4f5a;white-space:nowrap}
+html body main section .bj-data-note p:not(#bj-x){margin:0;font-size:14px!important;line-height:1.6!important;font-weight:600!important}
+.bj-data-note a{text-decoration:underline;text-underline-offset:2px}
+@media(max-width:640px){.bj-data-note{grid-template-columns:1fr;gap:6px}}
+html body main .check-box:not(#bj-x){padding:30px 34px!important;gap:34px!important}
+html body main .check-box p:not(#bj-x){margin-bottom:0!important}
+a.bj-law{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#8a4f5a}
+a.bj-law:hover{color:#8a4f5a}
+.bj-checks-wrap{margin-top:26px}
+.bj-checks{padding-top:22px;border-top:1px solid #dedede}
+html body main .bj-checks h3:not(#bj-x){font-size:20px!important;margin:0 0 8px}
+html body main section .bj-checks p:not(#bj-x){font-size:16px!important;margin:0 0 12px}
+.bj-checks ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.bj-checks li{position:relative;padding-left:18px;font-size:15px;font-weight:600;line-height:1.5}
+.bj-checks li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:#8a4f5a}
+@media(max-width:900px){.bj-checks-wrap>div:first-child{display:none}.bj-checks ul{grid-template-columns:1fr}}
+.bj-checks summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a4f5a}
+.bj-checks summary::-webkit-details-marker{display:none}
+.bj-checks summary::after{content:"\2192";transition:transform .2s}
+.bj-checks[open] summary::after{transform:rotate(90deg)}
+.bj-checks[open] summary{margin-bottom:14px}
+/* review: one step per row, regular body weight, narrower column */
+.bj-steps{grid-template-columns:1fr!important;max-width:640px}
+.bj-steps li,.bj-steps li:nth-child(even),.bj-steps li:last-child{grid-column:auto!important;padding:16px 0!important;border-left:0!important;display:grid;grid-template-columns:44px 1fr;column-gap:8px}
+.bj-steps li .bj-step-n{grid-row:1/3;margin:3px 0 0}
+.bj-guide-note{max-width:640px;margin:18px 0 0!important}
+html body main .copy p:not(#bj-x),html body main .section p:not(#bj-x),html body main .hero-copy:not(#bj-x),html body main .check-box p:not(#bj-x),html body main .value p:not(#bj-x),html body main .bj-steps p:not(#bj-x),html body main .bj-checks li:not(#bj-x),html body main .bj-stat p:not(#bj-x),html body main .bj-facts td:not(#bj-x){font-weight:400!important}
+html body main .copy:not(#bj-x),html body main .copy p:not(#bj-x),html body main .bj-check-single:not(#bj-x){max-width:640px}
+html body main .check-box.bj-check-single:not(#bj-x){display:block!important}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://beautyjar.com/#org",
+   "name": "BeautyJar",
+   "url": "https://beautyjar.com/",
+   "description": "A medical aesthetics directory of licensed providers.",
+   "email": "hello@beautyjar.com",
+   "founder": {
+    "@type": "Person",
+    "name": "Ruby O.",
+    "jobTitle": "Governance, Risk and Compliance Analyst"
+   },
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "Wenley Technologies LLC"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Washington, DC metropolitan area",
+    "addressCountry": "US"
+   },
+   "sameAs": [
+    "https://instagram.com/beautyjarhq",
+    "https://x.com/beautyjar",
+    "https://medium.com/@beautyjar",
+    "https://facebook.com/Thebeautyjar/"
+   ]
+  },
+  {
+   "@type": "AboutPage",
+   "url": "https://beautyjar.com/about",
+   "name": "About BeautyJar",
+   "about": {
+    "@id": "https://beautyjar.com/#org"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How do I know if a provider is right for me?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with their page: their training, their approach and the treatments they focus on. Every license is confirmed, though a license doesn’t measure skill or guarantee results. A consultation is your chance to ask questions and see whether the practice feels right for you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is BeautyJar available?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "BeautyJar is open to licensed providers across the United States, starting in Washington, DC, Maryland and Northern Virginia. International providers are coming soon."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -680,28 +851,104 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <nav class="nav"><a href="/">Home</a><a href="/providers">Find a Provider</a><a href="/treatments">Treatments</a><a href="/the-edit">The Edit</a><a aria-current="page" href="/about">About</a><a href="/for-providers">For Providers</a></nav>
 </header>
 <main class="wrap">
-<section class="hero"><div><div class="eyebrow">About BeautyJar</div><h1>Get to know the people behind aesthetic care.</h1></div><p class="hero-copy">Explore licensed providers, learn about their approach and get a feel for their practice, all in one place.</p></section>
-<section class="section"><div class="section-grid"><div><div class="eyebrow">Our Story</div><h2>Why I started BeautyJar</h2></div><div class="copy"><p>BeautyJar began with my own search. As my skin changed with shifting hormones, I wanted to find a provider who could help me care for it over time. Choosing whom to trust with your face is personal, and that experience inspired me to create a place where you can discover providers and get to know them before reaching out.</p><p style="margin-top:18px"><strong>— Ruby</strong></p></div></div></section>
+<section class="hero"><div><div class="eyebrow">About BeautyJar</div><h1>Get to know the people behind aesthetic care.</h1></div><p class="hero-copy">BeautyJar is a medical aesthetics directory of licensed providers. Explore their experience, the treatments they offer, and where they practice. We check each provider’s license against the issuing board’s records before publishing their profile.</p></section>
 
-<section class="section" id="independence"><div class="section-grid"><div><div class="eyebrow">Memberships</div><h2>How BeautyJar works.</h2></div><div class="copy"><p>Providers pay a flat monthly membership, with no per-inquiry or booking fees and no share of appointments. Spotlight includes additional visibility and feature opportunities. Featured placement is labeled and does not represent a clinical rating or endorsement. Stories in The Edit are selected independently and are not included in membership.</p></div></div></section>
+<section class="section" id="different"><div class="section-grid"><div><div class="eyebrow">Our approach</div><h2>What you’ll find on each provider profile</h2></div></div>
+<div class="values bj-values">
+<div class="value"><div class="num">01</div><h3>Who they are</h3><p>Their training, background, and what drew them to aesthetics.</p></div>
+<div class="value"><div class="num">02</div><h3>How they practice</h3><p>The treatments they offer, where they see patients, and how they approach care.</p></div>
+<div class="value"><div class="num">03</div><h3>License check</h3><p>BeautyJar checks each provider’s license against the issuing board’s records before publishing their profile.</p></div>
+</div></section>
+
+<section class="section" id="story"><div class="section-grid"><div><div class="eyebrow">Our Story</div><h2>How BeautyJar began</h2></div><div class="copy"><p>BeautyJar began with my own search. As my skin changed with shifting hormones, I wanted to find a provider who could help me care for it over time. Choosing whom to trust with your face is personal, and that experience inspired me to create a place where you can discover providers and get to know them before reaching out.</p><p>My work in governance, risk, and compliance shaped how I built BeautyJar. We check each provider’s license against the issuing board’s records before publishing their profile.</p><p class="bj-sign"><strong>— Ruby</strong></p></div></div></section>
+
+<section class="section" id="how-to-choose"><div class="section-grid"><div><div class="eyebrow">A patient’s guide</div><h2>How to choose an aesthetic provider</h2><p class="bj-side-note">Seven things to look at before you book. BeautyJar checks the license of each listed provider.</p></div>
+<div><ol class="bj-steps">
+<li><span class="bj-step-n">01</span><h3>Check their license</h3><p>If you found your provider on BeautyJar, we checked their license before publishing their profile. You can look up their current status through the issuing board.</p></li>
+<li><span class="bj-step-n">02</span><h3>Ask who will treat you</h3><p>If someone else will perform the treatment, ask for their full name and professional credential.</p></li>
+<li><span class="bj-step-n">03</span><h3>Ask about their experience</h3><p>Where did they train for this treatment, and how often do they perform it?</p></li>
+<li><span class="bj-step-n">04</span><h3>See whether their approach fits your goals</h3><p>Ask to see examples of their work and discuss what they’d recommend for you.</p></li>
+<li><span class="bj-step-n">05</span><h3>Use the consultation</h3><p>Ask about risks, downtime, follow-up, and whom to contact if you have a concern afterward.</p></li>
+<li><span class="bj-step-n">06</span><h3>Get the full price</h3><p>Ask whether pricing is per unit, syringe, or session, and what the total includes.</p></li>
+<li><span class="bj-step-n">07</span><h3>Take your time</h3><p>Give yourself room to think it over and ask any follow-up questions before booking.</p></li>
+</ol>
+<p class="bj-guide-note">A license confirms a provider’s professional status at the time it’s checked. It doesn’t measure skill or guarantee results. A consultation is your chance to talk about your goals, ask about their experience and decide whether the practice feels right for you.</p></div></div></section>
+
+<section class="section bj-numbers" id="by-the-numbers" aria-labelledby="bj-numbers-title"><div class="section-head"><div><div class="eyebrow">By the numbers</div><h2 id="bj-numbers-title">Patients choose people.</h2></div></div>
+<div class="bj-row-label">How patients choose</div>
+<div class="bj-stat-grid">
+<div class="bj-stat"><span class="bj-stat-num">70%</span><p>of U.S. consumers surveyed are considering a cosmetic procedure.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">94%</span><p>say rate-and-review websites affect their choice of provider.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">74%</span><p>follow the social media of a provider they see or are considering.</p><a class="bj-stat-src" href="https://www.asds.net/Skin-Experts/News-Room/Press-Releases/Dermatologists-Top-the-List-as-Key-Influencers-in-Patients-Cosmetic-Procedure-Decisions" target="_blank" rel="noopener">ASDS 2025 Consumer Survey&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">73%</span><p>of medical spa patients are repeat patients, up from 65% in 2022. The right first choice lasts.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/medical-spas-are-safe-repeat-patients-and-industry-size/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
+</div>
+<div class="bj-row-label">Aesthetics today</div>
+<div class="bj-stat-grid">
+<div class="bj-stat"><span class="bj-stat-num">$20.5B</span><p>spent by U.S. patients on non-surgical aesthetics in 2024, up 5% from 2023.</p><a class="bj-stat-src" href="https://qsight.guidepoint.com/trends-report/" target="_blank" rel="noopener">Guidepoint Qsight &amp; Skytale&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">10,488</span><p>medical spas in the U.S. in 2023, up from 8,899 a year earlier. More choice makes the right fit matter more.</p><a class="bj-stat-src" href="https://www.americanmedspa.org/news/2024-medical-spa-state-of-the-industry-executive-report-recap/" target="_blank" rel="noopener">AmSpa 2024 State of the Industry&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">80%</span><p>of minimally invasive procedures in 2025 were neuromodulators and hyaluronic acid fillers.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/stats2025" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
+<div class="bj-stat"><span class="bj-stat-num">+24%</span><p>growth in cosmetic procedures among patients 66 and older in 2025, the fastest of any age group.</p><a class="bj-stat-src" href="https://www.plasticsurgery.org/news/articles/plastic-surgery-at-every-age-how-goals-change-throughout-life" target="_blank" rel="noopener">ASPS 2025 Procedural Statistics&nbsp;↗</a></div>
+</div>
+<div class="bj-reports">
+<span class="bj-reports-label">BeautyJar Insights · 2027 Outlook</span>
+<a class="bj-report" href="/reports/the-expert-advantage"><b>The Expert Advantage</b><span>How qualified providers stand out, and what patients look for before they book.</span><em>Read the report →</em></a>
+<a class="bj-report" href="/reports/the-new-aesthetics-patient"><b>The New Aesthetics Patient</b><span>Older, more informed and ready to invest in the right provider.</span><em>Read the report →</em></a>
+</div>
+<div class="bj-data-note"><span class="bj-data-label">How we use data</span><p>BeautyJar cites primary sources: professional societies, industry associations and market research firms. Figures appear exactly as each source published them, and sources may use different definitions and time periods. Select any source to read the original. Last reviewed November 2026. <a href="/editorial-standards">Read our Editorial Standards</a>.</p></div>
+</section>
+
+<section class="section" id="independence"><div class="section-grid"><div><div class="eyebrow">Memberships</div><h2>How BeautyJar works.</h2></div><div class="copy"><p>BeautyJar is free to browse. Patients book directly with the practice. Providers can join through a paid monthly membership. Every provider goes through the same license check. Spotlight includes labeled featured placement. Stories in The Edit are selected independently.</p></div></div></section>
+
 <section class="section" id="credential-check">
 <div class="section-grid">
 <div>
 <div class="eyebrow">License Review</div>
-<h2>The licensing work, done for you.</h2>
+<h2>How we check licenses.</h2>
 </div>
-<div class="check-box">
-<div>
-<h3>1. Before a page goes live</h3>
-<p>Physicians, nurse practitioners, physician assistants and nurses are each licensed by different boards. Before a provider’s page goes live, we confirm their license with the board that issued it. We recheck every license each year, and if one lapses, the page comes down. <a href="#credential-sources">See our sources</a>.</p>
+<div class="check-box bj-check-single"><p>Before a provider’s profile goes live, we check their license against the issuing board’s records. We recheck it annually. If we find that a license has lapsed, we pause the profile until we confirm that it’s active again. <a href="#credential-sources">See our sources</a>.</p></div>
 </div>
-<div>
-<h3>2. Finding the right fit for you</h3>
-<p>A license confirms a provider’s professional status at the time it’s checked. It doesn’t measure skill or guarantee results. A consultation is your chance to talk about your goals, ask about their experience and decide whether the practice feels right for you.</p>
-</div>
-</div>
-</div>
+<div class="section-grid bj-checks-wrap"><div></div><details class="bj-checks"><summary>See what we review</summary><p>We review each provider’s record on their licensing board’s official lookup. Records vary by board.</p>
+<ul>
+<li>License number, type and status</li>
+<li>Issue and expiration dates</li>
+<li>Disciplinary actions, in-state and in other states</li>
+<li>Pending charges</li>
+<li>Other public actions or administrative fines</li>
+<li>Malpractice judgments and settlements</li>
+<li>Criminal convictions reported by the courts</li>
+<li>Training and board certification</li>
+</ul></details></div>
 </section>
+
+<section class="section" id="regulation"><div class="section-grid"><div><div class="eyebrow">Regulation</div><h2>The rules are changing.</h2></div><div class="copy"><p>States are tightening who can perform aesthetic treatments and how they’re supervised. <a class="bj-law" href="https://americanmedspa.org/news/texas-iv-therapy-bill-hb-3749-signed-into-law-by-governor-abbott" target="_blank" rel="noopener">Texas (Jenifer’s Law)</a>, <a class="bj-law" href="https://www.clearhq.org/news/rhode-island-establishes-medical-spas-safety-act-7-30-25" target="_blank" rel="noopener">Rhode Island</a>, <a class="bj-law" href="https://www.americanmedspa.org/news/indiana-sb-282-has-passed-what-med-spas-need-to-know-and-why-collective-advocacy-matters/" target="_blank" rel="noopener">Indiana</a> and <a class="bj-law" href="https://djholtlaw.com/what-counts-as-the-practice-of-medicine-in-california-med-spas/" target="_blank" rel="noopener">California</a> have all passed new laws since 2025. BeautyJar tracks these changes and confirms every provider’s license.</p></div></div></section>
+
+<section class="section" id="key-facts"><div class="section-grid"><div><div class="eyebrow">Key facts</div><h2>BeautyJar at a glance</h2><p class="bj-side-note">Last updated November 2026.</p></div>
+<table class="bj-facts"><tbody>
+<tr><th scope="row">Name</th><td>BeautyJar</td></tr>
+<tr><th scope="row">What it is</th><td>A medical aesthetics directory of licensed providers</td></tr>
+<tr><th scope="row">Founder</th><td>Ruby O., governance, risk and compliance (GRC) analyst</td></tr>
+<tr><th scope="row">Operated by</th><td>Wenley Technologies LLC, as part of Wenley Health</td></tr>
+<tr><th scope="row">Based in</th><td>Washington, DC metropolitan area</td></tr>
+<tr><th scope="row">Availability</th><td>Licensed providers across the U.S., with a founding community in Washington, DC, Maryland and Northern Virginia</td></tr>
+<tr><th scope="row">Who is listed</th><td>Physicians, nurse practitioners, physician assistants and registered nurses who offer medical aesthetic treatments</td></tr>
+<tr><th scope="row">How providers join</th><td>By application</td></tr>
+<tr><th scope="row">License review</th><td>Confirmed with the issuing board before publication. Rechecked every year. Page made inactive if a license lapses.</td></tr>
+<tr><th scope="row">For patients</th><td>Free. Book directly with the provider or practice.</td></tr>
+<tr><th scope="row">Provider memberships</th><td>Profile and Spotlight. See <a href="/for-providers">For Providers</a> for pricing.</td></tr>
+<tr><th scope="row">Fees</th><td>No lead or booking fees</td></tr>
+<tr><th scope="row">Paid placement</th><td>Spotlight placement is labeled and is not a rating or endorsement</td></tr>
+<tr><th scope="row">Editorial</th><td>Stories in The Edit are selected independently and are not part of membership</td></tr>
+<tr><th scope="row">Medical advice</th><td>BeautyJar does not provide medical advice or services.</td></tr>
+<tr><th scope="row">Research</th><td><a href="/reports/the-expert-advantage">The Expert Advantage</a> · <a href="/reports/the-new-aesthetics-patient">The New Aesthetics Patient</a></td></tr>
+<tr><th scope="row">Contact</th><td><a href="mailto:hello@beautyjar.com">hello@beautyjar.com</a></td></tr>
+</tbody></table></div></section>
+
+<section class="section" id="faq"><div class="section-grid"><div><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="bj-side-note">More in the <a href="/faq">full FAQ</a>.</p></div>
+<div class="bj-faq">
+<details class="bj-faq-item"><summary>How do I know if a provider is right for me?</summary><p>Start with their page: their training, their approach and the treatments they focus on. Every license is confirmed, though a license doesn’t measure skill or guarantee results. A consultation is your chance to ask questions and see whether the practice feels right for you.</p></details>
+<details class="bj-faq-item"><summary>Where is BeautyJar available?</summary><p>BeautyJar is open to licensed providers across the United States, starting in Washington, DC, Maryland and Northern Virginia. International providers are coming soon.</p></details>
+</div></div></section>
+
 <section class="trust-resources" id="credential-sources">
 <div class="trust-resources-head">
 <div>
@@ -843,6 +1090,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <div class="resource-label">Research + clinical sources</div>
 <div class="research-row"><span class="research-title">Government + Research</span><a href="https://www.fda.gov/" target="_blank">U.S. Food &amp; Drug Administration</a><a href="https://www.nih.gov/" target="_blank">National Institutes of Health</a><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a><a href="https://clinicaltrials.gov/" target="_blank">ClinicalTrials.gov</a></div>
 </div></section>
+
 <section class="section">
 <div class="section-grid">
 <div>
@@ -852,15 +1100,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <div class="copy"><p>The Edit explores treatments, trends and provider perspectives to help you understand the services you’re considering and prepare for conversations about your care.</p></div>
 </div>
 </section>
-<section class="leadership">
-<div class="leadership-head">
-<div>
-<div class="eyebrow">Behind BeautyJar</div>
-<h2>Wenley Health</h2>
+
+<section class="leadership" id="wenley">
+<div class="leadership-head"><div><div class="eyebrow">Behind BeautyJar</div><h2>Wenley Health</h2></div></div>
+<div class="bj-behind">
+<div><p class="hero-copy" style="margin:0 0 14px">BeautyJar is part of Wenley Health, a family of health and wellness directories operated by Wenley Technologies LLC in the Washington, DC metropolitan area.</p><p class="hero-copy" style="margin:0 0 14px">We believe choosing a professional for your health or appearance deserves care and consideration. Our directories introduce professionals as people, explain credentials in plain language, confirm licenses, and help you connect directly with the provider who feels right for you.</p><p class="hero-copy" style="margin:0">BeautyJar is our first directory, built for medical aesthetics.</p></div>
 </div>
-</div>
-<p class="hero-copy" style="max-width:780px;margin:0 0 14px">BeautyJar is part of Wenley Health, a family of health and wellness directories operated by Wenley Technologies LLC.</p><p class="hero-copy" style="max-width:780px;margin:0 0 14px">We believe choosing a professional for your health or appearance deserves care and consideration. Our directories introduce professionals as people, explain credentials in plain language, confirm licenses, and help you connect directly with the provider who feels right for you.</p><p class="hero-copy" style="max-width:780px;margin:0">BeautyJar is our first directory, built for medical aesthetics.</p>
 </section>
+
 <section class="provider-cta" id="provider-interest">
 <div class="provider-cta-inner">
 <div class="eyebrow">Get Started</div>
@@ -971,7 +1218,7 @@ html body div.source:not(#bj-x){border-bottom-color:#dedede!important;border-lef
 <style id="bj-accent">
 section.section .eyebrow::before,section.trust-resources .trust-resources-head .eyebrow::before,section.leadership .eyebrow::before{content:"";display:block;width:60px;height:3px;background:#8a4f5a;margin-bottom:18px}
 </style>
-<style id="bj-gaps">html body main section.section:not(#bj-x),html body main section.trust-resources:not(#bj-x),html body main section.leadership:not(#bj-x){padding-top:34px!important;padding-bottom:34px!important}html body main section.hero:not(#bj-x){padding-bottom:30px!important}</style>
+<style id="bj-gaps">html body main section.section:not(#bj-x),html body main section.trust-resources:not(#bj-x),html body main section.leadership:not(#bj-x){padding-top:28px!important;padding-bottom:28px!important}html body main section.hero:not(#bj-x){padding-bottom:30px!important}</style>
 <style id="bj-weight">html body main .copy p:not(#bj-x),html body main .section p:not(#bj-x),html body main .hero-copy:not(#bj-x),html body main .check p:not(#bj-x),html body main .hero p:not(#bj-x){font-weight:600!important;font-size:17px!important;line-height:1.65!important}</style>
 <style id="bj-type">
 /* One type scale for the site */

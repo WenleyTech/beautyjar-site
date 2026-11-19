@@ -1151,6 +1151,27 @@ section.founding-band{background:#fff!important;border-top:1px solid #000;border
 body .providers .provider-card .chips .chip{background:#fff!important;border:1px solid #000!important;color:#000!important}
 .providers .provider-card{position:relative}.spotlight-tag{position:absolute;top:14px;left:14px;z-index:2;background:#fff;padding:3px 9px;border:1px solid #8a4f5a;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a4f5a}
 </style>
+<style id="bj-numbers">
+.bj-numbers{background:#fff}
+#insights h2{position:relative;padding-top:26px}
+#insights h2::before{content:"";position:absolute;left:0;top:0;width:60px;height:3px;background:#8a4f5a}
+.bj-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #000}
+.bj-stat{padding:28px 26px 26px 0}
+.bj-stat + .bj-stat{border-left:1px solid #dedede;padding-left:26px}
+.bj-stat-num{display:block;font-family:'Playfair Display',Georgia,serif;font-size:52px;line-height:1;font-weight:600;color:#8a4f5a;letter-spacing:-.02em;margin-bottom:14px;font-variant-numeric:lining-nums}
+.bj-stat p{font-size:15px;line-height:1.5;font-weight:600;color:#000;margin:0 0 12px}
+.bj-stat-src{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5c5651}
+.bj-reports{display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:stretch;margin-top:34px;padding-top:26px;border-top:1px solid #dedede}
+.bj-reports-label{align-self:center;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8a4f5a;max-width:150px;line-height:1.5}
+.bj-report{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid #dedede;text-decoration:none;color:#000;transition:border-color .2s}
+.bj-report:hover{border-color:#8a4f5a}
+.bj-report b{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600}
+.bj-report span{font-size:14px;line-height:1.5;font-weight:500}
+.bj-report em{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a4f5a;margin-top:6px}
+.bj-stat-note{font-size:12px;font-weight:600;color:#5c5651;margin-top:16px}
+@media(max-width:900px){.bj-stat-grid{grid-template-columns:1fr 1fr}.bj-stat:nth-child(3){border-left:0;padding-left:0}.bj-stat:nth-child(n+3){border-top:1px solid #dedede}.bj-reports{grid-template-columns:1fr}.bj-reports-label{max-width:none}}
+@media(max-width:560px){.bj-stat-grid{grid-template-columns:1fr}.bj-stat,.bj-stat + .bj-stat{border-left:0;padding-left:0;border-top:1px solid #dedede}.bj-stat:first-child{border-top:0}.bj-stat-num{font-size:44px}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -1187,6 +1208,26 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 </div>
 </div>
 </section><div class="trust-marker-strip"><div class="container trust-marker-grid"><span>License confirmed</span><span>Know what to expect</span><span>Book directly with the practice</span></div></div>
+<section class="section bj-numbers" id="insights" aria-labelledby="bj-numbers-title">
+<div class="container">
+<div class="section-head">
+<div><h2 id="bj-numbers-title">Patients choose people.</h2></div>
+<p>Before booking, today’s patients research the provider as carefully as the treatment. The research backs it up.</p>
+</div>
+<div class="bj-stat-grid">
+<div class="bj-stat"><span class="bj-stat-num">94%</span><p>say rate-and-review websites affect their choice of provider.</p><span class="bj-stat-src">ASDS 2025 Consumer Survey</span></div>
+<div class="bj-stat"><span class="bj-stat-num">74%</span><p>follow the social media of a provider they see or are considering.</p><span class="bj-stat-src">ASDS 2025 Consumer Survey</span></div>
+<div class="bj-stat"><span class="bj-stat-num">73%</span><p>of medical spa patients are repeat patients. The right first choice lasts.</p><span class="bj-stat-src">AmSpa 2024 State of the Industry</span></div>
+<div class="bj-stat"><span class="bj-stat-num">+24%</span><p>growth in cosmetic procedures among patients 66 and older in 2025, the fastest of any age group.</p><span class="bj-stat-src">ASPS 2025 Procedural Statistics</span></div>
+</div>
+<div class="bj-reports">
+<span class="bj-reports-label">BeautyJar Insights · 2027 Outlook</span>
+<a class="bj-report" href="/reports/the-expert-advantage"><b>The Expert Advantage</b><span>How qualified providers stand out, and what patients look for before they book.</span><em>Read the report →</em></a>
+<a class="bj-report" href="/reports/the-new-aesthetics-patient"><b>The New Aesthetics Patient</b><span>Older, more informed and ready to invest in the right provider.</span><em>Read the report →</em></a>
+</div>
+<p class="bj-stat-note">Figures as published by each source; full citations in each report.</p>
+</div>
+</section>
 <section class="founding-band" aria-label="Founding Provider offer"><div class="container founding-band-grid"><div><div class="fb-eyebrow">Founding Providers</div><p class="fb-title">Our first 50 providers in DC, Maryland and Northern Virginia receive a complimentary membership that never expires.</p><p class="fb-copy">For licensed physicians, nurse practitioners, physician assistants and registered nurses.</p></div><a class="btn btn-featured fb-btn" href="/founding-provider">Apply as a Founding Provider</a></div></section>
 <section class="section category-wrap" id="treatments">
 <div class="container">
@@ -1241,6 +1282,7 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 </div>
 </div>
 </section>
+
 <section class="section edit-refresh" id="edit">
 <div class="container">
 <div class="section-head edit-head">

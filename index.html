@@ -1172,6 +1172,13 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 @media(max-width:900px){.bj-stat-grid{grid-template-columns:1fr 1fr}.bj-stat:nth-child(3){border-left:0;padding-left:0}.bj-stat:nth-child(n+3){border-top:1px solid #dedede}.bj-reports{grid-template-columns:1fr}.bj-reports-label{max-width:none}}
 @media(max-width:560px){.bj-stat-grid{grid-template-columns:1fr}.bj-stat,.bj-stat + .bj-stat{border-left:0;padding-left:0;border-top:1px solid #dedede}.bj-stat:first-child{border-top:0}.bj-stat-num{font-size:44px}}
 </style>
+<style id="bj-mens">
+.cat:nth-child(6){background:#eef0f2!important}
+.view-all-treatments{margin-top:22px;text-align:right}
+.view-all-treatments a{color:var(--berry,#8a4f5a);font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.view-all-treatments a:hover{opacity:.75}
+@media(max-width:640px){.view-all-treatments{text-align:left}}
+</style>
 </head>
 <body>
 <header id="beautyjar-header">
@@ -1238,10 +1245,9 @@ body .providers .provider-card .chips .chip{background:#fff!important;border:1px
 <a class="cat" href="/providers?specialty=body-contouring"><img alt="Body contouring treatment" decoding="async" height="944" loading="lazy" src="/assets/images/body-contouring-treatment-v2.webp" width="1665"/><div><h3>Body Contouring</h3><p>Body sculpting, skin tightening, non-surgical treatments</p></div></a>
 <a class="cat" href="/providers?specialty=hair-restoration"><img alt="Hair restoration" decoding="async" height="1024" loading="lazy" src="/assets/images/hair-restoration-899653c04a50.webp" width="1536"/><div><h3>Hair Restoration</h3><p>Restoration, scalp health, hair loss</p></div></a>
 <a class="cat" href="/providers?specialty=aesthetic-recovery"><img alt="Lymphatic and post-procedure care" decoding="async" height="1535" loading="lazy" src="/assets/images/lymphatic-and-post-procedure-care-68ed8168e40a.webp" width="1025"/><div><h3>Aesthetic Recovery</h3><p>Post-procedure care, lymphatic drainage, scar care, recovery services</p></div></a>
-<a aria-label="Explore all BeautyJar treatments" class="cat explore-treatments" href="/treatments">
-<div><h3>Explore Treatments</h3><p>Discover treatments and services across BeautyJar.</p><span class="explore-link">View all treatments</span></div>
-</a>
+<a class="cat" href="/providers?q=men"><img alt="Men's aesthetic care" decoding="async" height="800" loading="lazy" src="/assets/images/mens-care.webp" width="1256"/><div><h3>Men's Care</h3><p>Injectables, skin, hair and body treatments for men</p></div></a>
 </div>
+<div class="view-all-treatments"><a href="/treatments">View all treatments →</a></div>
 </div>
 </section>
 <section class="section" id="providers">
